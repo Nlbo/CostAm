@@ -1,0 +1,40 @@
+.wrapperFooter{
+  max-width: 1280px;
+  margin: auto;
+  width: 94%;
+}
+.wrapperFooter .socIcons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+.footer{
+  padding-bottom: 20px;
+  background: #30383e;
+}
+.footer .socIcons a{
+  /*width:25%;*/
+}
+.footer .socIcons a img{
+  max-width: 100px;
+}
+.footer .socIcons > div{
+  display: inline-block;
+}
+.footerLogo{
+  text-align: center;
+}
+.footerLogo img{
+  max-width: 200px;
+  width:200px;
+}
+
+@media (max-width: 767px) {
+  .footer .socIcons {
+    flex-direction: column;
+  }
+  .footer .socIcons > div{
+    margin-bottom: 12px;
+  }
+}

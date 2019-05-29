@@ -1,0 +1,9 @@
+<div class="btnHomeMap">
+  <button (click)="showRedMarkers()" [ngClass]="{'btnMarkerActiveClass': btnRedMarkerFlag}">{{'Բնակարան' | translate:user}}</button>
+  <button (click)="showGreenMarkers()" [ngClass]="{'btnMarkerActiveClass': btnGreenMarkerFlag}">{{'Առանձնատուն' | translate:user}}</button>
+  <button (click)="showYellowMarkers()" [ngClass]="{'btnMarkerActiveClass': btnYellowMarkerFlag}">{{'Կոմերցիոն' | translate:user}}</button>
+  <button (click)="showBlueMarkers()" [ngClass]="{'btnMarkerActiveClass': btnBlueMarkerFlag}">{{'Հողամաս' | translate:user}}</button>
+  <button (click)="showPurpleMarkers()" [ngClass]="{'btnMarkerActiveClass': btnPurpleMarkerFlag}">{{'Բիզնես' | translate:user}}</button>
+  <input type="text" id="mapSearch" size="50" placeholder="{{'Մուտքագրեք հասցեն' | translate:user}}">
+  <div id="map" class="mapHome"></div>
+</div>
