@@ -1,0 +1,87 @@
+<div class="filter-content filter-contentStyle" style="margin-left: 10px; margin-right: 10px;">
+  <form [formGroup]="form" (ngSubmit)="formSend()">
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="optionsData.transactions" formControlName="transactions"
+                     [maxSelectedLabels]="1"
+                     [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Գործարքի տեսակը' | translate:user}}"
+                     [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="optionsData.regions" formControlName="regions" [selectedItemsLabel]="'{0} ընտրված դաշտ'"
+                     (onChange)="onChange('region')"
+                     [maxSelectedLabels]="1"
+                     defaultLabel="{{'Մարզ' | translate:user}}" [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="cities" formControlName="cities" [selectedItemsLabel]="'{0} ընտրված դաշտ'"
+                     (onChange)="onChange('cities')"
+                     [maxSelectedLabels]="1"
+                     defaultLabel="{{'Քաղաք' | translate:user}}" [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="communities" formControlName="communities"
+                     [maxSelectedLabels]="1"
+                     [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Համայնք' | translate:user}}"
+                     (onChange)="onChange('communities')"
+                     [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="streets" formControlName="streets"
+                     [maxSelectedLabels]="1"
+                     [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Փողոց' | translate:user}}"
+                     [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="optionsData.building" formControlName="buildingType"
+                     [maxSelectedLabels]="1"
+                     [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Շենքի տեսակ' | translate:user}}"
+                     [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="optionsData.rooms" formControlName="numberOfRooms"
+                     [maxSelectedLabels]="1"
+                     [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Սենյակների քանակը' | translate:user}}"
+                     [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-dropdown [options]="optionsData.surface" [style]="{'width':'100%'}" formControlName="areaValue"
+                  placeholder=" {{'Մակերես քմ' | translate:user}} "></p-dropdown>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-dropdown [options]="optionsData.pricesStart" [style]="{'width':'100%'}" formControlName="pricesStart"
+                  placeholder=" {{'Գինը (սկսած)' | translate:user}} "></p-dropdown>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-dropdown [options]="optionsData.pricesEnd" [style]="{'width':'100%'}" formControlName="pricesEnd"
+                  placeholder=" {{'Մինչև' | translate:user}} "></p-dropdown>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-dropdown [options]="optionsData.currencys" [style]="{'width':'100%'}" formControlName="currencyForSale"
+                  placeholder=" {{'Արժույթ' | translate:user}} "></p-dropdown>
+    </div>
+
+
+    <div class="appartament-button" style="margin-top: 20px;">
+      <button  id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>
+      <button type="submit" id="search"
+              class="twoToneButton"
+              [ngClass]="{'spinning': searchFlage, 'ngPadding': searchFlage}">
+        <i class="fas fa-search"  [ngClass]="{'searchIconHidden': searchFlage}"></i>
+        {{'Փնտրել' | translate:user}}
+      </button>
+    </div>
+    <!--<button type="submit">Value</button>-->
+    <!--<button  (click)="formSend2()">Form</button>-->
+  </form>
+</div>
+

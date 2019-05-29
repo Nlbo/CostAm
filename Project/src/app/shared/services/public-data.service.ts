@@ -16,13 +16,16 @@ export class PublicDataService {
     {label: 'Միաձույլ', value: 'Միաձույլ'}
   ];
   rooms = [
-    {label: '1', value: '1'},
-    {label: '2', value: '2'},
-    {label: '3', value: '3'},
-    {label: '4', value: '4'},
-    {label: '5', value: '5'},
-    {label: '6', value: '6'},
-    {label: '7+', value: '7+'},
+    {label: '1', value: 1},
+    {label: '2', value: 2},
+    {label: '3', value: 3},
+    {label: '4', value: 4},
+    {label: '5', value: 5},
+    {label: '6', value: 6},
+    {label: '7', value: 7},
+    {label: '8', value: 8},
+    {label: '9', value: 9},
+    {label: '10', value: 10},
   ];
   surface = [
     {label: 'Մինչև 50 քմ', value: {min: 1, max: 50}},
@@ -32,7 +35,7 @@ export class PublicDataService {
     {label: '250-300', value: {min: 250, max: 300}},
     {label: '350-400', value: {min: 350, max: 400}}
   ];
-  cost = [
+  pricesStart = [
     {label: '1000', value: 1000},
     {label: '2000', value: 2000},
     {label: '3000', value: 3000},
@@ -42,7 +45,7 @@ export class PublicDataService {
     {label: '7000', value: 7000},
     {label: '8000', value: 8000}
   ];
-  up = [
+  pricesEnd = [
     {label: '2000', value: 2000},
     {label: '4000', value: 4000},
     {label: '10000', value: 10000},
@@ -4458,7 +4461,8 @@ export class PublicDataService {
   ];
   streets = [
     {
-      "Աջափնյակ": [
+      communities: 'Աջափնյակ',
+      info: [
         {
           "label": "Աբելյան փող.",
           "value": "Աբելյան փող."
@@ -4798,7 +4802,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Ավան": [
+      communities: 'Ավան',
+      info: [
         {
           "label": "Ա. Շահինյան 1 նրբ.",
           "value": "Ա. Շահինյան 1 նրբ."
@@ -5034,7 +5039,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Արաբկիր": [
+      communities: 'Արաբկիր',
+      info: [
         {
           "label": "Ա. Ավետիսյան փող.",
           "value": "Ա. Ավետիսյան փող."
@@ -5426,7 +5432,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Դավթաշեն": [
+      communities: 'Դավթաշեն',
+      info: [
         {
           "label": "Աղաբաբյան փող.",
           "value": "Աղաբաբյան փող."
@@ -5530,7 +5537,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Էրեբունի": [
+      communities: 'Էրեբունի',
+      info: [
         {
           "label": "Ազատամարտիկներ/Դիմիտրով/ 1 նրբ.",
           "value": "Ազատամարտիկներ/Դիմիտրով/ 1 նրբ."
@@ -6178,7 +6186,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Կենտրոն": [
+      communities: 'Կենտրոն',
+      info: [
         {
           "label": "Ա. Պետրոսյան փող.",
           "value": "Ա. Պետրոսյան փող."
@@ -6798,7 +6807,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Մալաթիա-Սեբաստիա": [
+      communities: 'Մալաթիա-Սեբաստիա',
+      info: [
         {
           "label": "Ա. Բաբաջանյան փող.",
           "value": "Ա. Բաբաջանյան փող."
@@ -7106,7 +7116,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Նոր-Նորք": [
+      communities: 'Նոր-Նորք',
+      info: [
         {
           "label": "Ա. Հովհաննիսյան փող.",
           "value": "Ա. Հովհաննիսյան փող."
@@ -7330,7 +7341,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Նորք-Մարաշ": [
+      communities: 'Նորք-Մարաշ',
+      info: [
         {
           "label": "Այգեստան 11 փող., 1 նրբ.",
           "value": "Այգեստան 11 փող., 1 նրբ."
@@ -7442,7 +7454,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Նուբարաշեն": [
+      communities: 'Նուբարաշեն',
+      info: [
         {
           "label": "Մասիս -Ա թաղ.",
           "value": "Մասիս -Ա թաղ."
@@ -7546,7 +7559,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Շենգավիթ": [
+      communities: 'Շենգավիթ',
+      info: [
         {
           "label": "Աէրացիա թաղ.",
           "value": "Աէրացիա թաղ."
@@ -8074,7 +8088,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Վահագնի թաղամաս": [
+      communities: 'Վահագնի թաղամաս',
+      info: [
         {
           "label": "Ալիշան փող.",
           "value": "Ալիշան փող."
@@ -8138,7 +8153,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Քանաքեռ-Զեյթուն": [
+      communities: 'Քանաքեռ-Զեյթուն',
+      info: [
         {
           "label": "Ա.Տիգրանյան նրբ.",
           "value": "Ա.Տիգրանյան նրբ."

@@ -7,26 +7,26 @@
     <div class="bigBlock">
       <div class="row" style=" margin-bottom: 20px">
         <div class="block1 filter-buttons">
-          <button type="button" class="btn btn-lg btn-style">
+          <button routerLink="apartments" type="button" class="btn btn-lg btn-style">
             <img src="assets/images/home-logo.png" alt="" style="width: 40px">
             {{'Բնակարան' | translate:user}}
           </button>
-          <button type="button" class="btn btn-lg btn-style">
+          <button routerLink="houses" type="button" class="btn btn-lg btn-style">
             <img src="assets/images/house-logo.png" alt="" style="width: 40px">{{'Առանձնատուն' | translate:user}}
           </button>
-          <button type="button" class="btn btn-lg btn-style">
+          <button routerLink="commercials" type="button" class="btn btn-lg btn-style">
             <img src="assets/images/usd.png" alt="" style="width: 40px">{{'Կոմերցիոն' | translate:user}}
           </button>
-          <button type="button" class="btn btn-lg btn-style">
+          <button routerLink="lands" type="button" class="btn btn-lg btn-style">
             <img src="assets/images/landandplots.png" alt="" style="width: 40px">{{'Հողամաս' | translate:user}}
           </button>
-          <button type="button" class="btn btn-lg btn-style">
+          <button routerLink="businesses" type="button" class="btn btn-lg btn-style">
             <img src="assets/images/office-logo.png" alt="" style="width: 40px">{{'Բիզնես' | translate:user}}
           </button>
-          <button type="button" class="btn btn-lg btn-style">
+          <button routerLink="codes" type="button" class="btn btn-lg btn-style">
             <img src="assets/images/code.png" alt="" style="width: 40px">{{'Կոդ' | translate:user}}
           </button>
-          <button type="button" class="btn btn-lg btn-style">
+          <button routerLink="newlyBuilts" type="button" class="btn btn-lg btn-style">
             <img src="assets/images/home-logo.png" alt="" style="width: 40px">{{'Նորակառույց' | translate:user}}
           </button>
 
@@ -37,12 +37,7 @@
       <div class="filter-content">
         <router-outlet></router-outlet>
       </div>
-      <div class="appartament-button">
-        <button id="add-announcement" [routerLink]="['/add-announcement']">{{'Ավելացնել հայտարարություն' | translate:user}}</button>
-        <button id="search"  class="twoToneButton "><i class="fas fa-search"></i>
-          {{'Փնտրել' | translate:user}}
-        </button>
-      </div>
+
     </div>
   </div>
   <div class="google-map">

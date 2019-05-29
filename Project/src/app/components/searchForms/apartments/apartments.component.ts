@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {PublicDataService} from '../../shared/services/public-data.service';
+import {PublicDataService} from '../../../shared/services/public-data.service';
 
 @Component({
   selector: 'app-apartments',
@@ -8,10 +8,15 @@ import {PublicDataService} from '../../shared/services/public-data.service';
   styleUrls: ['./apartments.component.css']
 })
 export class ApartmentsComponent implements OnInit {
+
+  searchFlage = false;
+
+
   form: FormGroup;
   user: string;
   cities: object[];
   communities: object[];
+  streets: object[];
 
   constructor(public optionsData: PublicDataService) {
 
@@ -20,6 +25,13 @@ export class ApartmentsComponent implements OnInit {
       regions: new FormControl([], [Validators.required]),
       cities: new FormControl([], [Validators.required]),
       communities: new FormControl([], [Validators.required]),
+      streets: new FormControl([], [Validators.required]),
+      buildingType: new FormControl('', [Validators.required]),
+      numberOfRooms: new FormControl('', [Validators.required]),
+      areaValue: new FormControl('', [Validators.required]),
+      pricesStart: new FormControl('', [Validators.required]),
+      pricesEnd: new FormControl('', [Validators.required]),
+      currencyForSale: new FormControl('', [Validators.required]),
     });
   }
 
@@ -30,7 +42,9 @@ export class ApartmentsComponent implements OnInit {
     switch (item) {
       case 'region': {
         this.cities = [];
-        let candidate = this.optionsData.cities
+        this.communities = [];
+
+        this.optionsData.cities
           .filter(items => this.form.get('regions').value
             .filter(item => item === items.city).length > 0)
           .forEach(items => {
@@ -42,7 +56,7 @@ export class ApartmentsComponent implements OnInit {
             {label: 'Երևան', value: 'Երևան'}
           ];
           this.form.get('cities').setValue(['Երևան']);
-          let candidate = this.optionsData.communities.filter(item => item.city === 'Երևան')
+          this.optionsData.communities.filter(item => item.city === 'Երևան')
             .forEach(items => {
               this.communities = this.communities.concat(items.info);
             });
@@ -52,11 +66,33 @@ export class ApartmentsComponent implements OnInit {
         }
       }
         break;
+      case 'cities': {
+        this.communities = [];
+        this.optionsData.communities.filter(items => this.form.get('cities').value
+          .filter(item => item === items.city).length > 0)
+          .forEach(items => {
+            this.communities = this.communities.concat(items.info);
+          })
+      }
+        break;
+      case 'communities': {
+        this.streets = [];
+        this.optionsData.streets.filter(items => this.form.get('communities').value
+          .filter(item => item == items.communities).length > 0)
+          .forEach(items => {
+            this.streets = this.streets.concat(items.info);
+          })
+      }
+        break;
     }
   }
 
   formSend() {
-    // todo
+    this.searchFlage = true;
+    setTimeout(_ => {
+      this.searchFlage = false;
+    }, 1600);
+    console.log(this.form.value)
   }
 
 }
