@@ -561,7 +561,8 @@ export class PublicDataService {
   ];
   communities = [
     {
-      "Երևան": [
+      city: 'Երևան',
+      info: [
         {
           "label": "Աջափնյակ",
           "value": "Աջափնյակ"
@@ -617,7 +618,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Գյուղեր(Արագածոտն)": [
+      city: 'Գյուղեր(Արագածոտն)',
+      info: [
         {
           "label": "Ագարակ գ.",
           "value": "Ագարակ գ."
@@ -1097,7 +1099,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Գյուղեր(Արարատ)": [
+      city: 'Գյուղեր(Արարատ)',
+      info: [
         {
           "label": "Աբովյան գ.",
           "value": "Աբովյան գ."
@@ -1485,7 +1488,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Գյուղեր(Արմավիր)": [
+      city: 'Գյուղեր(Արմավիր)',
+      info: [
         {
           "label": "Ալաշկերտ գ.",
           "value": "Ալաշկերտ գ."
@@ -1865,7 +1869,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Գյուղեր(Գեղարքունիք)": [
+      city: 'Գյուղեր(Գեղարքունիք)',
+      info: [
         {
           "label": "Ազատ գ.",
           "value": "Ազատ գ."
@@ -2245,7 +2250,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Գյուղեր(Լոռի)": [
+      city: 'Գյուղեր(Լոռի)',
+      info: [
         {
           "label": "Ագարակ գ.",
           "value": "Ագարակ գ."
@@ -2733,7 +2739,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Գյուղեր(Կոտայք)": [
+      city: 'Գյուղեր(Կոտայք)',
+      info:  [
         {
           "label": "Ալափարս գ.",
           "value": "Ալափարս գ."
@@ -2977,7 +2984,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Գյուղեր(Շիրակ)": [
+      city: 'Գյուղեր(Շիրակ)',
+      info: [
         {
           "label": "Ազատան գ.",
           "value": "Ազատան գ."
@@ -3501,7 +3509,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Գյուղեր(Սյունիք)": [
+      city: 'Գյուղեր(Սյունիք)',
+      info: [
         {
           "label": "Ագաթանգեղոս գ.",
           "value": "Ագաթանգեղոս գ."
@@ -4009,7 +4018,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Գյուղեր(Վայոց Ձոր)": [
+      city: 'Գյուղեր(Վայոց Ձոր)',
+      info: [
         {
           "label": "Ագարակաձոր գ.",
           "value": "Ագարակաձոր գ."
@@ -4213,7 +4223,8 @@ export class PublicDataService {
       ]
     },
     {
-      "Գյուղեր(Տավուշ)": [
+      city: 'Գյուղեր(Տավուշ)',
+      info:  [
         {
           "label": "Ազատանուտ գ.",
           "value": "Ազատանուտ գ."

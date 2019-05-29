@@ -26,6 +26,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MultiSelectModule} from 'primeng/multiselect';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+import {DropdownModule} from 'primeng/dropdown';
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -56,6 +58,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AccordionModule,
     MultiSelectModule,
     FormsModule,
+    DropdownModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBrq8jkgCgDa3AvM5EmGPc39t1l_sVNdOk'

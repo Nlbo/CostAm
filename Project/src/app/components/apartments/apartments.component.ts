@@ -11,7 +11,7 @@ export class ApartmentsComponent implements OnInit {
   form: FormGroup;
   user: string;
   cities: object[];
-  communities: [];
+  communities: object[];
 
   constructor(public optionsData: PublicDataService) {
 
@@ -32,20 +32,26 @@ export class ApartmentsComponent implements OnInit {
         this.cities = [];
         let candidate = this.optionsData.cities
           .filter(items => this.form.get('regions').value
-            .filter( item => item === items.city).length > 0);
-        candidate.forEach(items => {
-          this.cities = this.cities.concat(items.info);
-        });
+            .filter(item => item === items.city).length > 0)
+          .forEach(items => {
+            this.cities = this.cities.concat(items.info);
+          });
 
-        if(this.form.get('regions').value.length === 1 && this.form.get('regions').value[0] === 'Երևան') {
+        if (this.form.get('regions').value.length === 1 && this.form.get('regions').value[0] === 'Երևան') {
           this.cities = [
             {label: 'Երևան', value: 'Երևան'}
           ];
           this.form.get('cities').setValue(['Երևան']);
+          let candidate = this.optionsData.communities.filter(item => item.city === 'Երևան')
+            .forEach(items => {
+              this.communities = this.communities.concat(items.info);
+            });
         } else {
           this.form.get('cities').setValue([]);
+          this.form.get('communities').setValue([]);
         }
-      }break;
+      }
+        break;
     }
   }
 
