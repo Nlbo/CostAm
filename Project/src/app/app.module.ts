@@ -27,6 +27,17 @@ import {MultiSelectModule} from 'primeng/multiselect';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {DropdownModule} from 'primeng/dropdown';
+import { CreateComponent } from './pages/create/create.component';
+import { CreateMapComponent } from './components/createForms/create-map/create-map.component';
+import { DetailsComponent } from './pages/details/details.component';
+import { CreateApartmentsComponent } from './components/createForms/create-apartments/create-apartments.component';
+import { CreateBusinessesComponent } from './components/createForms/create-businesses/create-businesses.component';
+import { CreateCodesComponent } from './components/createForms/create-codes/create-codes.component';
+import { CreateCommercialsComponent } from './components/createForms/create-commercials/create-commercials.component';
+import { CreateHousesComponent } from './components/createForms/create-houses/create-houses.component';
+import { CreateLandsComponent } from './components/createForms/create-lands/create-lands.component';
+import { CreateNewlybuiltsComponent } from './components/createForms/create-newlybuilts/create-newlybuilts.component';
+import {FileUploadModule} from 'primeng/primeng';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -47,7 +58,17 @@ export function HttpLoaderFactory(http: HttpClient) {
     LandsComponent,
     CommercialsComponent,
     CodesComponent,
-    NewlybuiltsComponent
+    NewlybuiltsComponent,
+    CreateComponent,
+    CreateMapComponent,
+    DetailsComponent,
+    CreateApartmentsComponent,
+    CreateBusinessesComponent,
+    CreateCodesComponent,
+    CreateCommercialsComponent,
+    CreateHousesComponent,
+    CreateLandsComponent,
+    CreateNewlybuiltsComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +80,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MultiSelectModule,
     FormsModule,
     DropdownModule,
+    FileUploadModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBrq8jkgCgDa3AvM5EmGPc39t1l_sVNdOk'

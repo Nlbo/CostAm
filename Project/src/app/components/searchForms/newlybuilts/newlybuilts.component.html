@@ -31,7 +31,7 @@
     </div>
 
     <div class="appartament-button" style="margin-top: 20px;">
-      <button  id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>
+      <button (click)="goToCreate()" id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>
       <button type="submit" id="search"
               class="twoToneButton"
               [ngClass]="{'spinning': searchFlage, 'ngPadding': searchFlage}">

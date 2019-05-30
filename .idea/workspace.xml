@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f9a3a95-b3b9-4010-96f6-b4debf2c863b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/commercials/commercials.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/commercials/commercials.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/commercials/commercials.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/houses/houses.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/houses/houses.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/houses/houses.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/lands/lands.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/lands/lands.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/lands/lands.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/apartments/apartments.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/apartments/apartments.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/apartments/apartments.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/apartments/apartments.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/apartments/apartments.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/apartments/apartments.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/businesses/businesses.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/businesses/businesses.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/businesses/businesses.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/businesses/businesses.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/businesses/businesses.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/businesses/businesses.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/codes/codes.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/codes/codes.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/codes/codes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/codes/codes.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/codes/codes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/codes/codes.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/commercials/commercials.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/commercials/commercials.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/commercials/commercials.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/houses/houses.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/houses/houses.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/houses/houses.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/lands/lands.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/lands/lands.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/lands/lands.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/newlybuilts/newlybuilts.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/newlybuilts/newlybuilts.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/newlybuilts/newlybuilts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/newlybuilts/newlybuilts.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/components/newlybuilts/newlybuilts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/searchForms/newlybuilts/newlybuilts.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/pages/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/app/shared/services/public-data.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/shared/services/public-data.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -90,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project/src/app/components/searchForms/lands/lands.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="74" column="14" lean-forward="true" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+            <state relative-caret-position="327">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -107,6 +71,7 @@
       <find>'label'</find>
       <find>'value'</find>
       <find>appartament-button</find>
+      <find>formSend</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,9 +134,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-116" />
-    <option name="y" value="124" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-114" />
+    <option name="y" value="91" />
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
@@ -317,6 +282,11 @@
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="i18n" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -369,17 +339,25 @@
       <updated>1559127007005</updated>
       <workItem from="1559127009264" duration="10757000" />
       <workItem from="1559138096339" duration="904000" />
-      <workItem from="1559157566286" duration="8738000" />
+      <workItem from="1559157566286" duration="8954000" />
     </task>
+    <task id="LOCAL-00001" summary="searchForms complete, default filters complete and Routes for search Forms">
+      <created>1559166895939</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1559166895941</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20399000" />
+    <option name="totallyTimeSpent" value="20615000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-114" y="91" width="1386" height="788" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.40327382" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30489615" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -406,6 +384,10 @@
         <option value="$PROJECT_DIR$/../../Full angular2+ node.js/27.05.19_4_UploadImageJsonOk/node_modules/karma/config.tpl.js" />
       </list>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="searchForms complete, default filters complete and Routes for search Forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="searchForms complete, default filters complete and Routes for search Forms" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -856,8 +838,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/src/app/components/searchForms/lands/lands.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="74" column="14" lean-forward="true" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+        <state relative-caret-position="327">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>

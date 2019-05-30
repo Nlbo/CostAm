@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {PublicDataService} from "../../../shared/services/public-data.service";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-lands',
@@ -17,7 +18,7 @@ export class LandsComponent implements OnInit {
   communities: object[];
   streets: object[];
 
-  constructor(public optionsData: PublicDataService) {
+  constructor(public optionsData: PublicDataService,  private router: Router) {
 
     this.form = new FormGroup({
       transactions: new FormControl([], [Validators.required]),
@@ -91,6 +92,10 @@ export class LandsComponent implements OnInit {
       this.searchFlage = false;
     }, 1600);
     console.log(this.form.value)
+  }
+
+  goToCreate() {
+    this.router.navigate(['create', 'lands']);
   }
 
 }

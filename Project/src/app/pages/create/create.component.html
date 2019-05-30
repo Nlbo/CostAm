@@ -1,0 +1,73 @@
+<div class="addAnnouncement">
+  <div class="wrapper">
+
+    <div class="toggleAddAnnouncement">
+      <div class="linksBox">
+        <a routerLink="apartments" routerLinkActive="addAnnouncementActive"
+           class="boldStyles">{{'Բնակարան' | translate:user}}</a>
+        <a routerLink="houses" routerLinkActive="addAnnouncementActive"
+           class="boldStyles">{{'Առանձնատուն' | translate:user}}</a>
+        <a routerLink="commercials" routerLinkActive="addAnnouncementActive"
+           class="boldStyles">{{'Կոմերցիոն' | translate:user}}</a>
+        <a routerLink="lands" routerLinkActive="addAnnouncementActive"
+           class="boldStyles">{{'Հողամաս' | translate:user}}</a>
+        <a routerLink="businesses" routerLinkActive="addAnnouncementActive"
+           class="boldStyles">{{'Բիզնես' | translate:user}}</a>
+      </div>
+    </div>
+    <div class="toggleAddAnnouncement required-fields-section">
+      <span class="required-fields boldStyles">* {{'դաշտերը ենթակա են պարտադիր լրացման' | translate:user}}</span>
+    </div>
+    <!--<form [formGroup]="form" (ngSubmit)="form2Submit()"></form>-->
+      <router-outlet></router-outlet>
+      <div class="addAnnouncement-w100">
+        <app-create-map (mapDetails)="mapDetails($event)"></app-create-map>
+      </div>
+    <form [formGroup]="form2" (ngSubmit)="form2Submit()">
+      <input type="hidden" formControlName="mapDetails">
+    <div class="addAnnouncement-w100 choosezUploadImage">
+      <p-fileUpload name="demo[]" customUpload="true" (uploadHandler)="onUpload($event)"
+                    multiple="multiple" accept="image/*" maxFileSize="1000000"
+                    auto="true" chooseLabel="{{'Ավելացնել նկարներ' | translate:user}}">
+      </p-fileUpload>
+    </div>
+    <div class="addAnnouncement-w100">
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"><i class="fa fa-phone fa-rotate-180"></i></span>
+          <input type="text" pInputText
+                 formControlName="phone1"
+                 placeholder="* {{'Հեռախոս' | translate:user}} 1">
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"><i class="fa fa-phone fa-rotate-180"></i></span>
+          <input type="text" pInputText
+                 formControlName="phone2"
+                 placeholder="{{'Հեռախոս' | translate:user}} 2">
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"><i class="fa fa-phone fa-rotate-180"></i></span>
+          <input type="text" pInputText
+                 formControlName="phone3"
+                 placeholder="{{'Հեռախոս' | translate:user}} 3">
+        </div>
+      </div>
+    </div>
+    <div class="addAnnouncement-w100">
+        <textarea pInputTextarea autoResize="autoResize"
+                  formControlName="additionalInformation"
+                  placeholder="* {{'Լրացուցիչ ինֆորմացիա՝ բնութագրի համար' | translate:user}}"></textarea>
+    </div>
+    <div class="addAnnouncement-input addNewPost">
+      <button type="submit" [disabled]="form2.invalid"
+              [ngClass]="{'btnActiveClass': form2.invalid}">
+        {{'Ավելացնել հայտարարություն' | translate:user}}
+      </button>
+    </div>
+    </form>
+  </div>
+</div>

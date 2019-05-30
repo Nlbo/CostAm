@@ -1,0 +1,60 @@
+<form [formGroup]="form" (ngSubmit)="send()">
+  <div class="flewWrap">
+
+  <div class="addAnnouncement-input">
+    <p-multiSelect [options]="optionsData.transactions" formControlName="transactions"
+                   [maxSelectedLabels]="1"
+                   (onChange)="send('transactions')"
+                   [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="* {{'Գործարքի տեսակը' | translate:user}}"
+                   [style]="{'width':'100%'}"></p-multiSelect>
+  </div>
+
+  <div class="addAnnouncement-input">
+    <p-dropdown [options]="optionsData.regions" [style]="{'width':'100%'}" formControlName="regions"
+                (onChange)="send('regions')"
+                placeholder="* {{'Մարզ' | translate:user}} "></p-dropdown>
+  </div>
+
+  <div class="addAnnouncement-input">
+    <p-dropdown [options]="cities" [style]="{'width':'100%'}" formControlName="cities"
+                (onChange)="send('cities')"
+                placeholder="* {{'Քաղաք' | translate:user}} "></p-dropdown>
+  </div>
+
+  <div class="addAnnouncement-input">
+    <p-dropdown [options]="communities" [style]="{'width':'100%'}" formControlName="communities"
+                (onChange)="send('communities')"
+                placeholder="* {{'Համայնք' | translate:user}} "></p-dropdown>
+  </div>
+
+  <div class="addAnnouncement-input">
+    <p-dropdown [options]="streets" [style]="{'width':'100%'}" formControlName="streets"
+                (onChange)="send('streets')"
+                placeholder="* {{'Փողոց' | translate:user}}"></p-dropdown>
+  </div>
+
+  <div class="addAnnouncement-input">
+    <p-dropdown [options]="optionsData.numberOfRooms" [style]="{'width':'100%'}" formControlName="numberOfRooms"
+                (onChange)="send('numberOfRooms')"
+                placeholder="* {{'Սենյակների քանակը' | translate:user}} "></p-dropdown>
+  </div>
+
+  <button type="submit">Send</button>
+  </div>
+</form>
+
+
+<!--<div class="addAnnouncement-input">-->
+  <!--<p-dropdown [options]="optionsData.surface" [style]="{'width':'100%'}" formControlName="areaValue"-->
+              <!--(onChange)="send()"-->
+              <!--placeholder=" {{'Մակերես քմ' | translate:user}} "></p-dropdown>-->
+<!--</div>-->
+
+
+<!--<div class="addAnnouncement-input">-->
+  <!--<p-multiSelect [options]="optionsData.transactions" formControlName="transactions"-->
+                 <!--(onChange)="send()"-->
+                 <!--[maxSelectedLabels]="1"-->
+                 <!--[selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Գործարքի տեսակը' | translate:user}}"-->
+                 <!--[style]="{'width':'100%'}"></p-multiSelect>-->
+<!--</div>-->

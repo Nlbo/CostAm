@@ -9,7 +9,7 @@
 
     <div class="col-md-3 input-style">
       <p-multiSelect [options]="optionsData.regions" formControlName="regions" [selectedItemsLabel]="'{0} ընտրված դաշտ'"
-                     (onChange)="onChange('region')"
+                     (onChange)="onChange('regions')"
                      [maxSelectedLabels]="1"
                      defaultLabel="{{'Մարզ' | translate:user}}" [style]="{'width':'100%'}"></p-multiSelect>
     </div>
@@ -72,7 +72,7 @@
 
 
     <div class="appartament-button" style="margin-top: 20px;">
-      <button  id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>
+      <button (click)="goToCreate()" id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>
       <button type="submit" id="search"
               class="twoToneButton"
               [ngClass]="{'spinning': searchFlage, 'ngPadding': searchFlage}">

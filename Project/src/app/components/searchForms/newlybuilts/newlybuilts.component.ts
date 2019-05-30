@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {PublicDataService} from "../../../shared/services/public-data.service";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-newlybuilts',
@@ -17,7 +18,7 @@ export class NewlybuiltsComponent implements OnInit {
   communities: object[];
   streets: object[];
 
-  constructor(public optionsData: PublicDataService) {
+  constructor(public optionsData: PublicDataService,  private router: Router) {
 
     this.form = new FormGroup({
       regions: new FormControl([], [Validators.required]),
@@ -85,5 +86,8 @@ export class NewlybuiltsComponent implements OnInit {
       this.searchFlage = false;
     }, 1600);
     console.log(this.form.value)
+  }
+  goToCreate() {
+    this.router.navigate(['create', 'lands']);
   }
 }

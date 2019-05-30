@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-codes',
@@ -10,9 +11,12 @@ export class CodesComponent implements OnInit {
   searchFlage = false;
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+  goToCreate() {
+    this.router.navigate(['create', 'codes']);
   }
 
 }
