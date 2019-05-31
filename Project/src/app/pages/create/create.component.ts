@@ -22,7 +22,8 @@ export class CreateComponent implements OnInit {
       data => {
         console.log(data);
         this.invalid = data.invalid;
-        this.form.append(data.key, data.value);
+        this.form.append(data.key, '');
+        this.form.set(data.key, JSON.stringify(data.value));
       });
   }
 
@@ -56,12 +57,15 @@ export class CreateComponent implements OnInit {
   }
 
   form2Submit() {
-    this.form.append('mapDetails', this.form2.get('mapDetails').value);
-    this.form.append('phone1', this.form2.get('phone1').value);
-    this.form.append('phone2', this.form2.get('phone2').value);
-    this.form.append('phone3', this.form2.get('phone3').value);
+
+    let phone = [];
+    phone.push(this.form2.get('phone1').value);
+    phone.push(this.form2.get('phone2').value);
+    phone.push(this.form2.get('phone3').value);
+    this.form.append('mapDetails', JSON.stringify(this.form2.get('mapDetails').value));
+    this.form.append('phone', JSON.stringify(phone));
     this.form.append('additionalInformation', this.form2.get('additionalInformation').value);
-    if(this.uploadedFiles && this.uploadedFiles.length > 0) {
+    if (this.uploadedFiles && this.uploadedFiles.length > 0) {
       this.uploadedFiles.forEach((file: File) => {
         this.form.append('images', file);
       });
