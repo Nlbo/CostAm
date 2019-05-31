@@ -156,3 +156,14 @@ button:hover {
   padding-left: 12px;
   margin-bottom: 12px;
 }
+
+.flewWrap{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 770px;
+  margin: auto;
+}
+
+.flewWrapSmall{
+  max-width: 750px;
+}

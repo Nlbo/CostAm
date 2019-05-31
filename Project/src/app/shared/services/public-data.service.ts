@@ -55,10 +55,6 @@ export class PublicDataService {
     {label: '200000', value: 200000},
     {label: '500000', value: 500000}
   ];
-  currencys = [
-    {label: 'USD', value: 'USD'},
-    {label: 'AMD', value: 'AMD'}
-  ];
 
   surfaceHouse = [
     {label: 'Մինչև 50 քմ', value: {min: 1, max: 50}},
@@ -9137,14 +9133,8 @@ export class PublicDataService {
     }
   ];
   currencies = [
-    {
-      "label": "USD",
-      "value": "USD"
-    },
-    {
-      "label": "AMD",
-      "value": "AMD"
-    }
+    {label: 'USD', value: 'USD'},
+    {label: 'AMD', value: 'AMD'}
   ];
 
   constructor() {

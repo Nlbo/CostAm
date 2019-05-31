@@ -37,7 +37,7 @@ import { CreateCommercialsComponent } from './components/createForms/create-comm
 import { CreateHousesComponent } from './components/createForms/create-houses/create-houses.component';
 import { CreateLandsComponent } from './components/createForms/create-lands/create-lands.component';
 import { CreateNewlybuiltsComponent } from './components/createForms/create-newlybuilts/create-newlybuilts.component';
-import {FileUploadModule} from 'primeng/primeng';
+import {FileUploadModule, SpinnerModule} from 'primeng/primeng';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -82,6 +82,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     DropdownModule,
     FileUploadModule,
     ReactiveFormsModule,
+    SpinnerModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBrq8jkgCgDa3AvM5EmGPc39t1l_sVNdOk'
     }),

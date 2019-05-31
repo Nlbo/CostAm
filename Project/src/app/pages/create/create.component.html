@@ -19,11 +19,11 @@
       <span class="required-fields boldStyles">* {{'դաշտերը ենթակա են պարտադիր լրացման' | translate:user}}</span>
     </div>
     <!--<form [formGroup]="form" (ngSubmit)="form2Submit()"></form>-->
-      <router-outlet></router-outlet>
+      <router-outlet (activate)="sendForm($event)" (deactivate)="sendForm($event)"></router-outlet>
       <div class="addAnnouncement-w100">
         <app-create-map (mapDetails)="mapDetails($event)"></app-create-map>
       </div>
-    <form [formGroup]="form2" (ngSubmit)="form2Submit()">
+    <form [formGroup]="form2" (ngSubmit)="form2Submit()" class="flewWrap">
       <input type="hidden" formControlName="mapDetails">
     <div class="addAnnouncement-w100 choosezUploadImage">
       <p-fileUpload name="demo[]" customUpload="true" (uploadHandler)="onUpload($event)"
@@ -63,7 +63,7 @@
                   placeholder="* {{'Լրացուցիչ ինֆորմացիա՝ բնութագրի համար' | translate:user}}"></textarea>
     </div>
     <div class="addAnnouncement-input addNewPost">
-      <button type="submit" [disabled]="form2.invalid"
+      <button type="submit" [disabled]="form2.invalid && invalid && uploadedFiles.length > 0"
               [ngClass]="{'btnActiveClass': form2.invalid}">
         {{'Ավելացնել հայտարարություն' | translate:user}}
       </button>

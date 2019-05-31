@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Router} from "@angular/router";
+import {EventsService} from "../../shared/services/events.service";
+import {DataService} from "../../shared/services/data.service";
 
 @Component({
   selector: 'app-create',
@@ -7,12 +10,20 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
-  uploadedFiles: object[];
+  uploadedFiles: object[] = [];
   user: string;
   form: FormData;
   form2: FormGroup;
+  invalid;
 
-  constructor() {
+  constructor(private router: Router, private events: EventsService, private service: DataService) {
+    this.form = new FormData();
+    events.changeEmitted$.subscribe(
+      data => {
+        console.log(data);
+        this.invalid = data.invalid;
+        this.form.append(data.key, data.value);
+      });
   }
 
   ngOnInit() {
@@ -23,6 +34,10 @@ export class CreateComponent implements OnInit {
       phone3: new FormControl(''),
       additionalInformation: new FormControl('', [Validators.required])
     });
+    console.log(this.router.events);
+    this.router.events.subscribe((data) => {
+      console.log(data);
+    });
   }
 
 
@@ -30,6 +45,10 @@ export class CreateComponent implements OnInit {
     for (const file of event.files) {
       this.uploadedFiles.push(file);
     }
+  }
+
+  sendForm(data) {
+    console.log(data);
   }
 
   mapDetails(data) {
@@ -42,8 +61,13 @@ export class CreateComponent implements OnInit {
     this.form.append('phone2', this.form2.get('phone2').value);
     this.form.append('phone3', this.form2.get('phone3').value);
     this.form.append('additionalInformation', this.form2.get('additionalInformation').value);
-    this.uploadedFiles.forEach((file: File) => {
-      this.form.append('images', file);
+    if(this.uploadedFiles && this.uploadedFiles.length > 0) {
+      this.uploadedFiles.forEach((file: File) => {
+        this.form.append('images', file);
+      });
+    }
+    this.service.postApartments(this.form).subscribe((data) => {
+      console.log(data);
     });
   }
 

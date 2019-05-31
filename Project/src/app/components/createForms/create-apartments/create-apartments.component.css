@@ -134,11 +134,15 @@
   transform: rotateY(26deg);
   position: absolute;
   left: 0;
+  display: grid;
+  width: 50%;
 }
 #basic2{
   transform: rotateY(26deg);
   position: absolute;
   right: 0;
+  display: grid;
+  width: 50%;
 }
 @media (max-width: 780px) {
   #basic1{
@@ -181,11 +185,13 @@
     position: relative;
     left: auto;
     margin-bottom: 17px;
+    width: 100%;
   }
   #basic2{
     transform: rotateY(0deg);
     position: relative;
     right: auto;
+    width: 100%;
   }
 }
 /* Avelacrac YERVAND */
