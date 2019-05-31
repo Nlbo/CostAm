@@ -80,7 +80,6 @@
                   (onChange)="send('interiorDecorations')"
                   [style]="{'width':'100%'}">
       </p-dropdown>
-      <!--(ngModelChange)="onInteriorDecorationChange($event)"-->
     </div>
 
 
@@ -95,7 +94,6 @@
                   (onChange)="send('projects')"
                   [style]="{'width':'100%'}">
       </p-dropdown>
-      <!--(ngModelChange)="onProjectChange($event)"-->
     </div>
 
 
@@ -145,7 +143,6 @@
                      [style]="{'width':'100%'}">
       </p-multiSelect>
     </div>
-    <!--    [disabled]="!(form.get('transactions').value.indexOf('Վաճառք') >= 0)"-->
     <div class="addAnnouncement-input">
       <p-dropdown [options]="optionsData.currencies"
                   placeholder="* {{'Արժույթ(Վաճառք)' | translate:user}} "
@@ -214,31 +211,5 @@
                  (onChange)="send('priceForDailyRent')">
       </p-spinner>
     </div>
-    <button type="submit">Send</button>
-<!--    <button type="submit" (click)="clear()">clear</button>-->
-<!--    <button type="submit" (click)="set()">setValidatotrs</button>-->
   </div>
 </form>
-
-
-<!--<div class="addAnnouncement-input">-->
-<!--<p-dropdown [options]="optionsData.surface" [style]="{'width':'100%'}" formControlName="areaValue"-->
-<!--(onChange)="send()"-->
-<!--placeholder=" {{'Մակերես քմ' | translate:user}} "></p-dropdown>-->
-<!--</div>-->
-
-
-<!--<div class="addAnnouncement-input">-->
-<!--<p-multiSelect [options]="optionsData.transactions" formControlName="transactions"-->
-<!--(onChange)="send()"-->
-<!--[maxSelectedLabels]="1"-->
-<!--[selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Գործարքի տեսակը' | translate:user}}"-->
-<!--[style]="{'width':'100%'}"></p-multiSelect>-->
-<!--</div>-->
-
-<!--<p-spinner size="1" [min]="-10" [max]="form.get('flooring').value" [step]="1"-->
-<!--           placeholder="* {{'Հարկ' | translate:user}} "-->
-<!--           id="basic2"-->
-<!--           formControlName="floor"-->
-<!--           (onChange)="send('floor')">-->
-<!--</p-spinner>-->

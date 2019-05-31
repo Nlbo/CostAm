@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
 export class DataService {
  url = 'http://localhost:3000';
   constructor(private http: HttpClient) { }
-  postApartments(data) {
-    return this.http.post(this.url + '/api/apartments', data);
+  postData(data, link) {
+    return this.http.post(this.url + '/api/' + link, data);
   }
 }

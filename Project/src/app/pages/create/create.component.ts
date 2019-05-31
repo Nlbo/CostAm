@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 import {EventsService} from "../../shared/services/events.service";
 import {DataService} from "../../shared/services/data.service";
 
@@ -14,7 +14,7 @@ export class CreateComponent implements OnInit {
   user: string;
   form: FormData;
   form2: FormGroup;
-  invalid;
+  invalid = true;
 
   constructor(private router: Router, private events: EventsService, private service: DataService) {
     this.form = new FormData();
@@ -27,6 +27,7 @@ export class CreateComponent implements OnInit {
       });
   }
 
+
   ngOnInit() {
     this.form2 = new FormGroup({
       mapDetails: new FormControl('', [Validators.required]),
@@ -34,10 +35,6 @@ export class CreateComponent implements OnInit {
       phone2: new FormControl(''),
       phone3: new FormControl(''),
       additionalInformation: new FormControl('', [Validators.required])
-    });
-    console.log(this.router.events);
-    this.router.events.subscribe((data) => {
-      console.log(data);
     });
   }
 
@@ -49,7 +46,7 @@ export class CreateComponent implements OnInit {
   }
 
   sendForm(data) {
-    console.log(data);
+    console.log(this.router.url.split('/')[2]);
   }
 
   mapDetails(data) {
@@ -70,7 +67,7 @@ export class CreateComponent implements OnInit {
         this.form.append('images', file);
       });
     }
-    this.service.postApartments(this.form).subscribe((data) => {
+    this.service.postData(this.form, this.router.url.split('/')[2]).subscribe((data) => {
       console.log(data);
     });
   }

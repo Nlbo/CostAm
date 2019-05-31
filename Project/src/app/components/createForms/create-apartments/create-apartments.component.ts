@@ -20,8 +20,6 @@ export class CreateApartmentsComponent implements OnInit {
   dailyRent = true;
 
 
-  @Output() sendForm = new EventEmitter();
-
   constructor(public optionsData: PublicDataService, private events: EventsService) {
   }
 
@@ -168,12 +166,12 @@ export class CreateApartmentsComponent implements OnInit {
             {label: 'Երևան', value: 'Երևան'}
           ];
           let data = {
-            key: item,
-            value: this.form.get(item).value,
-            invalid: this.form.invalid && this.rent && this.sale && this.dailyRent
+            key: 'cities',
+            value: 'Երևան',
+            invalid: !(this.form.valid && this.rent && this.sale && this.dailyRent)
           };
           // console.log(data);
-          this.sendForm.emit(data);
+          this.events.emitChange(data);
           this.form.get('cities').setValue('Երևան');
           this.optionsData.communities.filter(item => item.city === 'Երևան')
             .forEach(items => {
@@ -229,7 +227,6 @@ export class CreateApartmentsComponent implements OnInit {
       value: this.form.get(item).value,
       invalid: !(this.form.valid && this.rent && this.sale && this.dailyRent)
     };
-    this.sendForm.emit(data);
     this.events.emitChange(data);
   }
 

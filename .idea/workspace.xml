@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f9a3a95-b3b9-4010-96f6-b4debf2c863b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/controllers/commercials.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controllers/houses.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/commercials.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/houses.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/app/components/createForms/create-commercials/create-commercials.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/createForms/create-commercials/create-commercials.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/app/components/createForms/create-commercials/create-commercials.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/createForms/create-commercials/create-commercials.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/app/components/createForms/create-commercials/create-commercials.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/createForms/create-commercials/create-commercials.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/app/components/createForms/create-houses/create-houses.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/createForms/create-houses/create-houses.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/app/components/createForms/create-houses/create-houses.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/createForms/create-houses/create-houses.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/app/components/createForms/create-houses/create-houses.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/components/createForms/create-houses/create-houses.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/app/pages/create/create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/pages/create/create.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project/src/app/pages/create/create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/pages/create/create.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/apartments.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/apartments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/apartments.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/apartments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/app/shared/services/data.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/app/shared/services/data.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middleware/multer.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middleware/multer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,55 +34,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.html">
+        <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-commercials/create-commercials.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3036">
-              <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+            <state relative-caret-position="289">
+              <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Project/src/app/pages/create/create.component.ts">
+        <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-commercials/create-commercials.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="25" column="46" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="46" />
+            <state relative-caret-position="253">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
               <folding>
-                <element signature="e#0#48#0" expanded="true" />
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/src/app/shared/services/data.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/src/app/pages/create/create.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="65" column="92" selection-start-line="65" selection-start-column="92" selection-end-line="65" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -75,61 +57,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="231" column="29" selection-start-line="231" selection-start-column="29" selection-end-line="231" selection-end-column="29" />
+            <state relative-caret-position="1018">
+              <caret line="91" column="38" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="38" />
               <folding>
                 <element signature="e#0#70#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/src/app/shared/services/events.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="e#0#55#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-map/create-map.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="58" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-map/create-map.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="123" column="7" selection-start-line="123" selection-start-column="7" selection-end-line="123" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#70#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/src/app/app.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="n#style#0;n#app-footer#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -143,6 +87,7 @@
       <find>console</find>
       <find>textarea</find>
       <find>flexBoxItem</find>
+      <find>area</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,18 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Project/src/app/components/apartments/apartments.component.css" />
-        <option value="$PROJECT_DIR$/Project/src/app/components/apartments/apartments.component.ts" />
-        <option value="$PROJECT_DIR$/Project/src/app/app-routing.module.ts" />
-        <option value="$PROJECT_DIR$/Project/src/app/pages/home/home.component.html" />
-        <option value="$PROJECT_DIR$/Project/src/app/components/houses/houses.component.css" />
-        <option value="$PROJECT_DIR$/Project/src/app/components/apartments/apartments.component.html" />
-        <option value="$PROJECT_DIR$/Project/src/app/components/houses/houses.component.ts" />
-        <option value="$PROJECT_DIR$/Project/src/app/components/houses/houses.component.html" />
-        <option value="$PROJECT_DIR$/Project/src/app/components/commercials/commercials.component.css" />
-        <option value="$PROJECT_DIR$/Project/src/app/components/commercials/commercials.component.ts" />
-        <option value="$PROJECT_DIR$/Project/src/app/components/commercials/commercials.component.html" />
-        <option value="$PROJECT_DIR$/Project/src/app/components/lands/lands.component.css" />
         <option value="$PROJECT_DIR$/Project/src/app/components/lands/lands.component.ts" />
         <option value="$PROJECT_DIR$/Project/src/app/components/lands/lands.component.html" />
         <option value="$PROJECT_DIR$/Project/src/app/components/businesses/businesses.component.html" />
@@ -194,22 +127,33 @@
         <option value="$PROJECT_DIR$/Project/src/app/shared/services/public-data.service.ts" />
         <option value="$PROJECT_DIR$/Project/src/app/components/createForms/create-map/create-map.component.css" />
         <option value="$PROJECT_DIR$/Project/src/app/components/createForms/create-map/create-map.component.html" />
-        <option value="$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.html" />
         <option value="$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.css" />
         <option value="$PROJECT_DIR$/Project/src/app/pages/create/create.component.css" />
         <option value="$PROJECT_DIR$/Project/src/app/shared/services/events.service.ts" />
-        <option value="$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.ts" />
-        <option value="$PROJECT_DIR$/Project/src/app/pages/create/create.component.html" />
+        <option value="$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.html" />
+        <option value="$PROJECT_DIR$/Project/src/app/components/createForms/create-houses/create-houses.component.css" />
         <option value="$PROJECT_DIR$/Project/src/app/shared/services/data.service.ts" />
+        <option value="$PROJECT_DIR$/server/controllers/houses.js" />
+        <option value="$PROJECT_DIR$/server/routes/houses.js" />
+        <option value="$PROJECT_DIR$/server/middleware/multer.js" />
         <option value="$PROJECT_DIR$/Project/src/app/pages/create/create.component.ts" />
+        <option value="$PROJECT_DIR$/Project/src/app/pages/create/create.component.html" />
+        <option value="$PROJECT_DIR$/Project/src/app/components/createForms/create-commercials/create-commercials.component.css" />
+        <option value="$PROJECT_DIR$/Project/src/app/components/createForms/create-houses/create-houses.component.html" />
+        <option value="$PROJECT_DIR$/server/routes/commercials.js" />
+        <option value="$PROJECT_DIR$/server/controllers/commercials.js" />
+        <option value="$PROJECT_DIR$/server/app.js" />
+        <option value="$PROJECT_DIR$/Project/src/app/components/createForms/create-houses/create-houses.component.ts" />
+        <option value="$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.ts" />
+        <option value="$PROJECT_DIR$/Project/src/app/components/createForms/create-commercials/create-commercials.component.html" />
+        <option value="$PROJECT_DIR$/Project/src/app/components/createForms/create-commercials/create-commercials.component.ts" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="215" />
-    <option name="y" value="114" />
-    <option name="width" value="1386" />
-    <option name="height" value="788" />
+    <option name="x" value="-7" />
+    <option name="width" value="697" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -222,13 +166,130 @@
         <subPane>
           <expand>
             <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="createForms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="createForms" type="462c0819:PsiDirectoryNode" />
+              <item name="create-apartments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="createForms" type="462c0819:PsiDirectoryNode" />
+              <item name="create-commercials" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="createForms" type="462c0819:PsiDirectoryNode" />
+              <item name="create-houses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="create" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="middleware" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CostAm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CostAm" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -248,7 +309,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
-    <property name="ts.external.directory.path" value="C:\Users\studentb\Desktop\Project\Project\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\erik.nalbandyan\Desktop\Project\CostAm\Project\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -285,6 +346,7 @@
       <workItem from="1559138096339" duration="904000" />
       <workItem from="1559157566286" duration="8954000" />
       <workItem from="1559287160664" duration="25517000" />
+      <workItem from="1559335736826" duration="6990000" />
     </task>
     <task id="LOCAL-00001" summary="searchForms complete, default filters complete and Routes for search Forms">
       <created>1559166895939</created>
@@ -304,13 +366,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46132000" />
+    <option name="totallyTimeSpent" value="53122000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21654373" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21651785" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -323,7 +385,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32872504" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -332,11 +394,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$USER_HOME$/Full angular2+ node.js/27.05.19_4_UploadImageJsonOk/node_modules/karma/config.tpl.js" />
-      </list>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="searchForms complete, default filters complete and Routes for search Forms" />
@@ -370,122 +427,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Project/src/app/components/slider/slider.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/components/map/map.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/shared/services/map-info.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/components/map/map.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/components/header/header.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/components/footer/footer.component.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/pages/home/home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/angular.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/pages/home/home.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="199" column="21" lean-forward="true" selection-start-line="199" selection-start-column="21" selection-end-line="199" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/app-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/pages/home/home.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#button#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#button#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#button#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#button#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#button#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#button#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/components/map/map.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/components/searchForms/newlybuilts/newlybuilts.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="220" lean-forward="true" selection-start-line="220" selection-end-line="278" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -709,25 +650,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="n#style#0;n#app-footer#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project/tslint.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="193" column="16" selection-start-line="193" selection-start-column="16" selection-end-line="193" selection-end-column="16" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-map/create-map.component.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -736,17 +660,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3036">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project/src/app/pages/create/create.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2168">
           <caret line="205" column="15" selection-start-line="205" selection-start-column="15" selection-end-line="205" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -760,16 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="231" column="29" selection-start-line="231" selection-start-column="29" selection-end-line="231" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-map/create-map.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -779,7 +696,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-map/create-map.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
+        <state relative-caret-position="2074">
           <caret line="123" column="7" selection-start-line="123" selection-start-column="7" selection-end-line="123" selection-end-column="7" />
           <folding>
             <element signature="e#0#70#0" expanded="true" />
@@ -787,27 +704,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/app.module.ts">
+    <entry file="file://$PROJECT_DIR$/Project/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
-            <element signature="e#0#56#0" expanded="true" />
+            <element signature="n#style#0;n#app-footer#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/app/pages/create/create.component.html">
+    <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-houses/create-houses.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="65" column="92" selection-start-line="65" selection-start-column="92" selection-end-line="65" selection-end-column="92" />
+        <state relative-caret-position="569">
+          <caret line="226" selection-start-line="226" selection-end-line="226" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="199" column="26" selection-end-line="215" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/apartments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/middleware/multer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/src/app/shared/services/data.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
@@ -816,10 +761,117 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/src/app/pages/create/create.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="25" column="46" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="46" />
+        <state relative-caret-position="119">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/app/pages/create/create.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="174" column="16" lean-forward="true" selection-end-line="226" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-commercials/create-commercials.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="226" selection-start-line="226" selection-end-line="226" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-houses/create-houses.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="140" column="10" lean-forward="true" selection-start-line="140" selection-start-column="10" selection-end-line="140" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/houses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/commercials.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/houses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/apartments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/commercials.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-houses/create-houses.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="173" column="83" selection-start-line="173" selection-start-column="83" selection-end-line="173" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-apartments/create-apartments.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1018">
+          <caret line="91" column="38" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-commercials/create-commercials.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/app/components/createForms/create-commercials/create-commercials.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
