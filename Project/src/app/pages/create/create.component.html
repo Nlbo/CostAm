@@ -3,7 +3,7 @@
 
     <div class="toggleAddAnnouncement">
       <div class="linksBox">
-        <a routerLink="apartments" routerLinkActive="addAnnouncementActive"
+        <a routerLink="apartments" routerLinkActive="addAnnouaddAnnouncement-input addNewPostncementActive"
            class="boldStyles">{{'Բնակարան' | translate:user}}</a>
         <a routerLink="houses" routerLinkActive="addAnnouncementActive"
            class="boldStyles">{{'Առանձնատուն' | translate:user}}</a>
@@ -26,7 +26,7 @@
     <form [formGroup]="form2" (ngSubmit)="form2Submit()" class="flewWrap">
       <input type="hidden" formControlName="mapDetails">
     <div class="addAnnouncement-w100 choosezUploadImage">
-      <p-fileUpload name="demo[]" customUpload="true" (uploadHandler)="onUpload($event)"
+      <p-fileUpload #fileUpload name="demo[]" customUpload="true" (uploadHandler)="onUpload($event)"
                     multiple="multiple" accept="image/*" maxFileSize="1000000"
                     auto="true" chooseLabel="{{'Ավելացնել նկարներ' | translate:user}}">
       </p-fileUpload>
@@ -63,11 +63,19 @@
                   placeholder="* {{'Լրացուցիչ ինֆորմացիա՝ բնութագրի համար' | translate:user}}"></textarea>
     </div>
     <div class="addAnnouncement-input addNewPost">
-      <button type="submit" [disabled]="false"
-              [ngClass]="{'btnActiveClass': false}">
+      <button type="submit" [disabled]="!(form2.valid && uploadedFiles.length > 0 && !invalid)"
+              [ngClass]="{'btnActiveClass': form2.valid && uploadedFiles.length > 0 && !invalid}">
         {{'Ավելացնել հայտարարություն' | translate:user}}
       </button>
     </div>
     </form>
   </div>
 </div>
+<!--<div class="addAnnouncement-input addNewPost">-->
+
+<!--<button type="submit"-->
+        <!--(click)="delteImages()"-->
+        <!--[ngClass]="{'btnActiveClass': true}">-->
+  <!--Jnjel-->
+<!--</button>-->
+<!--</div>-->

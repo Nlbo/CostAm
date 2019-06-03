@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const apartmentsSchema = new Schema({
+const HousesSchema = new Schema({
     additionalInfoFields: {
         type: [String],
         required: true
@@ -10,14 +10,6 @@ const apartmentsSchema = new Schema({
         type: String,
         required: true
     },
-    areaValue: {
-        type: String,
-        required: true
-    },
-    buildingTypes: {
-        type: String,
-        required: true
-       },
     ceilingValue: {
         type: String,
         required: true
@@ -41,6 +33,14 @@ const apartmentsSchema = new Schema({
         type: String,
         required: true
     },
+    landArea: {
+        type: String,
+        required: true
+    },
+    livingSpace: {
+        type: String,
+        required: true
+    },
     mapDetails: {
         lat:  {
             type: Number,
@@ -54,10 +54,6 @@ const apartmentsSchema = new Schema({
             type: String,
             required: true
         }
-    },
-    phone: {
-        type: [String],
-        required: true
     },
     prices: [{
         type: {
@@ -73,8 +69,8 @@ const apartmentsSchema = new Schema({
             required: true
         }
     }],
-    projects: {
-        type: String,
+    phone: {
+        type: [String],
         required: true
     },
     regions: {
@@ -92,11 +88,15 @@ const apartmentsSchema = new Schema({
         type: [String],
         required: true
     },
+    numberOfRooms: {
+        type: String,
+        required: true
+    },
     cities: {
         type: String,
         required: true
     },
-    numberOfRooms: {
+    buildingTypes: {
         type: String,
         required: true
     },
@@ -110,4 +110,4 @@ const apartmentsSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('apartments', apartmentsSchema);
+module.exports = mongoose.model('houses', HousesSchema);

@@ -16,6 +16,7 @@ import {CreateBusinessesComponent} from './components/createForms/create-busines
 import {CreateCodesComponent} from './components/createForms/create-codes/create-codes.component';
 import {CreateNewlybuiltsComponent} from './components/createForms/create-newlybuilts/create-newlybuilts.component';
 import {CreateComponent} from './pages/create/create.component';
+import {DetailsComponent} from "./pages/details/details.component";
 
 const routes: Routes = [
   {
@@ -30,7 +31,8 @@ const routes: Routes = [
       {path: '', redirectTo: '/apartments', pathMatch: 'full'}
     ]
   },
-  {path: 'create', component: CreateComponent, children: [
+  {
+    path: 'create', component: CreateComponent, children: [
       {path: 'apartments', component: CreateApartmentsComponent},
       {path: 'houses', component: CreateHousesComponent},
       {path: 'commercials', component: CreateCommercialsComponent},
@@ -39,7 +41,9 @@ const routes: Routes = [
       {path: 'codes', component: CreateCodesComponent},
       {path: 'newlyBuilts', component: CreateNewlybuiltsComponent},
       {path: '', redirectTo: '/apartments', pathMatch: 'full'}
-    ]},
+    ]
+  },
+  {path: 'details', component: DetailsComponent},
   {path: '', redirectTo: '/home/apartments', pathMatch: 'full'}
 ];
 

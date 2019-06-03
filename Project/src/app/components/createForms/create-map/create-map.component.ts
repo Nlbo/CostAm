@@ -31,6 +31,7 @@ export class CreateMapComponent implements OnInit {
 
   modal;
   inputMapAddress;
+  user: string;
 
   constructor(private mapInfoService: MapInfoService) {
   }

@@ -1,8 +1,10 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {EventsService} from "../../shared/services/events.service";
 import {DataService} from "../../shared/services/data.service";
+import * as $ from 'jquery';
+
 
 @Component({
   selector: 'app-create',
@@ -16,14 +18,16 @@ export class CreateComponent implements OnInit {
   form2: FormGroup;
   invalid = true;
 
+  @ViewChild("fileUpload", {static: false}) fileUpload;
+
+
   constructor(private router: Router, private events: EventsService, private service: DataService) {
     this.form = new FormData();
     events.changeEmitted$.subscribe(
       data => {
-        console.log(data);
         this.invalid = data.invalid;
         this.form.append(data.key, '');
-        this.form.set(data.key, JSON.stringify(data.value));
+        this.form.set(data.key, typeof (data.value) === "string" ? data.value : JSON.stringify(data.value));
       });
   }
 
@@ -45,9 +49,7 @@ export class CreateComponent implements OnInit {
     }
   }
 
-  sendForm(data) {
-    console.log(this.router.url.split('/')[2]);
-  }
+
 
   mapDetails(data) {
     this.form2.get('mapDetails').setValue(data);
@@ -69,6 +71,19 @@ export class CreateComponent implements OnInit {
     }
     this.service.postData(this.form, this.router.url.split('/')[2]).subscribe((data) => {
       console.log(data);
+      this.form.delete('mapDetails');
+      this.form.delete('phone');
+      this.form.delete('additionalInformation');
+      this.form.delete('images');
+      this.form2.reset();
+      this.uploadedFiles = [];
+      this.fileUpload.clear();
+      this.events.emitChange2({});
+    }, err => {
+      this.form.delete('mapDetails');
+      this.form.delete('phone');
+      this.form.delete('additionalInformation');
+      this.form.delete('images');
     });
   }
 

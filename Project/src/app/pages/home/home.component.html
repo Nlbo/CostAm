@@ -42,10 +42,42 @@
   </div>
   <div class="google-map">
     <div class="map-box">
-      <div class="mapouter">
+      <div *ngIf="searchPostsActive" class="mapouter">
         <app-map></app-map>
       </div>
-      <h2 class="top-announcements">{{'Տոպ հայտարարություններ' | translate:user}}</h2>
+      <h2 *ngIf="searchPostsActive" class="top-announcements">{{'Տոպ հայտարարություններ' | translate:user}}</h2>
+      <div *ngIf="searchPostsActive" class="carts">
+        <div class="cart" *ngFor="let cart of topCarts"
+             [ngClass]="{'activeSection': !searchPostsActive}">
+          <img [src]="url + '/uploads/' + cart.imgs[0]" alt="">
+          <div class="cart-info">
+            <h3>{{cart.regions}} </h3>
+            <p>{{cart.cities}}, {{cart.communities}}, {{cart.streets}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="searchCart" [ngClass]="{'activeSection': searchPostsActive}">
+        <div (click)="goToDetails(carts)" class="cartS" *ngFor="let carts of cycleData">
+          <div class="wAuto">
+            <h2>{{carts.regions}}, {{carts.cities}}, {{carts.communities}}</h2>
+            <img [src]="url + '/uploads/' + carts.imgs[0]" alt="">
+          </div>
+          <div class="cart-info">
+            <h3>{{carts.cities}}, {{carts.streets}}</h3>
+            <div class="moreInfo">
+              <p>{{carts.streets}}</p>
+              <p>{{carts.numberOfRooms || carts.buildingArea}}</p>
+              <p>{{carts.supportingArea  || (carts.flooring + '/' + carts.floor) }}</p>
+              <p>{{carts.areaValue || carts.landArea}}</p>
+              <p class="colorRed">
+                {{
+                carts.prices[0].price + ' ' + carts.prices[0].currency
+                }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="advertising-box">
 

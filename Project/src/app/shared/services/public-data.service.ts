@@ -26,10 +26,12 @@ export class PublicDataService {
     {label: '8', value: 8},
     {label: '9', value: 9},
     {label: '10', value: 10},
+    {label: '199', value: 199},
+    {label: '200', value: 200},
+    {label: '201', value: 201},
   ];
   surface = [
-    {label: 'Մինչև 50 քմ', value: {min: 1, max: 50}},
-    {label: '50-100', value: {min: 50, max: 100}},
+    {label: '0-100', value: {min: 3, max: 100}},
     {label: '100-150', value: {min: 100, max: 150}},
     {label: '150-200', value: {min: 150, max: 200}},
     {label: '250-300', value: {min: 250, max: 300}},

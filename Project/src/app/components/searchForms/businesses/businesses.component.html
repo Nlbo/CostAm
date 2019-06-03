@@ -1,7 +1,7 @@
 <div class="filter-content filter-contentStyle" style="margin-left: 10px; margin-right: 10px;">
   <form [formGroup]="form" (ngSubmit)="formSend()">
     <div class="col-md-3 input-style">
-      <p-multiSelect [options]="optionsData.transactions" formControlName="transactions"
+      <p-multiSelect [options]="optionsData.transactionsCommercial" formControlName="transactions"
                      [maxSelectedLabels]="1"
                      [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Գործարքի տեսակը' | translate:user}}"
                      [style]="{'width':'100%'}"></p-multiSelect>
@@ -37,7 +37,7 @@
     </div>
 
     <div class="col-md-3 input-style">
-      <p-multiSelect [options]="optionsData.sectorsBusiness" formControlName="sectorsBusiness"
+      <p-multiSelect [options]="optionsData.sectorsBusiness" formControlName="areasBusiness"
                      [maxSelectedLabels]="1"
                      [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Ոլորտ' | translate:user}}"
                      [style]="{'width':'100%'}"></p-multiSelect>
@@ -55,7 +55,7 @@
     </div>
 
     <div class="col-md-3 input-style">
-      <p-dropdown [options]="optionsData.currencies" [style]="{'width':'100%'}" formControlName="currencyForSale"
+      <p-dropdown [options]="optionsData.currencies" [style]="{'width':'100%'}" formControlName="currency"
                   placeholder=" {{'Արժույթ' | translate:user}} "></p-dropdown>
     </div>
 

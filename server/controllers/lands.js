@@ -1,4 +1,4 @@
-const Commercials = require('../models/commercials');
+const Lands = require('../models/lands');
 
 
 module.exports = {
@@ -30,28 +30,27 @@ module.exports = {
             currency: data.currencyForSale
         });
         try {
-            await new Commercials(data).save();
+            await new Lands(data).save();
             res.status(201).json(data);
         } catch (e) {
-            console.log(e)
             res.status(409).json({
-                msg: 'Error: Commercial not saved ...'
+                msg: 'Error: Lands not saved ...'
             })
         }
     },
     getData: async (req, res) => {
-        let commercials = {};
+        let lands = {};
 
-        req.body.transactions.length > 0 ? commercials.transactions = {"$in": req.body.transactions} : null;
-        req.body.regions.length > 0 ? commercials.regions = {"$in": req.body.regions} : null;
-        req.body.streets.length > 0 ? commercials.streets = {"$in": req.body.streets} : null;
-        req.body.communities.length > 0 ? commercials.communities = {"$in": req.body.communities} : null;
-        req.body.actualUse.length > 0 ? commercials.actualUse = {"$in": req.body.actualUse} : null;
-        req.body.cities.length > 0 ? commercials.cities = {"$in": req.body.cities} : null;
-        req.body.currency || req.body.pricesStart || req.body.pricesEnd ? commercials.prices =
+        req.body.transactions.length > 0 ? lands.transactions = {"$in": req.body.transactions} : null;
+        req.body.regions.length > 0 ? lands.regions = {"$in": req.body.regions} : null;
+        req.body.streets.length > 0 ? lands.streets = {"$in": req.body.streets} : null;
+        req.body.actualUse.length > 0 ? lands.actualUse = {"$in": req.body.actualUse} : null;
+        req.body.communities.length > 0 ? lands.communities = {"$in": req.body.communities} : null;
+        req.body.cities.length > 0 ? lands.cities = {"$in": req.body.cities} : null;
+        req.body.currency || req.body.pricesStart || req.body.pricesEnd ? lands.prices =
             {$elemMatch: {
                     'currency': req.body.currency ? req.body.currency : "USD",
-                    'type': {"$in": req.body.transactions.length > 0 ? req.body.transactions : ["Վաճառք", "Վարձակալություն"]},
+                    'type': {"$in":  req.body.transactions.length > 0 ? req.body.transactions : ["Վաճառք", "Վարձակալություն"]},
                     'price': {
                         "$gte": req.body.pricesStart ? req.body.pricesStart + "" : "0",
                         "$lte": req.body.pricesEnd ? req.body.pricesEnd + "" : "99999999999999999999999"
@@ -60,19 +59,14 @@ module.exports = {
         // apartmetns.prices = {$elemMatch: {'price': "2000"}};
         //  apartmetns.prices = {$elemMatch: {'currency' : "USD", 'type' : "Վարձակալություն", 'price' : {"$gt" : "0" , "$lte" : "1999"}}};
 
-        req.body.landArea ? commercials.landArea = {
+        req.body.landArea ? lands.landArea = {
             "$gte": "" + req.body.landArea.min,
             "$lte": "" + req.body.landArea.max
         } : null;
-
-        req.body.buildingArea ? commercials.buildingArea = {
-            "$gte": "" + req.body.buildingArea.min,
-            "$lte": "" + req.body.buildingArea.max
-        } : null;
         // apartmetns.prices = {$elemMatch: {'currency' : "AMD"}};
 
-        let data = await Commercials
-            .find(commercials);
+        let data = await Lands
+            .find(lands);
         res.status(201).json(data)
     }
 }

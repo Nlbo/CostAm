@@ -37,7 +37,7 @@
     </div>
 
     <div class="col-md-3 input-style">
-      <p-multiSelect [options]="optionsData.building" formControlName="buildingType"
+      <p-multiSelect [options]="optionsData.building" formControlName="buildingTypes"
                      [maxSelectedLabels]="1"
                      [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Շենքի տեսակ' | translate:user}}"
                      [style]="{'width':'100%'}"></p-multiSelect>
@@ -51,12 +51,12 @@
     </div>
 
     <div class="col-md-3 input-style">
-      <p-dropdown [options]="optionsData.surfaceHouse" [style]="{'width':'100%'}" formControlName="landArea"
+      <p-dropdown [options]="optionsData.surface" [style]="{'width':'100%'}" formControlName="landArea"
                   placeholder=" {{'Հողի մակերես' | translate:user}} "></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style">
-      <p-dropdown [options]="optionsData.residentialHouse" [style]="{'width':'100%'}" formControlName="livingSpace"
+      <p-dropdown [options]="optionsData.surface" [style]="{'width':'100%'}" formControlName="livingSpace"
                   placeholder=" {{'Բնակելի մակերես' | translate:user}} "></p-dropdown>
     </div>
 
@@ -82,7 +82,7 @@
     </div>
 
     <div class="col-md-3 input-style">
-      <p-dropdown [options]="optionsData.currencies" [style]="{'width':'100%'}" formControlName="currencyForSale"
+      <p-dropdown [options]="optionsData.currencies" [style]="{'width':'100%'}" formControlName="currency"
                   placeholder=" {{'Արժույթ' | translate:user}} "></p-dropdown>
     </div>
 

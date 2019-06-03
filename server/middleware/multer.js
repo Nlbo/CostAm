@@ -15,6 +15,15 @@ const storage = multer.diskStorage({
         if(req.originalUrl.split('/')[2] === 'houses' && req.method === 'POST'){
             cb(null, __dirname + '/../_uploads')
         }
+        if(req.originalUrl.split('/')[2] === 'commercials' && req.method === 'POST'){
+            cb(null, __dirname + '/../_uploads')
+        }
+        if(req.originalUrl.split('/')[2] === 'lands' && req.method === 'POST'){
+            cb(null, __dirname + '/../_uploads')
+        }
+        if(req.originalUrl.split('/')[2] === 'businesses' && req.method === 'POST'){
+            cb(null, __dirname + '/../_uploads')
+        }
 
     },
     filename: function (req, file, cb) {

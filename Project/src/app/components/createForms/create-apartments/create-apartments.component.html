@@ -1,4 +1,4 @@
-<form [formGroup]="form" (ngSubmit)="send()">
+<form [formGroup]="form" (ngSubmit)="send('')">
   <div class="flewWrap">
 
     <div class="addAnnouncement-input">
@@ -34,11 +34,13 @@
     </div>
 
     <div class="addAnnouncement-input">
-      <p-dropdown [options]="optionsData.numberOfRooms" [style]="{'width':'100%'}" formControlName="numberOfRooms"
-                  (onChange)="send('numberOfRooms')"
-                  placeholder="* {{'Սենյակների քանակը' | translate:user}} "></p-dropdown>
+      <p-spinner class="ui-fluid" size="1" [min]="0" [step]="1"
+                 placeholder="* {{'Սենյակների քանակը' | translate:user}} "
+                 [inputStyle]="{'width':'100%'}"
+                 formControlName="numberOfRooms"
+                 (onChange)="send('numberOfRooms')">
+      </p-spinner>
     </div>
-
 
     <div class="addAnnouncement-input flexBoxItem">
       <!--        [style]="{'width':'40%'}"-->

@@ -34,6 +34,7 @@ export class MapComponent implements OnInit {
   markersArray = [];
 
   selectedMarkerID;
+  user: string;
 
   constructor(private mapInfoService: MapInfoService) {
   }

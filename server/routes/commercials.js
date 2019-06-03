@@ -4,7 +4,7 @@ const controller = require('../controllers/commercials');
 const uploadImg = require('../middleware/multer');
 
 router.post('/', uploadImg.array('images'), controller.postData);
-router.get('/', controller.getData);
+router.post('/filtered', controller.getData);
 
 
 

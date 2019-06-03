@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {PublicDataService} from '../../../shared/services/public-data.service';
 import {Router} from '@angular/router';
+import {DataService} from "../../../shared/services/data.service";
+import {EventsService} from "../../../shared/services/events.service";
 
 @Component({
   selector: 'app-apartments',
@@ -19,7 +21,7 @@ export class ApartmentsComponent implements OnInit {
   communities: object[];
   streets: object[];
 
-  constructor(public optionsData: PublicDataService, private router: Router) {
+  constructor(public optionsData: PublicDataService, private router: Router, private service: DataService, private events: EventsService) {
 
     this.form = new FormGroup({
       transactions: new FormControl([], [Validators.required]),
@@ -27,12 +29,12 @@ export class ApartmentsComponent implements OnInit {
       cities: new FormControl([], [Validators.required]),
       communities: new FormControl([], [Validators.required]),
       streets: new FormControl([], [Validators.required]),
-      buildingType: new FormControl('', [Validators.required]),
-      numberOfRooms: new FormControl('', [Validators.required]),
+      buildingTypes: new FormControl('', [Validators.required]),
+      numberOfRooms: new FormControl([], [Validators.required]),
       areaValue: new FormControl('', [Validators.required]),
       pricesStart: new FormControl('', [Validators.required]),
       pricesEnd: new FormControl('', [Validators.required]),
-      currencyForSale: new FormControl('', [Validators.required]),
+      currency: new FormControl('', [Validators.required]),
     });
   }
 
@@ -90,10 +92,12 @@ export class ApartmentsComponent implements OnInit {
 
   formSend() {
     this.searchFlage = true;
-    setTimeout(_ => {
+
+    this.service.getFiltredApartmens(this.form.value).subscribe((data) => {
+      this.events.emitChange3(data);
       this.searchFlage = false;
-    }, 1600);
-    console.log(this.form.value)
+
+    });
   }
   goToCreate() {
     this.router.navigate(['create', 'apartments']);

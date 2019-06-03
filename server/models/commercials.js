@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const apartmentsSchema = new Schema({
+const CommercialsSchema = new Schema({
+    actualUse: {
+        type: [String],
+        required: true
+    },
     additionalInfoFields: {
         type: [String],
         required: true
@@ -10,15 +14,19 @@ const apartmentsSchema = new Schema({
         type: String,
         required: true
     },
-    areaValue: {
+    buildingArea: {
         type: String,
         required: true
     },
     buildingTypes: {
         type: String,
         required: true
-       },
+    },
     ceilingValue: {
+        type: String,
+        required: true
+    },
+    cities: {
         type: String,
         required: true
     },
@@ -37,7 +45,15 @@ const apartmentsSchema = new Schema({
         type: String,
         required: true
     },
+    front: {
+        type: String,
+        required: true
+    },
     interiorDecorations: {
+        type: String,
+        required: true
+    },
+    landArea: {
         type: String,
         required: true
     },
@@ -55,10 +71,6 @@ const apartmentsSchema = new Schema({
             required: true
         }
     },
-    phone: {
-        type: [String],
-        required: true
-    },
     prices: [{
         type: {
             type: String,
@@ -73,8 +85,8 @@ const apartmentsSchema = new Schema({
             required: true
         }
     }],
-    projects: {
-        type: String,
+    phone: {
+        type: [String],
         required: true
     },
     regions: {
@@ -84,20 +96,16 @@ const apartmentsSchema = new Schema({
     streets: {
         type: String
     },
+    supportingArea: {
+        type: String,
+        required: true
+    },
     transactions: {
         type: [String],
         required: true
     },
     imgs: {
         type: [String],
-        required: true
-    },
-    cities: {
-        type: String,
-        required: true
-    },
-    numberOfRooms: {
-        type: String,
         required: true
     },
     created: {
@@ -110,4 +118,4 @@ const apartmentsSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('apartments', apartmentsSchema);
+module.exports = mongoose.model('commercials', CommercialsSchema);

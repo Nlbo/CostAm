@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
 export class CodesComponent implements OnInit {
 
   searchFlage = false;
+  user: string;
 
 
   constructor(private router: Router) { }

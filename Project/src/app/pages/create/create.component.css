@@ -84,26 +84,20 @@
   margin-bottom: 40px;
 }
 
-.addNewPost button{
-  padding: 0 20px;
-  float: left;
-  width: 50%;
-  height: 40px;
-  font-weight: 700;
-  background: #f66!important;
-  color: #fff!important;
-  border-color: #f66!important;
-  cursor: pointer;
-}
+
 .addAnnouncement-input input, button{
   color: #245173;
-  width: 100%;
   border-color: transparent;
   outline: 0;
   box-shadow: 0 0 0 2px rgba(24,144,255,.2);
   border-right-width: 1px!important;
   height: 40px;
   border-radius: 4px;
+}
+.addNewPost button{
+  background: lightgray!important;
+  border-color: lightgray!important;
+  cursor: no-drop;
 }
 .addAnnouncement-input button{
   color: #fff;
@@ -205,10 +199,24 @@ textarea {
   min-height: 160px!important;
   padding: 8px;
 }
+.addNewPost button{
+  padding: 0 20px;
+  float: left;
+  width: 50%;
+  height: 40px;
+  font-weight: 700;
+}
 .addNewPost .btnActiveClass{
-  background: lightgray!important;
-  border-color: lightgray!important;
-  cursor: no-drop;
+  padding: 0 20px;
+  float: left;
+  width: 50%;
+  height: 40px;
+  font-weight: 700;
+  background: #f66!important;
+  color: #fff!important;
+  border-color: #f66!important;
+  cursor: pointer;
+
 }
 .required-fields-section{
   margin-bottom: 0px;

@@ -21,6 +21,10 @@ export class CreateApartmentsComponent implements OnInit {
 
 
   constructor(public optionsData: PublicDataService, private events: EventsService) {
+    events.changeEmitted2$.subscribe(
+      data => {
+        this.form.reset();
+      });
   }
 
   onClick(){
@@ -229,5 +233,6 @@ export class CreateApartmentsComponent implements OnInit {
     };
     this.events.emitChange(data);
   }
+
 
 }
