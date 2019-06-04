@@ -5,6 +5,7 @@ const uploadImg = require('../middleware/multer');
 
 router.post('/', uploadImg.array('images'), controller.postData);
 router.post('/filtered', controller.getData);
+router.get ('/', controller.getMapMarkers);
 
 
 

@@ -79,11 +79,22 @@ export class CreateComponent implements OnInit {
       this.uploadedFiles = [];
       this.fileUpload.clear();
       this.events.emitChange2({});
+      this.gotoTop();
     }, err => {
       this.form.delete('mapDetails');
       this.form.delete('phone');
       this.form.delete('additionalInformation');
       this.form.delete('images');
+    });
+
+
+  }
+
+  gotoTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
     });
   }
 

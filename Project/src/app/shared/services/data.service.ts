@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {AppGlobals} from "../../app.globals";
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
  // url = 'http://localhost:3000';
- url = window.location.origin;
-  constructor(private http: HttpClient) { }
+ url;
+  constructor(private http: HttpClient, private globals: AppGlobals) {
+    this.url = this.globals.url;
+  }
   postData(data, link) {
     return this.http.post(this.url + '/api/' + link, data);
   }

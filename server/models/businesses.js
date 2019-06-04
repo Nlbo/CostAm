@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const BusinessesSchema = new Schema({
+    announcementType: {
+        type: String,
+        default: 'Բիզնես'
+    },
     additionalInfoFields: {
         type: [String],
         required: true

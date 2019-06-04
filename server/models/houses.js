@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const HousesSchema = new Schema({
+    announcementType: {
+        type: String,
+        default: 'Առանձնատուն'
+    },
     additionalInfoFields: {
         type: [String],
         required: true

@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const CommercialsSchema = new Schema({
+    announcementType: {
+        type: String,
+        default: 'Կոմերցիոն'
+    },
     actualUse: {
         type: [String],
         required: true

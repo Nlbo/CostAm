@@ -85,6 +85,10 @@ module.exports = {
         let data = await Houses
             .find(houses);
         res.status(201).json(data)
+    },
+    getMapMarkers: async (req,res) => {
+        let candidate = await Houses.find({}).distinct('mapDetails');
+        res.status(201).json(candidate)
     }
 };
 

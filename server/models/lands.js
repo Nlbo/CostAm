@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const LandsSchema = new Schema({
+    announcementType: {
+        type: String,
+        default: 'Հողամաս'
+    },
     actualUse: {
         type: [String],
         required: true

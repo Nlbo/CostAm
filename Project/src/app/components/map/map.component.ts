@@ -40,61 +40,30 @@ export class MapComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.mapInfoService.getMarkersAnnouncementsApartment().subscribe((data) => {
+    this.mapInfoService.getMarkers('Բնակարան').subscribe((data) => {
       this.markersBnakaran = data;
 
       for (let i = 0; i < this.markersBnakaran.length; i++) {
         this.markersForBnakaranRed.push({
-          lat: this.markersBnakaran[i].mapDetails.lat,
-          lng: this.markersBnakaran[i].mapDetails.lng
+          lat: this.markersBnakaran[i].lat,
+          lng: this.markersBnakaran[i].lng
         });
       }
     });
+    this.initMap();
+  };
 
-    this.mapInfoService.getMarkersAnnouncementsHouse().subscribe((data) => {
-      this.markersArandznatun = data;
+  getMarkers(item) {
+    this.mapInfoService.getMarkers(item).subscribe((data) => {
+      this.markersBnakaran = data;
 
-      for (let i = 0; i < this.markersArandznatun.length; i++) {
-        this.markersForArandznatunGreen.push({
-          lat: this.markersArandznatun[i].mapDetails.lat,
-          lng: this.markersArandznatun[i].mapDetails.lng
+      for (let i = 0; i < this.markersBnakaran.length; i++) {
+        this.markersForBnakaranRed.push({
+          lat: this.markersBnakaran[i].lat,
+          lng: this.markersBnakaran[i].lng
         });
       }
     });
-
-    this.mapInfoService.getMarkersAnnouncementsCommercial().subscribe((data) => {
-      this.markersKomercion = data;
-
-      for (let i = 0; i < this.markersKomercion.length; i++) {
-        this.markersForKomercionYellow.push({
-          lat: this.markersKomercion[i].mapDetails.lat,
-          lng: this.markersKomercion[i].mapDetails.lng
-        });
-      }
-    });
-
-    this.mapInfoService.getMarkersAnnouncementsLandArea().subscribe((data) => {
-      this.markersHoxamas = data;
-
-      for (let i = 0; i < this.markersHoxamas.length; i++) {
-        this.markersForHoxamasBlue.push({
-          lat: this.markersHoxamas[i].mapDetails.lat,
-          lng: this.markersHoxamas[i].mapDetails.lng
-        });
-      }
-    });
-
-    this.mapInfoService.getMarkersAnnouncementsBusiness().subscribe((data) => {
-      this.markersBiznes = data;
-
-      for (let i = 0; i < this.markersBiznes.length; i++) {
-        this.markersForBiznesPurple.push({
-          lat: this.markersBiznes[i].mapDetails.lat,
-          lng: this.markersBiznes[i].mapDetails.lng
-        });
-      }
-    });
-
     this.initMap();
   }
 
@@ -141,8 +110,8 @@ export class MapComponent implements OnInit {
 
       const infoWindow = new google.maps.InfoWindow({
         content: '<a style="display: flex;flex-direction: column;align-items: center" ' +
-          'href="details-search/' + this.markersBnakaran[i].id + '?announcementType=' + this.markersBnakaran[i].announcementType + '"' + '>\n' +
-          '<img src="../../../assets/images/1.jpeg" style="max-width: 80px;height: 80px;object-fit: cover">\n' +
+          'href="details-search/' + this.markersBnakaran[i].lat + '?announcementType=' + this.markersBnakaran[i].lat + '"' + '>\n' +
+          '<img src="assets/images/1.jpeg" style="max-width: 80px;height: 80px;object-fit: cover">\n' +
           '<br>\n' +
           this.markersBnakaran[i].mapDetails.address +
           '</a>'
