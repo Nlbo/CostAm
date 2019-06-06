@@ -2,10 +2,8 @@
   width: 100%;
   height: 320px;
 }
-
 #mapSearch{
-  width: 98%;
-  max-width: -webkit-fill-available;
+  width: 100%;
 }
 /*button{*/
 /*width: 20%;*/
@@ -44,5 +42,4 @@
   .btnHomeMap button{
     width:100%;
   }
-
 }

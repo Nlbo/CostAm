@@ -77,7 +77,8 @@ module.exports = {
         res.status(201).json(data)
     },
     getMapMarkers: async (req,res) => {
-        let candidate = await Apartments.find({}).distinct('mapDetails');
+        // let candidate = await Apartments.find({}).distinct('mapDetails');
+        let candidate = await Apartments.find({});
         res.status(201).json(candidate)
     }
 };

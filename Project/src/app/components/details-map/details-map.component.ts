@@ -39,12 +39,12 @@ export class DetailsMapComponent implements OnInit {
 
             this.markersHoxamas = this.data;
             for (let i = 0; i < this.data.length; i++) {
-              if (this.data[i].address == this.address) {
-                this.lat = parseFloat(this.data[i].lat);
-                this.lng = parseFloat(this.data[i].lng);
+              if (this.data[i].mapDetails.address == this.address) {
+                this.lat = parseFloat(this.data[i].mapDetails.lat);
+                this.lng = parseFloat(this.data[i].mapDetails.lng);
               } else {
-                this.otherMarkersLat.push(parseFloat(this.data[i].lat));
-                this.otherMarkersLng.push(parseFloat(this.data[i].lng));
+                this.otherMarkersLat.push(parseFloat(this.data[i].mapDetails.lat));
+                this.otherMarkersLng.push(parseFloat(this.data[i].mapDetails.lng));
               }
             }
             this.initMap();

@@ -1,9 +1,9 @@
 <div class="btnHomeMap">
-  <button (click)="getMarkers('Բնակարան')" [ngClass]="{'btnMarkerActiveClass': btnRedMarkerFlag}">{{'Բնակարան' | translate:user}}</button>
-  <button (click)="getMarkers('Առանձնատուն')" [ngClass]="{'btnMarkerActiveClass': btnGreenMarkerFlag}">{{'Առանձնատուն' | translate:user}}</button>
-  <button (click)="getMarkers('Կոմերցիոն')" [ngClass]="{'btnMarkerActiveClass': btnYellowMarkerFlag}">{{'Կոմերցիոն' | translate:user}}</button>
-  <button (click)="getMarkers('Հողամաս')" [ngClass]="{'btnMarkerActiveClass': btnBlueMarkerFlag}">{{'Հողամաս' | translate:user}}</button>
-  <button (click)="getMarkers('Բիզնես')" [ngClass]="{'btnMarkerActiveClass': btnPurpleMarkerFlag}">{{'Բիզնես' | translate:user}}</button>
+  <button (click)="getMarkers('Բնակարան')" >{{'Բնակարան' | translate:user}}</button>
+  <button (click)="getMarkers('Առանձնատուն')" >{{'Առանձնատուն' | translate:user}}</button>
+  <button (click)="getMarkers('Կոմերցիոն')" >{{'Կոմերցիոն' | translate:user}}</button>
+  <button (click)="getMarkers('Հողամաս')">{{'Հողամաս' | translate:user}}</button>
+  <button (click)="getMarkers('Բիզնես')" >{{'Բիզնես' | translate:user}}</button>
   <input type="text" id="mapSearch" size="50" placeholder="{{'Մուտքագրեք հասցեն' | translate:user}}">
   <div id="map" class="mapHome"></div>
 </div>

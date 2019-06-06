@@ -46,13 +46,13 @@ app.use('/api/random', random);
 
 
 
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/../Project/dist/Project/index.html'));
-});
-
-app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname + '/../Project/dist/Project/index.html'));
-});
+// app.get('/', function (req, res) {
+//     res.sendFile(path.join(__dirname + '/../Project/dist/Project/index.html'));
+// });
+//
+// app.get('/*', function (req, res) {
+//     res.sendFile(path.join(__dirname + '/../Project/dist/Project/index.html'));
+// });
 //--------------------------------------
 
 

@@ -70,7 +70,8 @@ module.exports = {
         res.status(201).json(data)
     },
     getMapMarkers: async (req,res) => {
-        let candidate = await Lands.find({}).distinct('mapDetails');
+        // let candidate = await Lands.find({}).distinct('mapDetails');
+        let candidate = await Lands.find({});
         res.status(201).json(candidate)
     }
 }
