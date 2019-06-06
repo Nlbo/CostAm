@@ -30,14 +30,25 @@
                      [style]="{'width':'100%'}"></p-multiSelect>
     </div>
 
-    <div class="appartament-button" style="margin-top: 20px;">
-      <button (click)="goToCreate()" id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>
+    <div class="col-md-3 input-style hiddenInputs"></div>
+
+    <div class="col-md-3 input-style appartament-button">
       <button type="submit" id="search"
               class="twoToneButton"
               [ngClass]="{'spinning': searchFlage, 'ngPadding': searchFlage}">
         <i class="fas fa-search"  [ngClass]="{'searchIconHidden': searchFlage}"></i>
         {{'Փնտրել' | translate:user}}
       </button>
+    </div>
+
+    <div class="appartament-button" style="margin-top: 20px;">
+      <button (click)="goToCreate()" id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>
+<!--      <button type="submit" id="search"-->
+<!--              class="twoToneButton"-->
+<!--              [ngClass]="{'spinning': searchFlage, 'ngPadding': searchFlage}">-->
+<!--        <i class="fas fa-search"  [ngClass]="{'searchIconHidden': searchFlage}"></i>-->
+<!--        {{'Փնտրել' | translate:user}}-->
+<!--      </button>-->
     </div>
 
     <!--<button type="submit">Value</button>-->

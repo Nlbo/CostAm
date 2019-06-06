@@ -7,7 +7,7 @@ const uploadImg = require('../middleware/multer');
 
 router.get('/', async (req,res) => {
     let data1 = await Apartments.find({});
-    let data2 = await Apartments.find({});
+    let data2 = await Houses.find({});
     let data = data1.concat(data2);
     res.status(201).json(data);
 });

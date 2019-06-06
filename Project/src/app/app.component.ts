@@ -12,6 +12,9 @@ export class AppComponent {
   showScroll: boolean;
   showScrollHeight = 300;
   hideScrollHeight = 10;
+
+
+
   @HostListener('window:scroll', [])
   onWindowScroll()
   {

@@ -24,6 +24,8 @@ export class HomeComponent implements OnInit {
         this.cycleData = data;
         this.searchPostsActive = false;
       });
+
+
   }
 
 
@@ -31,7 +33,15 @@ export class HomeComponent implements OnInit {
     this.service.getRandoms().subscribe((data: any) => {
       this.topCarts = data;
     })
+    if (localStorage.getItem('search')) {
+      this.cycleData = JSON.parse(localStorage.getItem('search'));
+      this.searchPostsActive = false;
+    }
+    this.service.getRandoms().subscribe((data: any) => {
+      this.topCarts = data;
+    })
   }
+
   goToDetails(cart) {
     localStorage.setItem('cart', JSON.stringify(cart));
     localStorage.setItem('carts', JSON.stringify(this.cycleData));

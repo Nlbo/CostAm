@@ -23,13 +23,12 @@
           <button routerLink="businesses" type="button" class="btn btn-lg btn-style">
             <img src="assets/images/office-logo.png" alt="" style="width: 40px">{{'Բիզնես' | translate:user}}
           </button>
-          <button routerLink="codes" type="button" class="btn btn-lg btn-style">
-            <img src="assets/images/code.png" alt="" style="width: 40px">{{'Կոդ' | translate:user}}
-          </button>
           <button routerLink="newlyBuilts" type="button" class="btn btn-lg btn-style">
             <img src="assets/images/home-logo.png" alt="" style="width: 40px">{{'Նորակառույց' | translate:user}}
           </button>
-
+          <button routerLink="codes" type="button" class="btn btn-lg btn-style">
+            <img src="assets/images/code.png" alt="" style="width: 40px">{{'Կոդ' | translate:user}}
+          </button>
 
           <!--    <div class="filter-project">-->
         </div>
@@ -45,7 +44,7 @@
       <div *ngIf="searchPostsActive" class="mapouter">
         <app-map></app-map>
       </div>
-      <h2 *ngIf="searchPostsActive" class="top-announcements">{{'Տոպ հայտարարություններ' | translate:user}}</h2>
+      <h2 *ngIf="searchPostsActive" class="top-announcements">{{'Լավագույն առաջարկներ' | translate:user}}</h2>
       <div *ngIf="searchPostsActive" class="carts">
         <div class="cart" *ngFor="let cart of topCarts"
              [ngClass]="{'activeSection': !searchPostsActive}">
@@ -79,13 +78,13 @@
         </div>
       </div>
     </div>
-    <div class="advertising-box">
+    <div class="advertising-box advertising-flex">
 
-      <div class="evaluation">
-        <img src="assets/images/logoSmall.png" alt="">
+      <div class="evaluation advertising-flex-item">
+        <img src="assets/images/Logo_vertical_black.png" alt="" style="max-width: 124px;margin-bottom: 12px;">
         <a href="" class="animate-text">{{'Գնահատում' | translate:user}}</a>
       </div>
-      <div class="btnBox">
+      <div class="btnBox advertising-flex-item">
         <button class="openPosition">
           <span>{{'Բաց շուկա' | translate:user}}</span>
         </button>

@@ -63,6 +63,7 @@ module.exports = {
                         "$lte": req.body.pricesEnd ? req.body.pricesEnd + "" : "99999999999999999999999"
                     }}
             } : null;
+
        // apartmetns.prices = {$elemMatch: {'price': "2000"}};
        //  apartmetns.prices = {$elemMatch: {'currency' : "USD", 'type' : "Վարձակալություն", 'price' : {"$gt" : "0" , "$lte" : "1999"}}};
 

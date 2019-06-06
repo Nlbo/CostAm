@@ -33,6 +33,7 @@ export class CreateComponent implements OnInit {
 
 
   ngOnInit() {
+    this.gotoTopInit();
     this.form2 = new FormGroup({
       mapDetails: new FormControl('', [Validators.required]),
       phone1: new FormControl('', [Validators.required]),
@@ -95,6 +96,12 @@ export class CreateComponent implements OnInit {
       top: 0,
       left: 0,
       behavior: 'smooth'
+    });
+  }
+  gotoTopInit() {
+    window.scroll({
+      top: 0,
+      left: 0
     });
   }
 

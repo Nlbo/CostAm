@@ -119,7 +119,8 @@
   padding: 0 11px;
 }
 .boldStyles{
-  font-family: "Roboto-Bold";
+  /*font-family: "Roboto-Bold";*/
+  font-family: "Montserrat-Light";
 }
 .flewWrap{
   display: flex;
@@ -198,6 +199,7 @@ textarea {
   width: 100%;
   min-height: 160px!important;
   padding: 8px;
+  font-family: "Montserrat-Light";
 }
 .addNewPost button{
   padding: 0 20px;
@@ -205,6 +207,7 @@ textarea {
   width: 50%;
   height: 40px;
   font-weight: 700;
+  font-family: "Montserrat-Light";
 }
 .addNewPost .btnActiveClass{
   padding: 0 20px;

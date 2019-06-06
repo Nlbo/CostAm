@@ -29,7 +29,8 @@
 }
 .searchDetailsPage h2{
   color: #f66;
-  font-family: "Roboto-Bold";
+  /*font-family: "Roboto-Bold";*/
+  font-family: "Montserrat-Light";
 }
 .searchDetailsPage .moreInfo > div{
   display: inline-block;
@@ -45,7 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Roboto-Bold";
+  font-family: "Montserrat-Light";
   flex-direction: column;
   border-radius: 4px!important;
 }
@@ -89,6 +90,7 @@
   flex-wrap: wrap;
   width: 44%;
   margin-bottom: 10px;
+  font-family: "Montserrat-Light";
 }
 .details-bottom-left h2{
   color: black;
@@ -195,7 +197,10 @@
   margin-bottom: 8px;
 }
 .boldStyles{
-  font-family: "Roboto-Bold";
+  font-family: "Montserrat-Light";
+}
+.addInfoStyle{
+  font-family: "Montserrat-Light";
 }
 .otherInfo > div > p{
   margin-right: 4px;

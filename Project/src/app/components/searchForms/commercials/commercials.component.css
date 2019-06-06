@@ -5,6 +5,9 @@
 }
 .filter-contentStyle{
   padding: 14px;
+  padding: 0;
+  text-align: center;
+  margin: 0 -4px!important;
 }
 .newly-build{
   width: 99.5%;
@@ -150,20 +153,21 @@
 }
 .input-style{
   display: inline-block;
-  width: 25%;
   text-align: center;
   margin-bottom: 8px;
+  width: 16.6%;
 }
 .appartament-button button{
   padding: 0 18px;
-  height: 40px;
+  height: 36px;
   font-weight: 700;
   background: #f66;
   color: #fff;
   outline: none;
   border: none;
   border-radius: 4px;
-  font-family: "Roboto-Regular";
+  font-family: "Montserrat-Light";
+  font-weight: normal;
   cursor: pointer;
 }
 #add-announcement{}
@@ -178,13 +182,22 @@
   padding: 4px 6px;
   text-align: left;
 }
-
-@media (max-width: 1200px) {
+@media (max-width: 1290px) {
   .input-style{
-    width: 50%;
+    width: 33%;
   }
+}
+@media (max-width: 1200px) {
+  /*.input-style{*/
+  /*  width: 50%;*/
+  /*}*/
   .newly-build{
     width: 99%;
+  }
+}
+@media (max-width: 768px) {
+  .input-style{
+    width: 50%;
   }
 }
 @media (max-width: 576px) {
@@ -277,3 +290,8 @@
   }
 }
 /*search icon spinner start*/
+#add-announcement{
+  position: fixed;
+  right: 82px;
+  bottom: 20px;
+}

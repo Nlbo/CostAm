@@ -1,9 +1,24 @@
+<!--<div class="btnHomeMap">-->
+<!--  <button (click)="getMarkers('Բնակարան')" >{{'Բնակարան' | translate:user}}</button>-->
+<!--  <button (click)="getMarkers('Առանձնատուն')" >{{'Առանձնատուն' | translate:user}}</button>-->
+<!--  <button (click)="getMarkers('Կոմերցիոն')" >{{'Կոմերցիոն' | translate:user}}</button>-->
+<!--  <button (click)="getMarkers('Հողամաս')">{{'Հողամաս' | translate:user}}</button>-->
+<!--  <button (click)="getMarkers('Բիզնես')" >{{'Բիզնես' | translate:user}}</button>-->
+<!--  <input type="text" id="mapSearch" size="50" placeholder="{{'Մուտքագրեք հասցեն' | translate:user}}">-->
+<!--  <div id="map" class="mapHome"></div>-->
+<!--</div>-->
+
+
 <div class="btnHomeMap">
-  <button (click)="getMarkers('Բնակարան')" >{{'Բնակարան' | translate:user}}</button>
-  <button (click)="getMarkers('Առանձնատուն')" >{{'Առանձնատուն' | translate:user}}</button>
-  <button (click)="getMarkers('Կոմերցիոն')" >{{'Կոմերցիոն' | translate:user}}</button>
-  <button (click)="getMarkers('Հողամաս')">{{'Հողամաս' | translate:user}}</button>
-  <button (click)="getMarkers('Բիզնես')" >{{'Բիզնես' | translate:user}}</button>
-  <input type="text" id="mapSearch" size="50" placeholder="{{'Մուտքագրեք հասցեն' | translate:user}}">
+  <div class="mapBtnFlex">
+    <button (click)="showRedMarkers()" [ngClass]="{'btnMarkerActiveClass': btnRedMarkerFlag}">{{'Բնակարան' | translate:user}}</button>
+    <button (click)="showGreenMarkers()" [ngClass]="{'btnMarkerActiveClass': btnGreenMarkerFlag}">{{'Առանձնատուն' | translate:user}}</button>
+    <button (click)="showYellowMarkers()" [ngClass]="{'btnMarkerActiveClass': btnYellowMarkerFlag}">{{'Կոմերցիոն' | translate:user}}</button>
+    <button (click)="showBlueMarkers()" [ngClass]="{'btnMarkerActiveClass': btnBlueMarkerFlag}">{{'Հողամաս' | translate:user}}</button>
+    <button (click)="showPurpleMarkers()" [ngClass]="{'btnMarkerActiveClass': btnPurpleMarkerFlag}">{{'Բիզնես' | translate:user}}</button>
+
+    <button (click)="showOrangeMarkers()" [ngClass]="{'btnMarkerActiveClass': btnOrangeMarkerFlag}">{{'Նորակառույց' | translate:user}}</button>
+  </div>
+    <input type="text" id="mapSearch" size="50" placeholder="{{'Մուտքագրեք հասցեն' | translate:user}}">
   <div id="map" class="mapHome"></div>
 </div>

@@ -25,10 +25,21 @@ export class DetailsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.gotoTopInit();
   }
 
   ngOnDestroy(): void {
-    localStorage.removeItem('cart')
+    localStorage.removeItem('cart');
+    localStorage.removeItem('this.markersBnakaran[i]');
+  }
+
+
+
+  gotoTopInit() {
+    window.scroll({
+      top: 0,
+      left: 0
+    });
   }
 
 }
