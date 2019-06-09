@@ -11,6 +11,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
   user: string;
   address;
   data;
+  options;
   images;
   constructor(private mapMarkerService: MapInfoService) {
     this.cart = JSON.parse(localStorage.getItem('cart'));
@@ -26,6 +27,10 @@ export class DetailsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.gotoTopInit();
+    this.options = {
+      onUpdate: (event: any) => {
+      }
+    };
   }
 
   ngOnDestroy(): void {

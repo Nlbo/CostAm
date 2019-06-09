@@ -14,8 +14,8 @@ export class DataService {
   postData(data, link) {
     return this.http.post(this.url + '/api/' + link, data);
   }
-  getRandoms() {
-    return this.http.get(this.url + '/api/random');
+  getRandoms(item) {
+    return this.http.post(this.url + '/api/random', item);
   }
 
   getFiltredApartmens(data) {

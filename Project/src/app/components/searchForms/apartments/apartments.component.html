@@ -3,6 +3,7 @@
     <div class="col-md-3 input-style">
       <p-multiSelect [options]="optionsData.transactions" formControlName="transactions"
                      [maxSelectedLabels]="1"
+                     [filter]="false"
                      [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Գործարքի տեսակը' | translate:user}}"
                      [style]="{'width':'100%'}"></p-multiSelect>
     </div>
@@ -39,6 +40,7 @@
     <div class="col-md-3 input-style">
       <p-multiSelect [options]="optionsData.building" formControlName="buildingTypes"
                      [maxSelectedLabels]="1"
+                     [filter]="false"
                      [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Շենքի տեսակ' | translate:user}}"
                      [style]="{'width':'100%'}"></p-multiSelect>
     </div>
@@ -46,33 +48,34 @@
     <div class="col-md-3 input-style">
       <p-multiSelect [options]="optionsData.rooms" formControlName="numberOfRooms"
                      [maxSelectedLabels]="1"
+                     [filter]="false"
                      [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Սենյակների քանակը' | translate:user}}"
                      [style]="{'width':'100%'}"></p-multiSelect>
     </div>
 
     <div class="col-md-3 input-style">
       <p-dropdown [options]="optionsData.surface" [style]="{'width':'100%'}" formControlName="areaValue"
-                  placeholder=" {{'Մակերես քմ' | translate:user}} "></p-dropdown>
+                  placeholder=" {{'Մակերես քմ' | translate:user}} " [showClear]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style">
-      <p-dropdown [options]="optionsData.pricesStart" [style]="{'width':'100%'}" formControlName="pricesStart"
-                  placeholder=" {{'Գինը (սկսած)' | translate:user}} "></p-dropdown>
+      <p-dropdown (onChange)="foo()" [options]="optionsData.pricesStart" [style]="{'width':'100%'}" formControlName="pricesStart"
+                  placeholder=" {{'Գինը (սկսած)' | translate:user}} " [showClear]="true" [filter]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style">
       <p-dropdown [options]="optionsData.pricesEnd" [style]="{'width':'100%'}" formControlName="pricesEnd"
-                  placeholder=" {{'Մինչև' | translate:user}} "></p-dropdown>
+                  placeholder=" {{'Մինչև' | translate:user}} " [showClear]="true" [filter]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style">
       <p-dropdown [options]="optionsData.currencies" [style]="{'width':'100%'}" formControlName="currency"
-                  placeholder=" {{'Արժույթ' | translate:user}} "></p-dropdown>
+                  placeholder=" {{'Արժույթ' | translate:user}} " [showClear]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style appartament-button">
       <div class="newCheckbox">
-        <input type="checkbox"><label>{{'Նորակառույց' | translate:user}}</label>
+        <input type="checkbox" name="newlyBuilds" value="Նորակառույց" formControlName="newlyBuilds"><label>{{'Նորակառույց' | translate:user}}</label>
       </div>
 
       <button type="submit" id="search"

@@ -13,3 +13,14 @@
 }
 /* You can add global styles to this file, and also import other style files */
 
+.searchSectionNone .ui-multiselect-panel .ui-multiselect-header{
+  display: none!important;
+  opacity: 0;
+}
+
+.ui-galleria .ui-galleria-filmstrip-wrapper {
+  margin-top: 210px!important;
+}
+.ng-dirty.ng-invalid > .ui-dropdown{
+  border: 1px solid #a6a6a6!important;
+}

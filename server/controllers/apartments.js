@@ -16,7 +16,6 @@ module.exports = {
         data.mapDetails = JSON.parse(data.mapDetails);
         data.phone = JSON.parse(data.phone);
         data.transactions = JSON.parse(data.transactions);
-        data.numberOfRooms = "" + data.numberOfRooms;
         data.prices = [];
         if (data.priceForRent) data.prices.push({
             type: 'Վարձակալություն',
@@ -46,43 +45,74 @@ module.exports = {
     },
     getData: async (req, res) => {
         let apartmetns = {};
+        // console.log(req.body)
 
-        req.body.transactions.length > 0 ? apartmetns.transactions = {"$in": req.body.transactions} : null;
-        req.body.regions.length > 0 ? apartmetns.regions = {"$in": req.body.regions} : null;
-        req.body.streets.length > 0 ? apartmetns.streets = {"$in": req.body.streets} : null;
-        req.body.communities.length > 0 ? apartmetns.communities = {"$in": req.body.communities} : null;
-        req.body.cities.length > 0 ? apartmetns.cities = {"$in": req.body.cities} : null;
-        req.body.buildingTypes.length > 0 ? apartmetns.buildingTypes = {"$in": req.body.buildingTypes} : null;
-        req.body.numberOfRooms.length > 0 ? apartmetns.numberOfRooms = {"$in": req.body.numberOfRooms} : null;
-        req.body.currency || req.body.pricesStart || req.body.pricesEnd ? apartmetns.prices =
-            {$elemMatch: {
-                    'currency': req.body.currency ? req.body.currency : "USD",
-                    'type': {"$in":  req.body.transactions.length > 0 ? req.body.transactions : ["Վաճառք", "Օրավարձով", "Վարձակալություն"]},
-                    'price': {
-                        "$gte": req.body.pricesStart ? req.body.pricesStart + "" : "0",
-                        "$lte": req.body.pricesEnd ? req.body.pricesEnd + "" : "99999999999999999999999"
-                    }}
+        let arr = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40];
+
+
+        let filters = {
+            pricesStart: req.body.pricesStart ? req.body.pricesStart : 0,
+            pricesEnd: req.body.pricesEnd ? req.body.pricesEnd : 9999999999999999,
+            currency: req.body.currency ? req.body.currency : ["USD", "AMD"],
+            transactions: req.body.transactions.length > 0 ? req.body.transactions : ["Վաճառք", "Օրավարձով", "Վարձակալություն"],
+        };
+
+
+        let numer = [];
+
+
+        if (req.body.numberOfRooms.length > 0) {
+            req.body.numberOfRooms.forEach(items => {
+                if (items === 8) {
+                    numer = numer.concat(arr);
+                } else {
+                    numer.push(items);
+                }
+            });
+        }
+
+
+
+            req.body.newlyBuilds ? apartmetns.projects = 'Նորակառույց' : null;
+            req.body.transactions.length > 0 ? apartmetns.transactions = {"$in": req.body.transactions} : null;
+            req.body.regions.length > 0 ? apartmetns.regions = {"$in": req.body.regions} : null;
+            req.body.streets.length > 0 ? apartmetns.streets = {"$in": req.body.streets} : null;
+            req.body.communities.length > 0 ? apartmetns.communities = {"$in": req.body.communities} : null;
+            req.body.cities.length > 0 ? apartmetns.cities = {"$in": req.body.cities} : null;
+            req.body.numberOfRooms.length > 0 ? apartmetns.numberOfRooms = {"$in": numer} : null;
+            req.body.buildingTypes.length > 0 ? apartmetns.buildingTypes = {"$in": req.body.buildingTypes} : null;
+            req.body.currency || req.body.pricesStart || req.body.pricesEnd ? apartmetns.prices =
+                {
+                    $elemMatch: {
+                        'currency': req.body.currency ? req.body.currency : ["USD", "AMD"],
+                        'type': {"$in": req.body.transactions.length > 0 ? req.body.transactions : ["Վաճառք", "Օրավարձով", "Վարձակալություն"]}
+                    }
+                } : null;
+            // "$gt": req.body.pricesStart ? req.body.pricesStart + "" : "0",
+            //     "$lte": req.body.pricesEnd ? req.body.pricesEnd + "" : "99999999999999999999999"
+            // apartmetns.prices = {$elemMatch: {'price': "2000"}};
+            //  apartmetns.prices = {$elemMatch: {'currency' : "USD", 'type' : "Վարձակալություն", 'price' : {"$gt" : "0" , "$lte" : "1999"}}};
+
+
+            req.body.areaValue ? filters.areaValue = {
+                min: req.body.areaValue.min,
+                max: req.body.areaValue.max
             } : null;
+            // apartmetns.prices = {$elemMatch: {'currency' : "AMD"}};
 
-       // apartmetns.prices = {$elemMatch: {'price': "2000"}};
-       //  apartmetns.prices = {$elemMatch: {'currency' : "USD", 'type' : "Վարձակալություն", 'price' : {"$gt" : "0" , "$lte" : "1999"}}};
-
-        req.body.areaValue ? apartmetns.areaValue = {
-            "$gte": "" + req.body.areaValue.min,
-            "$lte": "" + req.body.areaValue.max
-        } : null;
-        // apartmetns.prices = {$elemMatch: {'currency' : "AMD"}};
-
-        let data = await Apartments
-            .find(apartmetns);
-        res.status(201).json(data)
+            let data = await Apartments
+                .find(apartmetns);
+            res.status(201).json({
+                data: data,
+                filters: filters
+            })
     },
-    getMapMarkers: async (req,res) => {
-        // let candidate = await Apartments.find({}).distinct('mapDetails');
-        let candidate = await Apartments.find({});
-        res.status(201).json(candidate)
-    }
-};
+        getMapMarkers: async (req, res) => {
+            // let candidate = await Apartments.find({}).distinct('mapDetails');
+            let candidate = await Apartments.find({});
+            res.status(201).json(candidate)
+        }
+    };
 
 // transactions: {$in: req.body.transactions},
 // regions: {$in: req.body.regions},

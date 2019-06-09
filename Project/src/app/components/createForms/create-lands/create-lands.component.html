@@ -5,6 +5,7 @@
       <p-multiSelect [options]="optionsData.transactionsCommercial" formControlName="transactions"
                      [maxSelectedLabels]="1"
                      (onChange)="send('transactions')"
+                     [filter]="false"
                      [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="* {{'Գործարքի տեսակը' | translate:user}}"
                      [style]="{'width':'100%'}"></p-multiSelect>
     </div>
@@ -12,24 +13,28 @@
     <div class="addAnnouncement-input">
       <p-dropdown [options]="optionsData.regions" [style]="{'width':'100%'}" formControlName="regions"
                   (onChange)="send('regions')"
+                  [filter]="true"
                   placeholder="* {{'Մարզ' | translate:user}} "></p-dropdown>
     </div>
 
     <div class="addAnnouncement-input">
       <p-dropdown [options]="cities" [style]="{'width':'100%'}" formControlName="cities"
                   (onChange)="send('cities')"
+                  [filter]="true"
                   placeholder="* {{'Քաղաք' | translate:user}} "></p-dropdown>
     </div>
 
     <div class="addAnnouncement-input">
       <p-dropdown [options]="communities" [style]="{'width':'100%'}" formControlName="communities"
                   (onChange)="send('communities')"
+                  [filter]="true"
                   placeholder="* {{'Համայնք' | translate:user}} "></p-dropdown>
     </div>
 
     <div class="addAnnouncement-input">
       <p-dropdown [options]="streets" [style]="{'width':'100%'}" formControlName="streets"
                   (onChange)="send('streets')"
+                  [filter]="true"
                   placeholder="* {{'Փողոց' | translate:user}}"></p-dropdown>
     </div>
 

@@ -45,18 +45,18 @@
 
 
     <div class="col-md-3 input-style">
-      <p-dropdown [options]="optionsData.pricesStart" [style]="{'width':'100%'}" formControlName="pricesStart"
-                  placeholder=" {{'Գինը (սկսած)' | translate:user}} "></p-dropdown>
+      <p-dropdown (onChange)="foo()" [options]="optionsData.pricesStart" [style]="{'width':'100%'}" formControlName="pricesStart"
+                  placeholder=" {{'Գինը (սկսած)' | translate:user}} " [showClear]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style">
       <p-dropdown [options]="optionsData.pricesEnd" [style]="{'width':'100%'}" formControlName="pricesEnd"
-                  placeholder=" {{'Մինչև' | translate:user}} "></p-dropdown>
+                  placeholder=" {{'Մինչև' | translate:user}} " [showClear]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style">
       <p-dropdown [options]="optionsData.currencies" [style]="{'width':'100%'}" formControlName="currency"
-                  placeholder=" {{'Արժույթ' | translate:user}} "></p-dropdown>
+                  placeholder=" {{'Արժույթ' | translate:user}} " [showClear]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style hiddenInputs"></div>

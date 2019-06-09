@@ -196,6 +196,9 @@
     display: none;
   }
 }
+.hiddenInputsOne{
+  display: inline-block;
+}
 @media (max-width: 1200px) {
   /*.input-style{*/
   /*  width: 50%;*/
@@ -208,9 +211,10 @@
   .input-style{
     width: 50%;
   }
-  .hiddenInputs{
-    display: inline-block;
+  .hiddenInputs, .hiddenInputsOne{
+    display: none;
   }
+
 }
 @media (max-width: 576px) {
   .input-style{

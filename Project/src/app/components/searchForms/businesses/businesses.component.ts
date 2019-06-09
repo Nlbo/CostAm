@@ -39,6 +39,16 @@ export class BusinessesComponent implements OnInit {
   ngOnInit() {
   }
 
+  foo() {
+
+    if (this.form.get('pricesStart').value < 5000000) {
+      this.form.get('pricesEnd').enable()
+    } else {
+      this.form.get('pricesEnd').setValue('');
+      this.form.get('pricesEnd').disable();
+    }
+  }
+
   onChange(item) {
     switch (item) {
       case 'region': {

@@ -37,12 +37,15 @@ export class MapComponent implements OnInit {
   markersArray = [];
   url;
   selectedMarkerID;
+  user: string;
 
   constructor(private mapInfoService: MapInfoService, private globals: AppGlobals) {
-    this.url = this.globals.url + '/uploads/'
+    this.url = this.globals.url + '/uploads/';
   }
 
   ngOnInit() {
+
+
     this.mapInfoService.getMarkers('Բնակարան').subscribe((data) => {
       this.markersBnakaran = data;
 
@@ -147,8 +150,7 @@ export class MapComponent implements OnInit {
       // console.log(this.selectedType + ', ' + this.selectedMarkerID);
 
       const infoWindow = new google.maps.InfoWindow({
-        content: '<a style="display: flex;flex-direction: column;align-items: center" ' +
-          'href="details">\n' +
+        content: '<a target="_blank" style="display: flex;flex-direction: column;align-items: center" href="/details">\n' +
           '<img src="' + this.url + this.markersBnakaran[0].imgs[0]+'" style="max-width: 80px;height: 80px;object-fit: cover">\n' +
           '<br>\n' +
           this.markersBnakaran[i].mapDetails.address +
@@ -183,7 +185,7 @@ export class MapComponent implements OnInit {
   setMarkersGreen(map) {
     for (let i = 0; i < this.markersForArandznatunGreen.length; i++) {
       const infoWindow = new google.maps.InfoWindow({
-        content: '<a style="display: flex;flex-direction: column;align-items: center" ' +
+        content: '<a target="_blank" style="display: flex;flex-direction: column;align-items: center" ' +
           'href="details">\n' +
           '<img src="' + this.url + this.markersArandznatun[0].imgs[0]+'" style="max-width: 80px;height: 80px;object-fit: cover">\n' +
 
@@ -220,7 +222,7 @@ export class MapComponent implements OnInit {
   setMarkersYellow(map) {
     for (let i = 0; i < this.markersForKomercionYellow.length; i++) {
       const infoWindow = new google.maps.InfoWindow({
-        content: '<a style="display: flex;flex-direction: column;align-items: center" ' +
+        content: '<a target="_blank" style="display: flex;flex-direction: column;align-items: center" ' +
           'href="details">\n' +
           '<img src="' + this.url + this.markersKomercion[0].imgs[0]+'" style="max-width: 80px;height: 80px;object-fit: cover">\n' +
 
@@ -256,7 +258,7 @@ export class MapComponent implements OnInit {
   setMarkersBlue(map) {
     for (let i = 0; i < this.markersForHoxamasBlue.length; i++) {
       const infoWindow = new google.maps.InfoWindow({
-        content: '<a style="display: flex;flex-direction: column;align-items: center" ' +
+        content: '<a target="_blank" style="display: flex;flex-direction: column;align-items: center" ' +
           'href="details">\n' +
 
           '<img src="' + this.url + this.markersHoxamas[0].imgs[0]+'" style="max-width: 80px;height: 80px;object-fit: cover">\n' +
@@ -293,7 +295,7 @@ export class MapComponent implements OnInit {
   setMarkersPurple(map) {
     for (let i = 0; i < this.markersForBiznesPurple.length; i++) {
       const infoWindow = new google.maps.InfoWindow({
-        content: '<a style="display: flex;flex-direction: column;align-items: center" ' +
+        content: '<a target="_blank" style="display: flex;flex-direction: column;align-items: center" ' +
           'href="details">\n' +
           '<img src="' + this.url + this.markersBiznes[0].imgs[0]+'" style="max-width: 80px;height: 80px;object-fit: cover">\n' +
 

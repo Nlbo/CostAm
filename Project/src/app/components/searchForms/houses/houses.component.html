@@ -3,6 +3,7 @@
     <div class="col-md-3 input-style">
       <p-multiSelect [options]="optionsData.transactions" formControlName="transactions"
                      [maxSelectedLabels]="1"
+                     [filter]="false"
                      [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Գործարքի տեսակը' | translate:user}}"
                      [style]="{'width':'100%'}"></p-multiSelect>
     </div>
@@ -39,6 +40,7 @@
     <div class="col-md-3 input-style">
       <p-multiSelect [options]="optionsData.building" formControlName="buildingTypes"
                      [maxSelectedLabels]="1"
+                     [filter]="false"
                      [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Շենքի տեսակ' | translate:user}}"
                      [style]="{'width':'100%'}"></p-multiSelect>
     </div>
@@ -46,48 +48,46 @@
     <div class="col-md-3 input-style">
       <p-multiSelect [options]="optionsData.rooms" formControlName="numberOfRooms"
                      [maxSelectedLabels]="1"
+                     [filter]="false"
                      [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Սենյակների քանակը' | translate:user}}"
                      [style]="{'width':'100%'}"></p-multiSelect>
     </div>
 
     <div class="col-md-3 input-style">
       <p-dropdown [options]="optionsData.surface" [style]="{'width':'100%'}" formControlName="landArea"
-                  placeholder=" {{'Հողի մակերես' | translate:user}} "></p-dropdown>
+                  placeholder=" {{'Հողի մակերես' | translate:user}} " [showClear]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style">
       <p-dropdown [options]="optionsData.surface" [style]="{'width':'100%'}" formControlName="livingSpace"
-                  placeholder=" {{'Բնակելի մակերես' | translate:user}} "></p-dropdown>
+                  placeholder=" {{'Բնակելի մակերես' | translate:user}} " [showClear]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style">
       <p-dropdown [options]="optionsData.flooring" [style]="{'width':'100%'}" formControlName="flooring"
-                  placeholder=" {{'Հարկայնություն' | translate:user}} "></p-dropdown>
-    </div>
-
-    <div class="col-md-3 input-style">
-      <p-dropdown [options]="optionsData.floor" [style]="{'width':'100%'}" formControlName="floor"
-                  placeholder=" {{'Հարկ' | translate:user}} "></p-dropdown>
+                  placeholder=" {{'Հարկայնություն' | translate:user}} " [showClear]="true"></p-dropdown>
     </div>
 
 
+
     <div class="col-md-3 input-style">
-      <p-dropdown [options]="optionsData.pricesStart" [style]="{'width':'100%'}" formControlName="pricesStart"
-                  placeholder=" {{'Գինը (սկսած)' | translate:user}} "></p-dropdown>
+      <p-dropdown (onChange)="foo()" [options]="optionsData.pricesStart" [style]="{'width':'100%'}" formControlName="pricesStart"
+                  placeholder=" {{'Գինը (սկսած)' | translate:user}} " [filter]="true" [showClear]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style">
       <p-dropdown [options]="optionsData.pricesEnd" [style]="{'width':'100%'}" formControlName="pricesEnd"
-                  placeholder=" {{'Մինչև' | translate:user}} "></p-dropdown>
+                  placeholder=" {{'Մինչև' | translate:user}} " [filter]="true" [showClear]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style">
       <p-dropdown [options]="optionsData.currencies" [style]="{'width':'100%'}" formControlName="currency"
-                  placeholder=" {{'Արժույթ' | translate:user}} "></p-dropdown>
+                  placeholder=" {{'Արժույթ' | translate:user}} " [showClear]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style hiddenInputs"></div>
     <div class="col-md-3 input-style hiddenInputs"></div>
+    <div class="col-md-3 input-style hiddenInputs hiddenInputsOne"></div>
     <div class="col-md-3 input-style hiddenInputs hiddenInputsLatest"></div>
 
     <div class="col-md-3 input-style appartament-button">

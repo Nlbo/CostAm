@@ -33,7 +33,6 @@ export class HousesComponent implements OnInit {
       landArea: new FormControl('', [Validators.required]),
       livingSpace: new FormControl('', [Validators.required]),
       flooring: new FormControl('', [Validators.required]),
-      floor: new FormControl('', [Validators.required]),
       pricesStart: new FormControl('', [Validators.required]),
       pricesEnd: new FormControl('', [Validators.required]),
       currency: new FormControl('', [Validators.required]),
@@ -41,6 +40,16 @@ export class HousesComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  foo() {
+
+    if (this.form.get('pricesStart').value < 5000000) {
+      this.form.get('pricesEnd').enable()
+    } else {
+      this.form.get('pricesEnd').setValue('');
+      this.form.get('pricesEnd').disable();
+    }
   }
 
   onChange(item) {

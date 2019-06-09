@@ -35,10 +35,21 @@ export class ApartmentsComponent implements OnInit {
       pricesStart: new FormControl('', [Validators.required]),
       pricesEnd: new FormControl('', [Validators.required]),
       currency: new FormControl('', [Validators.required]),
+      newlyBuilds: new FormControl('', [Validators.required]),
     });
   }
 
   ngOnInit() {
+  }
+
+  foo() {
+
+    if (this.form.get('pricesStart').value < 5000000) {
+      this.form.get('pricesEnd').enable()
+    } else {
+      this.form.get('pricesEnd').setValue('');
+      this.form.get('pricesEnd').disable();
+    }
   }
 
   onChange(item) {
@@ -92,6 +103,22 @@ export class ApartmentsComponent implements OnInit {
 
   formSend() {
     this.searchFlage = true;
+    //
+    // let rooms = this.form.value.numberOfRooms;
+    // let numer = [];
+    //
+    // if (rooms.length > 0) {
+    //   rooms.forEach(items => {
+    //     if (typeof (items) === "string") {
+    //       console.log(items);
+    //       numer = numer.concat(JSON.parse(items));
+    //     } else {
+    //       numer.push(items);
+    //     }
+    //   });
+    // }
+
+    // this.form.get('numberOfRooms').setValue(JSON.stringify(numer));
 
     this.service.getFiltredApartmens(this.form.value).subscribe((data) => {
       this.events.emitChange3(data);
@@ -99,6 +126,7 @@ export class ApartmentsComponent implements OnInit {
 
     });
   }
+
   goToCreate() {
     this.router.navigate(['create', 'apartments']);
   }

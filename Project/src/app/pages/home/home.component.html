@@ -7,26 +7,26 @@
     <div class="bigBlock">
       <div class="row" style=" margin-bottom: 20px">
         <div class="block1 filter-buttons">
-          <button routerLink="apartments" type="button" class="btn btn-lg btn-style">
+          <button routerLink="apartments" routerLinkActive="active" type="button" class="btn btn-lg btn-style" (click)="ngswitch('Բնակարան')">
             <img src="assets/images/home-logo.png" alt="" style="width: 40px">
             {{'Բնակարան' | translate:user}}
           </button>
-          <button routerLink="houses" type="button" class="btn btn-lg btn-style">
+          <button routerLink="houses" routerLinkActive="active" type="button" class="btn btn-lg btn-style"  (click)="ngswitch('Առանձնատուն')">
             <img src="assets/images/house-logo.png" alt="" style="width: 40px">{{'Առանձնատուն' | translate:user}}
           </button>
-          <button routerLink="commercials" type="button" class="btn btn-lg btn-style">
+          <button routerLink="commercials" routerLinkActive="active" type="button" class="btn btn-lg btn-style"  (click)="ngswitch('Կոմերցիոն')">
             <img src="assets/images/usd.png" alt="" style="width: 40px">{{'Կոմերցիոն' | translate:user}}
           </button>
-          <button routerLink="lands" type="button" class="btn btn-lg btn-style">
+          <button routerLink="lands" routerLinkActive="active" type="button" class="btn btn-lg btn-style"  (click)="ngswitch('Հողամաս')">
             <img src="assets/images/landandplots.png" alt="" style="width: 40px">{{'Հողամաս' | translate:user}}
           </button>
-          <button routerLink="businesses" type="button" class="btn btn-lg btn-style">
+          <button routerLink="businesses" routerLinkActive="active" type="button" class="btn btn-lg btn-style"  (click)="ngswitch('Բիզնես')">
             <img src="assets/images/office-logo.png" alt="" style="width: 40px">{{'Բիզնես' | translate:user}}
           </button>
-          <button routerLink="newlyBuilts" type="button" class="btn btn-lg btn-style">
+          <button routerLink="newlyBuilts" routerLinkActive="active" type="button" class="btn btn-lg btn-style"  (click)="ngswitch('Նորակառույց')">
             <img src="assets/images/home-logo.png" alt="" style="width: 40px">{{'Նորակառույց' | translate:user}}
           </button>
-          <button routerLink="codes" type="button" class="btn btn-lg btn-style">
+          <button routerLink="codes" routerLinkActive="active" type="button" class="btn btn-lg btn-style"  (click)="ngswitch('Կոդ')">
             <img src="assets/images/code.png" alt="" style="width: 40px">{{'Կոդ' | translate:user}}
           </button>
 
@@ -58,16 +58,17 @@
       <div class="searchCart" [ngClass]="{'activeSection': searchPostsActive}">
         <div (click)="goToDetails(carts)" class="cartS" *ngFor="let carts of cycleData">
           <div class="wAuto">
-            <h2>{{carts.regions}}, {{carts.cities}}, {{carts.communities}}</h2>
+<!--            <h2>{{carts.regions}}, {{carts.cities}}, {{carts.communities}}</h2>-->
+            <h2>{{carts.regions == carts.cities ? carts.regions : carts.regions + ', ' + carts.cities}}, {{carts.communities}}</h2>
             <img [src]="url + '/uploads/' + carts.imgs[0]" alt="">
           </div>
           <div class="cart-info">
             <h3>{{carts.cities}}, {{carts.streets}}</h3>
             <div class="moreInfo">
               <p>{{carts.streets}}</p>
-              <p>{{carts.numberOfRooms || carts.buildingArea}}</p>
-              <p>{{carts.supportingArea  || (carts.flooring + '/' + carts.floor) }}</p>
-              <p>{{carts.areaValue || carts.landArea}}</p>
+              <p>{{carts.numberOfRooms ? carts.numberOfRooms + ' սեն' : false || carts.buildingArea + ' ք.մ.'}}</p>
+              <p>{{carts.supportingArea ? carts.supportingArea + ' ք.մ.' : false  || (carts.flooring + '/' + carts.floor + ' հարկ') }}</p>
+              <p>{{carts.areaValue ? carts.areaValue + ' ք.մ.' : false || carts.landArea + ' ք.մ.'}}</p>
               <p class="colorRed">
                 {{
                 carts.prices[0].price + ' ' + carts.prices[0].currency
@@ -81,11 +82,11 @@
     <div class="advertising-box advertising-flex">
 
       <div class="evaluation advertising-flex-item">
-        <img src="assets/images/Logo_vertical_black.png" alt="" style="max-width: 124px;margin-bottom: 12px;">
+        <img src="assets/images/Logo_vertical_black.png" alt="" style="width: 124px;margin-bottom: 12px;">
         <a href="" class="animate-text">{{'Գնահատում' | translate:user}}</a>
       </div>
       <div class="btnBox advertising-flex-item">
-        <button class="openPosition">
+        <button class="openPosition" (click)="goToOpenMarket()">
           <span>{{'Բաց շուկա' | translate:user}}</span>
         </button>
 

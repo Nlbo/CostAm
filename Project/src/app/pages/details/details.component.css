@@ -34,7 +34,7 @@
 }
 .searchDetailsPage .moreInfo > div{
   display: inline-block;
-  max-width: 180px;
+  max-width: 160px;
   vertical-align: middle;
   text-align: center;
   display: table-cell;
@@ -201,6 +201,7 @@
 }
 .addInfoStyle{
   font-family: "Montserrat-Light";
+  white-space: pre-line;
 }
 .otherInfo > div > p{
   margin-right: 4px;

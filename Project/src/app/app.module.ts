@@ -40,6 +40,8 @@ import { CreateNewlybuiltsComponent } from './components/createForms/create-newl
 import {FileUploadModule, GalleriaModule, SpinnerModule} from 'primeng/primeng';
 import { DetailsMapComponent } from './components/details-map/details-map.component';
 import { DetailsSliderComponent } from './components/details-slider/details-slider.component';
+import {SortablejsModule} from "angular-sortablejs";
+import { OpenMarketComponent } from './pages/open-market/open-market.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -72,7 +74,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     CreateLandsComponent,
     CreateNewlybuiltsComponent,
     DetailsMapComponent,
-    DetailsSliderComponent
+    DetailsSliderComponent,
+    OpenMarketComponent
   ],
   imports: [
     BrowserModule,
@@ -88,6 +91,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     SpinnerModule,
     GalleriaModule,
+    SortablejsModule.forRoot({ animation: 150 }),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBrq8jkgCgDa3AvM5EmGPc39t1l_sVNdOk'
     }),

@@ -23,39 +23,61 @@ export class PublicDataService {
     {label: '5', value: 5},
     {label: '6', value: 6},
     {label: '7', value: 7},
-    {label: '8', value: 8},
-    {label: '9', value: 9},
-    {label: '10', value: 10},
-    {label: '199', value: 199},
-    {label: '200', value: 200},
-    {label: '201', value: 201},
+    {label: '8+', value: 8},
+    // {
+    //   label: '8+',
+    //   value: JSON.stringify([8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40])
+    // }
   ];
   surface = [
     {label: '0-100', value: {min: 3, max: 100}},
     {label: '100-150', value: {min: 100, max: 150}},
     {label: '150-200', value: {min: 150, max: 200}},
     {label: '250-300', value: {min: 250, max: 300}},
-    {label: '350-400', value: {min: 350, max: 400}}
+    {label: '350-400', value: {min: 350, max: 400}},
+    {label: '400+', value: {min: 400, max: 99999999999999}}
   ];
   pricesStart = [
-    {label: '1000', value: 1000},
-    {label: '2000', value: 2000},
-    {label: '3000', value: 3000},
-    {label: '4000', value: 4000},
-    {label: '5000', value: 5000},
-    {label: '6000', value: 6000},
-    {label: '7000', value: 7000},
-    {label: '8000', value: 8000}
-  ];
-  pricesEnd = [
-    {label: '2000', value: 2000},
-    {label: '4000', value: 4000},
+    {label: '0', value: 0},
     {label: '10000', value: 10000},
     {label: '20000', value: 20000},
+    {label: '30000', value: 30000},
+    {label: '40000', value: 40000},
     {label: '50000', value: 50000},
+    {label: '60000', value: 60000},
+    {label: '70000', value: 70000},
+    {label: '80000', value: 80000},
+    {label: '90000', value: 90000},
     {label: '100000', value: 100000},
+    {label: '150000', value: 150000},
     {label: '200000', value: 200000},
-    {label: '500000', value: 500000}
+    {label: '250000', value: 250000},
+    {label: '300000', value: 300000},
+    {label: '350000', value: 350000},
+    {label: '400000', value: 400000},
+    {label: '450000', value: 450000},
+    {label: '500000', value: 500000},
+    {label: '500000+', value: 5000005},
+  ];
+  pricesEnd = [
+    {label: '10000', value: 10000},
+    {label: '20000', value: 20000},
+    {label: '30000', value: 30000},
+    {label: '40000', value: 40000},
+    {label: '50000', value: 50000},
+    {label: '60000', value: 60000},
+    {label: '70000', value: 70000},
+    {label: '80000', value: 80000},
+    {label: '90000', value: 90000},
+    {label: '100000', value: 100000},
+    {label: '150000', value: 150000},
+    {label: '200000', value: 200000},
+    {label: '250000', value: 250000},
+    {label: '300000', value: 300000},
+    {label: '350000', value: 350000},
+    {label: '400000', value: 400000},
+    {label: '450000', value: 450000},
+    {label: '500000', value: 500000},
   ];
 
   surfaceHouse = [
@@ -2741,7 +2763,7 @@ export class PublicDataService {
     },
     {
       city: 'Գյուղեր(Կոտայք)',
-      info:  [
+      info: [
         {
           "label": "Ալափարս գ.",
           "value": "Ալափարս գ."
@@ -4225,7 +4247,7 @@ export class PublicDataService {
     },
     {
       city: 'Գյուղեր(Տավուշ)',
-      info:  [
+      info: [
         {
           "label": "Ազատանուտ գ.",
           "value": "Ազատանուտ գ."
@@ -9141,4 +9163,60 @@ export class PublicDataService {
 
   constructor() {
   }
+
+  randomSumArray(): any {
+    let len = 5,
+      sum = 8,
+      d;
+    let _sum = 0;
+    let arr = [];
+    let n, i;
+
+    if (!d && d !== 0) {
+      d = 100;
+    }
+
+    for (i = 0; i < len; i++) {
+      let from = (100 - d) * 1000,
+        to = (100 + d) * 1000,
+        n = Math.floor(Math.random() * (to - from + 1) + from); //random integer between from..to
+
+      _sum += n;
+      arr.push(n);
+    }
+
+    let x = sum / _sum;
+
+    _sum = 0; //count sum (again)
+    for (let i = 0; i < len; i++) {
+      arr[i] = Math.round(arr[i] * x);
+      _sum += arr[i];
+    }
+
+    let diff = sum - _sum;
+
+    // Correct the array if its sum does not match required sum (usually by a small bit)
+    if (diff) {
+      x = diff / Math.abs(diff); //x will be 1 or -1
+      let j = 0;
+      while (diff && j < 1000) { //limit to a finite number of 'corrections'
+        i = Math.floor(Math.random() * (len + 1)); //random index in the array
+        if (arr[i] + x >= 0) {
+          arr[i] += x;
+          diff -= x;
+        }
+        j++;
+      }
+    }
+
+    let obj = {
+      apartments: arr[0],
+      houses: arr[1],
+      commercials: arr[2],
+      businesses: arr[3],
+      lands: arr[4]
+    };
+    return obj;
+  }
+
 }

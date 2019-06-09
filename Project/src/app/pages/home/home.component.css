@@ -509,7 +509,7 @@
   }
 }
 /*====end responsive css====*/
-.active1, .active2, .active3, .active4, .active5, .active6, .active7{
+.active {
   background-color: #035290db!important;
 }
 .wAuto{

@@ -1,21 +1,24 @@
 <div class="wrapper searchDetailsPage">
-  <a routerLink="/" class="backToSearchStyle boldStyles"><i class="fas fa-arrow-left"></i>{{'Վերադառնալ որոնման արդյունքներին' | translate:user}}</a>
+  <!--<a routerLink="/" class="backToSearchStyle boldStyles"><i class="fas fa-arrow-left"></i>{{'Վերադառնալ որոնման արդյունքներին' | translate:user}}</a>-->
   <div class="locationPhone top-Info">
     <div class="announcementType borderRadiusLeft">
       <h2>{{cart.announcementType}}</h2>
     </div>
     <div class="phoneNumbers borderRadiusRight">
-      <h2 *ngFor="let phone of cart.phone" class="boldStyles">{{'Հեռ.' | translate:user}} {{phone}}</h2>
+<!--      <h2 *ngFor="let phone of cart.phone" class="boldStyles">{{'Հեռ.' | translate:user}} {{phone}}</h2>-->
+      <h2 class="boldStyles">{{'Հեռ.' | translate:user}} {{cart.phone[0]}}</h2>
+      <h2 class="boldStyles" *ngIf="cart.phone[1]">{{'Հեռ.' | translate:user}} {{cart.phone[1]}}</h2>
+      <h2 class="boldStyles" *ngIf="cart.phone[2]">{{'Հեռ.' | translate:user}} {{cart.phone[2]}}</h2>
     </div>
   </div>
   <div class="locationPhone">
     <div class="borderRadiusLeft">
       <h3 class="boldStyles">{{'Հասցե' | translate:user}}</h3>
-      <h2>{{cart.regions}}, {{cart.city}}, {{cart.communities}}, {{cart.mapDetails.address}}</h2>
+      <h2>{{cart.regions}}, {{cart.city ? cart.city + ' ,' : null}} {{cart.communities}}, {{cart.mapDetails.address}}</h2>
     </div>
-    <div class="floatRight borderRadiusRight">
+    <div class="floatRight borderRadiusRight" >
       <h3></h3>
-      <h2 *ngFor="let price of cart.prices">{{price.type}} {{price.price}}</h2>
+      <h2 *ngFor="let price of cart.prices">{{price.type}} {{price.price}} {{price.currency}}</h2>
     </div>
   </div>
   <div class="moreInfo">
@@ -25,7 +28,7 @@
     </div>
     <div  *ngIf="cart.announcementType !== 'Հողամաս'">
       <p>{{'Հարկայնություն/հարկ' | translate:user}}</p>
-      <p>{{cart.floor}}</p>
+      <p>{{cart.flooring}} / {{cart.floor}}</p>
     </div>
     <div *ngIf="cart.announcementType == 'Բնակարան'">
       <p>{{'Մակերես ք.մ.' | translate:user}}</p>
