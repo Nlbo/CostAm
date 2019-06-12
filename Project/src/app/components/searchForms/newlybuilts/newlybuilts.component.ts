@@ -23,6 +23,7 @@ export class NewlybuiltsComponent implements OnInit {
   constructor(public optionsData: PublicDataService,  private router: Router, private service: DataService, private events: EventsService) {
 
     this.form = new FormGroup({
+      transactions: new FormControl([], [Validators.required]),
       regions: new FormControl([], [Validators.required]),
       cities: new FormControl([], [Validators.required]),
       communities: new FormControl([], [Validators.required]),
@@ -89,7 +90,7 @@ export class NewlybuiltsComponent implements OnInit {
       this.searchFlage = false;
     });
   }
-  goToCreate() {
-    this.router.navigate(['create', 'lands']);
-  }
+  // goToCreate() {
+  //   this.router.navigate(['create', 'lands']);
+  // }
 }

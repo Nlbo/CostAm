@@ -31,6 +31,10 @@ export class CreateComponent implements OnInit {
       });
   }
 
+  foo(event) {
+    this.uploadedFiles = event;
+  }
+
 
   ngOnInit() {
     this.gotoTopInit();
@@ -78,9 +82,11 @@ export class CreateComponent implements OnInit {
       this.form.delete('images');
       this.form2.reset();
       this.uploadedFiles = [];
-      this.fileUpload.clear();
+      // this.fileUpload.clear();
+      this.events.emitChange4({});
       this.events.emitChange2({});
       this.gotoTop();
+      this.router.navigate(['']);
     }, err => {
       this.form.delete('mapDetails');
       this.form.delete('phone');

@@ -2,6 +2,20 @@
   <div class="flewWrap">
 
     <div class="addAnnouncement-input">
+      <p-spinner class="ui-fluid" size="1" [min]="0" [step]="1"
+                 placeholder="* {{'Կոդ' | translate:user}}"
+                 [inputStyle]="{'width':'100%'}"
+                 formControlName="codeValue"
+                 (onChange)="send('codeValue')">
+
+      </p-spinner>
+    </div>
+
+    <div class="addAnnouncement-input topCheckStyle">
+      <p-checkbox label="{{'Լավագույն առաջարկ' | translate:user}}" formControlName="top" binary="true" (onChange)="send('top')"></p-checkbox>
+    </div>
+
+    <div class="addAnnouncement-input">
       <p-multiSelect [options]="optionsData.transactionsCommercial" formControlName="transactions"
                      [maxSelectedLabels]="1"
                      (onChange)="send('transactions')"
@@ -41,14 +55,14 @@
     <div class="addAnnouncement-input flexBoxItem">
       <!--        [style]="{'width':'40%'}"-->
       <p-spinner size="1" [min]="0" [max]="100" [step]="1"
-                 placeholder="* {{'Հարկայնություն' | translate:user}} "
+                 placeholder=" {{'Հարկայնություն' | translate:user}} "
                  id="basic1"
                  formControlName="flooring"
                  [inputStyle]="{'width':'100%'}"
                  (onChange)="send('flooring')">
       </p-spinner>
       <p-spinner size="1" [min]="-10" [max]="form.get('flooring').value" [step]="1"
-                 placeholder="* {{'Հարկ' | translate:user}} "
+                 placeholder=" {{'Հարկ' | translate:user}} "
                  id="basic2"
                  formControlName="floor"
                  [inputStyle]="{'width':'100%'}"
@@ -59,7 +73,7 @@
 
     <div class="addAnnouncement-input">
       <p-spinner class="ui-fluid" size="1" [min]="0" [step]="1"
-                 placeholder="* {{'Հողամասի մակերես ք.մ.' | translate:user}} "
+                 placeholder=" {{'Հողամասի մակերես ք.մ.' | translate:user}} "
                  [inputStyle]="{'width':'100%'}"
                  formControlName="landArea"
                  (onChange)="send('landArea')">
@@ -70,7 +84,7 @@
 
     <div class="addAnnouncement-input">
       <p-spinner class="ui-fluid" size="1" [min]="0" [step]="1"
-                 placeholder="* {{'Շինության մակերես ք.մ.' | translate:user}} "
+                 placeholder=" {{'Շինության մակերես ք.մ.' | translate:user}} "
                  [inputStyle]="{'width':'100%'}"
                  formControlName="buildingArea"
                  (onChange)="send('buildingArea')">
@@ -81,7 +95,7 @@
 
     <div class="addAnnouncement-input">
       <p-spinner class="ui-fluid" size="1" [min]="0" [step]="1"
-                 placeholder="* {{'Օժանդակ մակերես ք.մ.' | translate:user}} "
+                 placeholder=" {{'Օժանդակ մակերես ք.մ.' | translate:user}} "
                  [inputStyle]="{'width':'100%'}"
                  formControlName="supportingArea"
                  (onChange)="send('supportingArea')">
@@ -91,7 +105,7 @@
 
     <div class="addAnnouncement-input">
       <p-multiSelect [options]="optionsData.sectorsBusiness"
-                     defaultLabel="* {{'Ոլորտ' | translate:user}}"
+                     defaultLabel=" {{'Ոլորտ' | translate:user}}"
                      [maxSelectedLabels]="1" [selectedItemsLabel]="'{0} ընտրված դաշտ'"
                      [filterPlaceHolder]="'Փնտրել'" [resetFilterOnHide]="true"
                      formControlName="areasBusiness"
@@ -101,7 +115,7 @@
     </div>
     <div class="addAnnouncement-input" >
       <p-spinner class="ui-fluid" size="1" [min]="0" [step]="1"
-                 placeholder="* {{'Տարեկան զուտ շահույթ' | translate:user}} "
+                 placeholder=" {{'Տարեկան զուտ շահույթ' | translate:user}} "
                  [inputStyle]="{'width':'100%'}"
                  formControlName="annualNetProfit"
                  (onChange)="send('annualNetProfit')">
@@ -111,7 +125,7 @@
 
     <div class="addAnnouncement-input">
       <p-multiSelect [options]="optionsData.additionalInfoFieldsBusiness"
-                     defaultLabel="* {{'Լրացուցիչ ինֆորմացիա' | translate:user}}"
+                     defaultLabel=" {{'Լրացուցիչ ինֆորմացիա' | translate:user}}"
                      [maxSelectedLabels]="1" [selectedItemsLabel]="'{0} ընտրված դաշտ'"
                      [filterPlaceHolder]="'Փնտրել'" [resetFilterOnHide]="true"
                      formControlName="additionalInfoFields"

@@ -13,6 +13,10 @@
            class="boldStyles">{{'Հողամաս' | translate:user}}</a>
         <a routerLink="businesses" routerLinkActive="addAnnouncementActive"
            class="boldStyles">{{'Բիզնես' | translate:user}}</a>
+
+        <a routerLink="newlyBuilds" routerLinkActive="addAnnouncementActive"
+           class="boldStyles">{{'Նորակառույց' | translate:user}}</a>
+
       </div>
     </div>
     <div class="toggleAddAnnouncement required-fields-section">
@@ -26,10 +30,9 @@
     <form [formGroup]="form2" (ngSubmit)="form2Submit()" class="flewWrap">
       <input type="hidden" formControlName="mapDetails">
     <div class="addAnnouncement-w100 choosezUploadImage">
-      <p-fileUpload #fileUpload name="demo[]" customUpload="true" (uploadHandler)="onUpload($event)"
-                    multiple="multiple" accept="image/*" maxFileSize="1000000"
-                    auto="true" chooseLabel="{{'Ավելացնել նկարներ' | translate:user}}">
-      </p-fileUpload>
+
+      <app-file-uploader (images)="foo($event)"></app-file-uploader>
+
     </div>
     <div class="addAnnouncement-w100">
       <div class="ui-g-12 ui-md-4">

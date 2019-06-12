@@ -60,6 +60,17 @@ export class CreateMapComponent implements OnInit {
     };
   }
 
+  // addressFilter(event){
+  //   if(this.address){
+  //     console.log('DATARK CHI');
+  //   }
+  // }
+  // searchAddressMap(){
+  //   if(this.address){
+  //     console.log('PNTREL HASCEN');
+  //   }
+  // }
+
   setMapOnAll(map) {
     for (let i = 0; i < this.markersArray.length; i++) {
       this.markersArray[i].setMap(map);
@@ -98,6 +109,7 @@ export class CreateMapComponent implements OnInit {
     });
 
     google.maps.event.addListener(this.myMap, 'click', (event) => {
+      console.log('aaaaaaaaaaaa')
       this.latitude = event.latLng.lat();
       this.longitude = event.latLng.lng();
 

@@ -3,6 +3,7 @@
     <div class="col-md-3 input-style">
       <p-multiSelect [options]="optionsData.transactionsCommercial" formControlName="transactions"
                      [maxSelectedLabels]="1"
+                     [filter]="false"
                      [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Գործարքի տեսակը' | translate:user}}"
                      [style]="{'width':'100%'}"></p-multiSelect>
     </div>
@@ -44,18 +45,18 @@
     </div>
 
     <div class="col-md-3 input-style">
-      <p-dropdown [options]="optionsData.surface" [style]="{'width':'100%'}" formControlName="landArea"
+      <p-dropdown [options]="optionsData.surfaceLand" [style]="{'width':'100%'}" formControlName="landArea"
                   placeholder=" {{'Հողի մակերես' | translate:user}} " [showClear]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style">
       <p-dropdown (onChange)="foo()" [options]="optionsData.pricesStart" [style]="{'width':'100%'}" formControlName="pricesStart"
-                  placeholder=" {{'Գինը (սկսած)' | translate:user}} " [showClear]="true"></p-dropdown>
+                  placeholder=" {{'Գինը (սկսած)' | translate:user}} " [filter]="true" [showClear]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style">
       <p-dropdown [options]="optionsData.pricesEnd" [style]="{'width':'100%'}" formControlName="pricesEnd"
-                  placeholder=" {{'Մինչև' | translate:user}} " [showClear]="true"></p-dropdown>
+                  placeholder=" {{'Մինչև' | translate:user}} " [filter]="true" [showClear]="true"></p-dropdown>
     </div>
 
     <div class="col-md-3 input-style">
@@ -76,7 +77,8 @@
 
 
     <div class="appartament-button" style="margin-top: 20px;">
-      <button (click)="goToCreate()"  id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>
+<!--      <button (click)="goToCreate()"  id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>-->
+
 <!--      <button type="submit" id="search"-->
 <!--              class="twoToneButton"-->
 <!--              [ngClass]="{'spinning': searchFlage, 'ngPadding': searchFlage}">-->

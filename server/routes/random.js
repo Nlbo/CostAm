@@ -10,13 +10,11 @@ const uploadImg = require('../middleware/multer');
 
 router.post('/', async (req,res) => {
 
-    console.log(req.body);
-
-    let data1 = req.body.apartments === 0 ? [] : await Apartments.find({}).limit(req.body.apartments);
-    let data2 = req.body.houses === 0 ? [] : await Houses.find({}).limit(req.body.houses);
-    let data3 = req.body.commercials === 0 ? [] : await Commercials.find({}).limit(req.body.commercials);
-    let data4 = req.body.lands === 0 ? [] : await Lands.find({}).limit(req.body.lands);
-    let data5 = req.body.businesses === 0 ? [] : await Businesses.find({}).limit(req.body.businesses);
+    let data1 =  await Apartments.find({top: true});
+    let data2 =  await Houses.find({top: true});
+    let data3 =  await Commercials.find({top: true});
+    let data4 =  await Lands.find({top: true});
+    let data5 =  await Businesses.find({top: true});
     let data = data1.concat(data2).concat(data3).concat(data4).concat(data5);
     console.log(data);
     res.status(201).json(data);

@@ -35,6 +35,8 @@ export class CreateCommercialsComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
+      top: new FormControl(),
+      codeValue: new FormControl('', [Validators.required]),
       transactions: new FormControl([], [Validators.required]),
       regions: new FormControl('', [Validators.required]),
       cities: new FormControl('', [Validators.required]),
@@ -44,17 +46,17 @@ export class CreateCommercialsComponent implements OnInit {
       floor: new FormControl('', [Validators.required]),
       landArea: new FormControl('', [Validators.required]),
       buildingArea: new FormControl('', [Validators.required]),
-      supportingArea: new FormControl('', [Validators.required]),
+      supportingArea: new FormControl(''),
       interiorDecorations: new FormControl('', [Validators.required]),
       buildingTypes: new FormControl('', [Validators.required]),
       covers: new FormControl('', [Validators.required]),
-      ceilingValue: new FormControl('', [Validators.required]),
+      ceilingValue: new FormControl(''),
       additionalInfoFields: new FormControl('', [Validators.required]),
       currencyForSale: new FormControl({value: '', disabled: true}),
       priceForSale: new FormControl({value: '', disabled: true}),
       currencyForRent: new FormControl({value: '', disabled: true}),
       priceForRent: new FormControl({value: '', disabled: true}),
-      front: new FormControl({value: '', disabled: false}, [Validators.required]),
+      front: new FormControl({value: '', disabled: false}),
       actualUse: new FormControl({value: '', disabled: false}, [Validators.required]),
     });
 
@@ -206,6 +208,11 @@ export class CreateCommercialsComponent implements OnInit {
           });
       }
         break;
+
+      case 'top': {
+        console.log(item);
+      }
+
     }
 
     await this.validate();
@@ -215,10 +222,10 @@ export class CreateCommercialsComponent implements OnInit {
       value: this.form.get(item).value,
       invalid: !(this.form.valid && this.rent && this.sale)
     };
-    console.log(this.form.valid);
-    console.log(this.sale);
-    console.log(this.rent);
-    console.log(data);
+   // console.log(this.form.valid);
+    //console.log(this.sale);
+   // console.log(this.rent);
+   // console.log(data);
     this.events.emitChange(data);
   }
 

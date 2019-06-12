@@ -14,6 +14,92 @@
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrq8jkgCgDa3AvM5EmGPc39t1l_sVNdOk&libraries=places">
 </script>
 <body>
+<!--<div id="popup_overlay" class="popup__overlay">-->
+<!--  <div class="popup">-->
+<!--    <div id="popup_close" class="popup__close">X</div>-->
+<!--    <p>Կայքը մշակման փուլում է-->
+<!--  </div>-->
+<!--</div>-->
   <app-root></app-root>
+  <script>
+    window.onload = function () {
+    const slider = document.querySelector('.cartsScrool');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+      if(slider) {
+        slider.addEventListener('mousedown', (e) => {
+          isDown = true;
+          slider.classList.add('activeScrool');
+          startX = e.pageX - slider.offsetLeft;
+          scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+          isDown = false;
+          slider.classList.remove('activeScrool');
+        });
+        slider.addEventListener('mouseup', () => {
+          isDown = false;
+          slider.classList.remove('activeScrool');
+        });
+        slider.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - slider.offsetLeft;
+          const walk = (x - startX) * 3;
+          slider.scrollLeft = scrollLeft - walk;
+        });
+      }
+      //popup start
+      // var wrap = window.document.getElementById('popup_overlay');
+      // var closeButton = window.document.getElementById('popup_close');
+      // closeButton.onclick = popupClose;
+      //
+      // var timeOUT, timeIN;
+      //
+      // function popup(){
+      //   wrap.style.display = 'block';
+      //   popupIn(1);
+      // }
+      //
+      //
+      // function popupClose(){
+      //   popupOut(0);
+      // }
+      //
+      // function popupIn(x){
+      //   var op = (wrap.style.opacity) ?  parseFloat(wrap.style.opacity) : 0;
+      //
+      //   if(op < x){
+      //     clearInterval(timeOUT);
+      //     op += 0.05;
+      //     wrap.style.opacity = op;
+      //     timeIN = setTimeout(function(){
+      //       popupIn(x);
+      //     }, 50)
+      //   }
+      // }
+      //
+      // function popupOut(x){
+      //   var op = (wrap.style.opacity) ?  parseFloat(wrap.style.opacity) : 0;
+      //   if(op > x){
+      //     clearInterval(timeIN);
+      //     op -= 0.05;
+      //     wrap.style.opacity = op;
+      //     timeOUT = setTimeout(function(){
+      //       popupOut(x);
+      //     }, 50)
+      //   }
+      //   if(wrap.style.opacity == x){
+      //     wrap.style.display = 'none';
+      //   }
+      // }
+      //
+      //
+      //
+      // setTimeout(popup, 500);
+      //popup end
+    }
+  </script>
 </body>
 </html>

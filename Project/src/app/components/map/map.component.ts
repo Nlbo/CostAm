@@ -27,11 +27,13 @@ export class MapComponent implements OnInit {
   markersKomercion: any = [];
   markersHoxamas: any = [];
   markersBiznes: any = [];
+  markersNewlyBuilds: any = [];
   markersForBnakaranRed = [];
   markersForArandznatunGreen = [];
   markersForKomercionYellow = [];
   markersForHoxamasBlue = [];
   markersForBiznesPurple = [];
+  markersFormarkersNewlyBuildsOrange = [];
 
   currentinfo = null;
   markersArray = [];
@@ -49,8 +51,8 @@ export class MapComponent implements OnInit {
     this.mapInfoService.getMarkers('Բնակարան').subscribe((data) => {
       this.markersBnakaran = data;
 
-      console.log(this.markersBnakaran)
-      console.log(this.markersBnakaran[0].imgs[0])
+      //console.log(this.markersBnakaran)
+     //console.log(this.markersBnakaran[0].imgs[0])
 
       for (let i = 0; i < this.markersBnakaran.length; i++) {
         this.markersForBnakaranRed.push({
@@ -104,6 +106,22 @@ export class MapComponent implements OnInit {
       }
     });
 
+    //newly builds start ====
+    this.mapInfoService.getMarkers('Նորակառույց').subscribe((data) => {
+      this.markersNewlyBuilds = data;
+
+     // console.log(data)
+     // console.log(this.markersNewlyBuilds[0].imgs[0])
+
+      for (let i = 0; i < this.markersNewlyBuilds.length; i++) {
+        this.markersFormarkersNewlyBuildsOrange.push({
+          lat: this.markersNewlyBuilds[i].mapDetails.lat,
+          lng: this.markersNewlyBuilds[i].mapDetails.lng
+        });
+      }
+    });
+    //newly builds end ====
+
     this.initMap();
   }
 
@@ -156,6 +174,9 @@ export class MapComponent implements OnInit {
           this.markersBnakaran[i].mapDetails.address +
           '</a>'
       });
+
+     // console.log(this.markersBnakaran[i].transactions);
+     // console.log(this.markersForBnakaranRed);
 
       const markersRed = new google.maps.Marker({
         position: {lat: +this.markersForBnakaranRed[i].lat, lng: +this.markersForBnakaranRed[i].lng},
@@ -329,6 +350,45 @@ export class MapComponent implements OnInit {
     }
   }
 
+  //newly map start====
+  setMarkersOrange(map) {
+    for (let i = 0; i < this.markersFormarkersNewlyBuildsOrange.length; i++) {
+      const infoWindow = new google.maps.InfoWindow({
+        content: '<a target="_blank" style="display: flex;flex-direction: column;align-items: center" ' +
+          'href="details">\n' +
+          '<img src="' + this.url + this.markersNewlyBuilds[0].imgs[0]+'" style="max-width: 80px;height: 80px;object-fit: cover">\n' +
+
+          '<br>\n' +
+          this.markersNewlyBuilds[i].mapDetails.address +
+          '</a>'
+      });
+      //1?announcementType=Բնակարան
+
+      const markersPurple = new google.maps.Marker({
+        position: {lat: +this.markersFormarkersNewlyBuildsOrange[i].lat, lng: +this.markersFormarkersNewlyBuildsOrange[i].lng},
+        map: map,
+        icon: '../../assets/marker-icons/iconOrange40.png'
+      });
+      this.markersArray.push(markersPurple);
+
+      google.maps.event.addListener(markersPurple, 'click', () => {
+        localStorage.setItem('cart', JSON.stringify(this.markersNewlyBuilds[i]));
+        if (this.currentinfo) {
+          this.currentinfo.close();
+        }
+
+        infoWindow.open(map, markersPurple);
+
+        this.currentinfo = infoWindow;
+      });
+
+      google.maps.event.addListener(this.myMap, 'click', () => {
+        infoWindow.close();
+      });
+    }
+  }
+  //newly map end====
+
   showRedMarkers() {
     this.setMapOnAll(null);
     this.setMarkersRed(this.myMap);
@@ -390,6 +450,9 @@ export class MapComponent implements OnInit {
   }
 
   showOrangeMarkers(){
+    this.setMapOnAll(null);
+    this.setMarkersOrange(this.myMap);
+   // console.log('showOrangeMarkers +++++++')
     this.btnRedMarkerFlag = false;
     this.btnGreenMarkerFlag = false;
     this.btnYellowMarkerFlag = false;

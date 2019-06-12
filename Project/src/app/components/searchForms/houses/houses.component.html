@@ -37,13 +37,13 @@
                      [style]="{'width':'100%'}"></p-multiSelect>
     </div>
 
-    <div class="col-md-3 input-style">
-      <p-multiSelect [options]="optionsData.building" formControlName="buildingTypes"
-                     [maxSelectedLabels]="1"
-                     [filter]="false"
-                     [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Շենքի տեսակ' | translate:user}}"
-                     [style]="{'width':'100%'}"></p-multiSelect>
-    </div>
+<!--    <div class="col-md-3 input-style">-->
+<!--      <p-multiSelect [options]="optionsData.building" formControlName="buildingTypes"-->
+<!--                     [maxSelectedLabels]="1"-->
+<!--                     [filter]="false"-->
+<!--                     [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Շենքի տեսակ' | translate:user}}"-->
+<!--                     [style]="{'width':'100%'}"></p-multiSelect>-->
+<!--    </div>-->
 
     <div class="col-md-3 input-style">
       <p-multiSelect [options]="optionsData.rooms" formControlName="numberOfRooms"
@@ -54,7 +54,7 @@
     </div>
 
     <div class="col-md-3 input-style">
-      <p-dropdown [options]="optionsData.surface" [style]="{'width':'100%'}" formControlName="landArea"
+      <p-dropdown [options]="optionsData.surfaceLand" [style]="{'width':'100%'}" formControlName="landArea"
                   placeholder=" {{'Հողի մակերես' | translate:user}} " [showClear]="true"></p-dropdown>
     </div>
 
@@ -87,6 +87,7 @@
 
     <div class="col-md-3 input-style hiddenInputs"></div>
     <div class="col-md-3 input-style hiddenInputs"></div>
+    <div class="col-md-3 input-style"></div>
     <div class="col-md-3 input-style hiddenInputs hiddenInputsOne"></div>
     <div class="col-md-3 input-style hiddenInputs hiddenInputsLatest"></div>
 
@@ -101,7 +102,8 @@
 
 
     <div class="appartament-button" style="margin-top: 20px;">
-      <button (click)="goToCreate()" id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>
+<!--      <button (click)="goToCreate()" id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>-->
+
 <!--      <button type="submit" id="search"-->
 <!--              class="twoToneButton"-->
 <!--              [ngClass]="{'spinning': searchFlage, 'ngPadding': searchFlage}">-->

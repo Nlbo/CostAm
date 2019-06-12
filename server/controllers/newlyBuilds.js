@@ -1,4 +1,4 @@
-const Apartments = require('../models/apartments');
+const NewlyBuilds = require('../models/newlybuilds');
 
 
 module.exports = {
@@ -12,18 +12,66 @@ module.exports = {
             transactions:req.body.transactions && req.body.transactions.length > 0 ? req.body.transactions : ["Վաճառք", "Օրավարձով", "Վարձակալություն"],
         };
 
+        req.body.transactions.length > 0 ? newlyBuilds.transactions = {"$in": req.body.transactions} : ["Վաճառք", "Օրավարձով", "Վարձակալություն"];
         req.body.regions.length > 0 ? newlyBuilds.regions = {"$in": req.body.regions} : null;
         req.body.streets.length > 0 ? newlyBuilds.streets = {"$in": req.body.streets} : null;
         req.body.communities.length > 0 ? newlyBuilds.communities = {"$in": req.body.communities} : null;
         req.body.cities.length > 0 ? newlyBuilds.cities = {"$in": req.body.cities} : null;
-        newlyBuilds.projects = 'Նորակառույց';
 
 
-        let data = await Apartments
+        let data = await NewlyBuilds
             .find(newlyBuilds);
         res.status(201).json({
             data: data,
             filters: filters
         })
+    },
+    postData: async (req,res) => {
+        let data = req.body;
+
+        let images = [];
+
+        req.files.forEach(item => {
+            images.push(item.filename);
+        });
+
+        data.imgs = images;
+        data.additionalInfoFields ? data.additionalInfoFields = JSON.parse(data.additionalInfoFields) : null;
+        data.mapDetails = JSON.parse(data.mapDetails);
+        data.phone = JSON.parse(data.phone);
+        data.transactions = JSON.parse(data.transactions);
+        data.prices = [];
+        if (data.priceForRent) data.prices.push({
+            type: 'Վարձակալություն',
+            price: data.priceForRent + "",
+            currency: data.currencyForRent
+        });
+        if (data.priceForSale) data.prices.push({
+            type: 'Վաճառք',
+            price: data.priceForSale + "",
+            currency: data.currencyForSale
+        });
+        if (data.priceForDailyRent) data.prices.push({
+            type: 'Օրավարձով',
+            price: data.priceForDailyRent + "",
+            currency: data.currencyForDailyRent,
+        });
+
+        try {
+            await new NewlyBuilds(data).save();
+            res.status(201).json(data);
+        } catch (e) {
+            console.log(e)
+            res.status(409).json({
+                msg: 'Error: Apartment not saved ...'
+            })
+        }
+    },
+
+    getMapMarkers: async (req,res) => {
+        // let candidate = await Houses.find({}).distinct('mapDetails');
+        let candidate = await NewlyBuilds.find({});
+        res.status(201).json(candidate)
     }
+
 };

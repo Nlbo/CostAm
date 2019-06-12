@@ -3,6 +3,7 @@
   <div class="locationPhone top-Info">
     <div class="announcementType borderRadiusLeft">
       <h2>{{cart.announcementType}}</h2>
+<!--    <h2>{{cart.codeValue ? cart.codeValue + ' code' : null}}</h2>-->
     </div>
     <div class="phoneNumbers borderRadiusRight">
 <!--      <h2 *ngFor="let phone of cart.phone" class="boldStyles">{{'Հեռ.' | translate:user}} {{phone}}</h2>-->
@@ -44,12 +45,12 @@
       <p>{{cart.livingSpace}}</p>
     </div>
     <!--COMMERCIAL DETAILS START-->
-    <div *ngIf="cart.announcementType == 'Կոմերցիոն' || cart.announcementType == 'Հողամաս' || cart.announcementType == 'Բիզնես'">
+    <div *ngIf="cart.buildingArea ? cart.announcementType == 'Կոմերցիոն' || cart.announcementType == 'Հողամաս' || cart.announcementType == 'Բիզնես' : null">
       <p>{{'Շինության մակերես ք.մ.' | translate:user}}</p>
       <p>{{cart.buildingArea}}</p>
     </div>
     <!--COMMERCIAL DETAILS END-->
-    <div *ngIf="cart.announcementType == 'Առանձնատուն' || cart.announcementType == 'Կոմերցիոն' || cart.announcementType == 'Հողամաս' || cart.announcementType == 'Բիզնես'">
+    <div *ngIf="cart.supportingArea ? cart.announcementType == 'Առանձնատուն' || cart.announcementType == 'Կոմերցիոն' || cart.announcementType == 'Հողամաս' || cart.announcementType == 'Բիզնես' : null">
       <p>{{'Օժանդակ մակերես ք.մ.' | translate:user}}</p>
       <p>{{cart.supportingArea}}</p>
     </div>
@@ -59,7 +60,7 @@
       <p>{{'Ն. Հարդարանք' | translate:user}}</p>
       <p>{{cart.interiorDecorations}}</p>
     </div>
-    <div *ngIf="cart.announcementType == 'Բնակարան'">
+    <div *ngIf="cart.announcementType == 'Բնակարան' && cart.projects">
       <p>{{'Նախագիծ' | translate:user}}</p>
       <p>{{cart.projects}}</p>
     </div>
@@ -67,7 +68,7 @@
       <p>{{'Շենքի տեսակ' | translate:user}}</p>
       <p>{{cart.buildingTypes}}</p>
     </div>
-    <div *ngIf="cart.announcementType == 'Կոմերցիոն'|| cart.announcementType == 'Հողամաս'">
+    <div *ngIf="cart.front ? cart.announcementType == 'Կոմերցիոն'|| cart.announcementType == 'Հողամաս' : null">
       <p>{{'Ճակատ' | translate:user}}</p>
       <p>{{cart.front}}</p>
     </div>
@@ -75,7 +76,7 @@
       <p>{{'Ծածկ' | translate:user}}</p>
       <p>{{cart.covers}}</p>
     </div>
-    <div *ngIf="cart.announcementType == 'Բնակարան' || cart.announcementType == 'Առանձնատուն' || cart.announcementType == 'Կոմերցիոն'">
+    <div *ngIf="cart.ceilingValue ? cart.ceilingValue && cart.announcementType == 'Բնակարան' || cart.announcementType == 'Առանձնատուն' || cart.announcementType == 'Կոմերցիոն' : null">
       <p>{{'Առաստաղ մ․' | translate:user}}</p>
       <p>{{cart.ceilingValue}}</p>
     </div>

@@ -2,6 +2,20 @@
   <div class="flewWrap">
 
     <div class="addAnnouncement-input">
+      <p-spinner class="ui-fluid" size="1" [min]="0" [step]="1"
+                 placeholder="* {{'Կոդ' | translate:user}}"
+                 [inputStyle]="{'width':'100%'}"
+                 formControlName="codeValue"
+                 (onChange)="send('codeValue')">
+
+      </p-spinner>
+    </div>
+
+    <div class="addAnnouncement-input topCheckStyle">
+      <p-checkbox label="{{'Լավագույն առաջարկ' | translate:user}}" formControlName="top" binary="true" (onChange)="send('top')"></p-checkbox>
+    </div>
+
+    <div class="addAnnouncement-input">
       <p-multiSelect [options]="optionsData.transactions" formControlName="transactions"
                      [maxSelectedLabels]="1"
                      (onChange)="send('transactions')"
@@ -91,7 +105,7 @@
 
     <div class="addAnnouncement-input">
       <p-spinner class="ui-fluid" size="1" [min]="0" [step]="1"
-                 placeholder="* {{'Օժանդակ մակերես ք.մ.' | translate:user}} "
+                 placeholder=" {{'Օժանդակ մակերես ք.մ.' | translate:user}} "
                  [inputStyle]="{'width':'100%'}"
                  formControlName="supportingArea"
                  (onChange)="send('supportingArea')">
@@ -141,7 +155,7 @@
 
     <div class="addAnnouncement-input">
       <p-spinner class="ui-fluid" size="1" [min]="0" [step]="0.05"
-                 placeholder="* {{'Առաստաղ մ․' | translate:user}} "
+                 placeholder=" {{'Առաստաղ մ․' | translate:user}} "
                  formControlName="ceilingValue"
                  (onChange)="send('ceilingValue')"
                  [inputStyle]="{'width':'100%'}">

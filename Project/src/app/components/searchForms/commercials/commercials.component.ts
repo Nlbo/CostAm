@@ -41,12 +41,12 @@ export class CommercialsComponent implements OnInit {
   }
   foo() {
 
-    if (this.form.get('pricesStart').value < 5000000) {
-      this.form.get('pricesEnd').enable()
-    } else {
-      this.form.get('pricesEnd').setValue('');
-      this.form.get('pricesEnd').disable();
-    }
+    // if (this.form.get('pricesStart').value < 5000000) {
+    //   this.form.get('pricesEnd').enable()
+    // } else {
+    //   this.form.get('pricesEnd').setValue('');
+    //   this.form.get('pricesEnd').disable();
+    // }
   }
 
   onChange(item) {
@@ -105,7 +105,7 @@ export class CommercialsComponent implements OnInit {
       this.searchFlage = false;
     });
   }
-  goToCreate() {
-    this.router.navigate(['create', 'commercials']);
-  }
+  // goToCreate() {
+  //   this.router.navigate(['create', 'commercials']);
+  // }
 }

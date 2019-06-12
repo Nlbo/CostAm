@@ -1,11 +1,11 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Project';
 
   //scrool top button START++++++++++
@@ -13,6 +13,9 @@ export class AppComponent {
   showScrollHeight = 300;
   hideScrollHeight = 10;
 
+  ngOnInit() {
+
+  }
 
 
   @HostListener('window:scroll', [])
@@ -40,3 +43,12 @@ export class AppComponent {
   }
   //scrool top button END++++++++++
 }
+
+
+
+
+
+
+
+
+

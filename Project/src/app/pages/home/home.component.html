@@ -46,29 +46,43 @@
       </div>
       <h2 *ngIf="searchPostsActive" class="top-announcements">{{'Լավագույն առաջարկներ' | translate:user}}</h2>
       <div *ngIf="searchPostsActive" class="carts">
+
+
+        <div class="cartsScrool">
         <div class="cart" *ngFor="let cart of topCarts"
              [ngClass]="{'activeSection': !searchPostsActive}">
           <img [src]="url + '/uploads/' + cart.imgs[0]" alt="">
           <div class="cart-info">
-            <h3>{{cart.regions}} </h3>
-            <p>{{cart.cities}}, {{cart.communities}}, {{cart.streets}}</p>
+            <h3>{{cart.announcementType}} </h3>
+            <!-- <p>{{cart.cities}}, {{cart.communities}}, {{cart.streets}}</p>-->
+            <p>{{cart.communities}}, {{cart.prices[0].price + ' ' + cart.prices[0].currency}}</p>
           </div>
         </div>
+        </div>
+
       </div>
+
       <div class="searchCart" [ngClass]="{'activeSection': searchPostsActive}">
         <div (click)="goToDetails(carts)" class="cartS" *ngFor="let carts of cycleData">
           <div class="wAuto">
 <!--            <h2>{{carts.regions}}, {{carts.cities}}, {{carts.communities}}</h2>-->
+<!--            {{carts.announcementType}}-->
             <h2>{{carts.regions == carts.cities ? carts.regions : carts.regions + ', ' + carts.cities}}, {{carts.communities}}</h2>
-            <img [src]="url + '/uploads/' + carts.imgs[0]" alt="">
+            <img [src]="url + '/uploads/' + carts.imgs[0]" alt="" style="max-height: 224px">
           </div>
           <div class="cart-info">
             <h3>{{carts.cities}}, {{carts.streets}}</h3>
             <div class="moreInfo">
-              <p>{{carts.streets}}</p>
-              <p>{{carts.numberOfRooms ? carts.numberOfRooms + ' սեն' : false || carts.buildingArea + ' ք.մ.'}}</p>
-              <p>{{carts.supportingArea ? carts.supportingArea + ' ք.մ.' : false  || (carts.flooring + '/' + carts.floor + ' հարկ') }}</p>
-              <p>{{carts.areaValue ? carts.areaValue + ' ք.մ.' : false || carts.landArea + ' ք.մ.'}}</p>
+<!--              <p>{{carts.streets}}</p>-->
+<!--              <p>{{carts.numberOfRooms ? carts.numberOfRooms + ' սեն' : false || carts.buildingArea + ' ք.մ.'}}</p>-->
+              <p *ngIf="carts.announcementType !== 'Բիզնես' && carts.announcementType !== 'Նորակառույց'">{{carts.announcementType == 'Բնակարան' ? carts.numberOfRooms + ' սեն' : carts.announcementType == 'Առանձնատուն' ? carts.numberOfRooms + ' սեն' : carts.announcementType == 'Կոմերցիոն' ? (carts.flooring + '/' + carts.floor + ' հարկ') : carts.announcementType == 'Հողամաս' ? carts.landArea + ' ք.մ.': null}}</p>
+<!--              <p>{{carts.announcementType == 'Առանձնատուն' ? carts.numberOfRooms + ' սեն' : null}}</p>-->
+<!--              <p>{{carts.supportingArea ? carts.supportingArea + ' ք.մ.' : false  || (carts.flooring + '/' + carts.floor + ' հարկ') }}</p>-->
+<!--              <p>{{carts.areaValue ? carts.areaValue + ' ք.մ.' : false || carts.landArea + ' ք.մ.'}}</p>-->
+              <p *ngIf="carts.announcementType !== 'Հողամաս' && carts.announcementType !== 'Բիզնես' && carts.announcementType !== 'Նորակառույց'">{{carts.announcementType == 'Բնակարան' ? (carts.flooring + '/' + carts.floor + ' հարկ') : carts.announcementType == 'Առանձնատուն' ? carts.landArea + ' ք.մ.' : carts.announcementType == 'Կոմերցիոն' ? carts.landArea + ' ք.մ.': null}}</p>
+              <p *ngIf="carts.announcementType !== 'Հողամաս' && carts.announcementType !== 'Բիզնես' && carts.announcementType !== 'Նորակառույց'">{{carts.announcementType == 'Բնակարան' ? carts.areaValue + ' ք.մ.' : carts.announcementType == 'Առանձնատուն' ? carts.livingSpace + ' ք.մ.' : carts.announcementType == 'Կոմերցիոն' ? carts.buildingArea + ' ք.մ.': null}}</p>
+
+              <!--              carts.announcementType == 'Կոմերցիոն' ? (carts.flooring + '/' + carts.floor + ' հարկ') : null-->
               <p class="colorRed">
                 {{
                 carts.prices[0].price + ' ' + carts.prices[0].currency
@@ -98,5 +112,10 @@
 
 </div>
 
-
+<div id="popup_overlay" class="popup__overlay">
+  <div class="popup">
+    <div id="popup_close" class="popup__close">X</div>
+    <p>Կայքը մշակման փուլում է
+  </div>
+</div>
 

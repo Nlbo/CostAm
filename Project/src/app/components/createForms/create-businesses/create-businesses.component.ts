@@ -35,19 +35,21 @@ export class CreateBusinessesComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
+      top: new FormControl(),
+      codeValue: new FormControl('', [Validators.required]),
       transactions: new FormControl([], [Validators.required]),
       regions: new FormControl('', [Validators.required]),
       cities: new FormControl('', [Validators.required]),
-      areasBusiness: new FormControl('', [Validators.required]),
-      annualNetProfit: new FormControl('', [Validators.required]),
+      areasBusiness: new FormControl(''),
+      annualNetProfit: new FormControl(''),
       communities: new FormControl({value: '', disabled: false}, [Validators.required]),
       streets: new FormControl({value: '', disabled: false}, [Validators.required]),
-      landArea: new FormControl('', [Validators.required]),
-      buildingArea: new FormControl('', [Validators.required]),
-      flooring: new FormControl('', [Validators.required]),
-      floor: new FormControl('', [Validators.required]),
-      supportingArea: new FormControl('', [Validators.required]),
-      additionalInfoFields: new FormControl('', [Validators.required]),
+      landArea: new FormControl(''),
+      buildingArea: new FormControl(''),
+      flooring: new FormControl(''),
+      floor: new FormControl(''),
+      supportingArea: new FormControl(''),
+      additionalInfoFields: new FormControl(''),
       currencyForSale: new FormControl({value: '', disabled: true}),
       priceForSale: new FormControl({value: '', disabled: true}),
       currencyForRent: new FormControl({value: '', disabled: true}),
@@ -202,6 +204,11 @@ export class CreateBusinessesComponent implements OnInit {
           });
       }
         break;
+
+      case 'top': {
+        console.log(item);
+      }
+
     }
 
     await this.validate();

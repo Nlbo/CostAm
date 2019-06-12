@@ -17,6 +17,7 @@
   "Գնահատում": "Evaluation",
   "Բաց շուկա": "Open Market",
   "Լավագույն առաջարկներ": "Best offers",
+  "Լավագույն առաջարկ": "Best offer",
   "Գործարքի տեսակը": "Transaction type",
   "Մարզ": "State",
   "Քաղաք": "City",
@@ -74,5 +75,6 @@
   "Երկայնություն": "Longitude",
   "Հաստատել": "Approve",
   "Փակել": "Close",
-  "Նորակառույց": "Newly built"
+  "Նորակառույց": "Newly built",
+  "Կոդ": "Code"
 }

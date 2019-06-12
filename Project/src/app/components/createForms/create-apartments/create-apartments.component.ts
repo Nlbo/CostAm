@@ -33,6 +33,8 @@ export class CreateApartmentsComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
+      top: new FormControl(),
+      codeValue: new FormControl('', [Validators.required]),
       transactions: new FormControl([], [Validators.required]),
       regions: new FormControl('', [Validators.required]),
       cities: new FormControl('', [Validators.required]),
@@ -43,10 +45,10 @@ export class CreateApartmentsComponent implements OnInit {
       floor: new FormControl('', [Validators.required]),
       areaValue: new FormControl('', [Validators.required]),
       interiorDecorations: new FormControl('', [Validators.required]),
-      projects: new FormControl('', [Validators.required]),
+      projects: new FormControl(''),
       buildingTypes: new FormControl('', [Validators.required]),
       covers: new FormControl('', [Validators.required]),
-      ceilingValue: new FormControl('', [Validators.required]),
+      ceilingValue: new FormControl(''),
       additionalInfoFields: new FormControl('', [Validators.required]),
       currencyForSale: new FormControl({value: '', disabled: true}),
       priceForSale: new FormControl({value: '', disabled: true}),
@@ -223,6 +225,10 @@ export class CreateApartmentsComponent implements OnInit {
           });
       }
         break;
+
+      case 'top': {
+        console.log(item);
+      }
     }
 
     await this.validate();

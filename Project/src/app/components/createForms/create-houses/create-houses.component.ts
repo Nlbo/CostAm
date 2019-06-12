@@ -35,6 +35,8 @@ export class CreateHousesComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
+      top: new FormControl(),
+      codeValue: new FormControl('', [Validators.required]),
       transactions: new FormControl([], [Validators.required]),
       regions: new FormControl('', [Validators.required]),
       cities: new FormControl('', [Validators.required]),
@@ -45,11 +47,11 @@ export class CreateHousesComponent implements OnInit {
       floor: new FormControl('', [Validators.required]),
       landArea: new FormControl('', [Validators.required]),
       livingSpace: new FormControl('', [Validators.required]),
-      supportingArea: new FormControl('', [Validators.required]),
+      supportingArea: new FormControl(''),
       interiorDecorations: new FormControl('', [Validators.required]),
       buildingTypes: new FormControl('', [Validators.required]),
       covers: new FormControl('', [Validators.required]),
-      ceilingValue: new FormControl('', [Validators.required]),
+      ceilingValue: new FormControl(''),
       additionalInfoFields: new FormControl('', [Validators.required]),
       currencyForSale: new FormControl({value: '', disabled: true}),
       priceForSale: new FormControl({value: '', disabled: true}),
@@ -226,6 +228,10 @@ export class CreateHousesComponent implements OnInit {
           });
       }
         break;
+
+      case 'top': {
+        console.log(item);
+      }
     }
 
     await this.validate();

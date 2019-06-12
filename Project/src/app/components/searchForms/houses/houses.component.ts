@@ -28,7 +28,7 @@ export class HousesComponent implements OnInit {
       cities: new FormControl([], [Validators.required]),
       communities: new FormControl([], [Validators.required]),
       streets: new FormControl([], [Validators.required]),
-      buildingTypes: new FormControl([], [Validators.required]),
+      // buildingTypes: new FormControl([], [Validators.required]),
       numberOfRooms: new FormControl([], [Validators.required]),
       landArea: new FormControl('', [Validators.required]),
       livingSpace: new FormControl('', [Validators.required]),
@@ -44,12 +44,12 @@ export class HousesComponent implements OnInit {
 
   foo() {
 
-    if (this.form.get('pricesStart').value < 5000000) {
-      this.form.get('pricesEnd').enable()
-    } else {
-      this.form.get('pricesEnd').setValue('');
-      this.form.get('pricesEnd').disable();
-    }
+    // if (this.form.get('pricesStart').value < 5000000) {
+    //   this.form.get('pricesEnd').enable()
+    // } else {
+    //   this.form.get('pricesEnd').setValue('');
+    //   this.form.get('pricesEnd').disable();
+    // }
   }
 
   onChange(item) {
@@ -109,8 +109,8 @@ export class HousesComponent implements OnInit {
       this.searchFlage = false;
     });
   }
-  goToCreate() {
-    this.router.navigate(['create', 'houses']);
-  }
+  // goToCreate() {
+  //   this.router.navigate(['create', 'houses']);
+  // }
 
 }

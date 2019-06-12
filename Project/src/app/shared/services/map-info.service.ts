@@ -29,6 +29,9 @@ export class MapInfoService {
       case 'Բիզնես':
         return this.http.get('http://localhost:3000/api/businesses');
         break;
+      case 'Նորակառույց':
+        return this.http.get('http://localhost:3000/api/newlyBuilds');
+        break;
     }
   }
 }

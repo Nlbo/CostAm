@@ -35,20 +35,22 @@ export class CreateLandsComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
+      top: new FormControl(),
+      codeValue: new FormControl('', [Validators.required]),
       transactions: new FormControl([], [Validators.required]),
       regions: new FormControl('', [Validators.required]),
       cities: new FormControl('', [Validators.required]),
       communities: new FormControl({value: '', disabled: false}, [Validators.required]),
       streets: new FormControl({value: '', disabled: false}, [Validators.required]),
       landArea: new FormControl('', [Validators.required]),
-      buildingArea: new FormControl('', [Validators.required]),
-      supportingArea: new FormControl('', [Validators.required]),
+      buildingArea: new FormControl(''),
+      supportingArea: new FormControl(''),
       additionalInfoFields: new FormControl('', [Validators.required]),
       currencyForSale: new FormControl({value: '', disabled: true}),
       priceForSale: new FormControl({value: '', disabled: true}),
       currencyForRent: new FormControl({value: '', disabled: true}),
       priceForRent: new FormControl({value: '', disabled: true}),
-      front: new FormControl({value: '', disabled: false}, [Validators.required]),
+      front: new FormControl({value: '', disabled: false}),
       actualUse: new FormControl({value: '', disabled: false}, [Validators.required]),
     });
 
@@ -200,6 +202,11 @@ export class CreateLandsComponent implements OnInit {
           });
       }
         break;
+
+      case 'top': {
+        console.log(item);
+      }
+
     }
 
     await this.validate();
@@ -209,10 +216,10 @@ export class CreateLandsComponent implements OnInit {
       value: this.form.get(item).value,
       invalid: !(this.form.valid && this.rent && this.sale)
     };
-    console.log(this.form.valid);
-    console.log(this.sale);
-    console.log(this.rent);
-    console.log(data);
+    //console.log(this.form.valid);
+    //console.log(this.sale);
+   // console.log(this.rent);
+    //console.log(data);
     this.events.emitChange(data);
   }
 

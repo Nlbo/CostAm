@@ -4,6 +4,8 @@ const controller = require('../controllers/newlyBuilds');
 const uploadImg = require('../middleware/multer');
 
 router.post('/filtered', controller.getData);
+router.post('/',uploadImg.array('images'), controller.postData);
+router.get ('/', controller.getMapMarkers);
 
 
 

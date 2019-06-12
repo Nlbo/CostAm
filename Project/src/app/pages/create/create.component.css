@@ -38,7 +38,7 @@
   border-bottom: 1px solid #ffffff78;
   /*width: max-project;*/
   margin: auto;
-  max-width: 717px;
+  max-width: 794px;
 }
 .toggleAddAnnouncement a:hover{
   border-color: #ffffff78;
@@ -143,7 +143,7 @@
   position: absolute;
   right: 0;
 }
-@media (max-width: 780px) {
+@media (max-width: 880px) {
   #basic1{
     transform: rotateY(32deg);
     position: absolute;

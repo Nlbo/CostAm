@@ -16,8 +16,8 @@ export class CodesComponent implements OnInit {
 
   ngOnInit() {
   }
-  goToCreate() {
-    this.router.navigate(['create', 'codes']);
-  }
+  // goToCreate() {
+  //   this.router.navigate(['create', 'codes']);
+  // }
 
 }

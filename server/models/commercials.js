@@ -2,6 +2,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const CommercialsSchema = new Schema({
+    top: {
+        type: Boolean,
+        default: false
+    },
+    codeValue: {
+        type: String,
+        required: true
+    },
     announcementType: {
         type: String,
         default: 'Կոմերցիոն'
@@ -28,7 +36,7 @@ const CommercialsSchema = new Schema({
     },
     ceilingValue: {
         type: String,
-        required: true
+        required: false
     },
     cities: {
         type: String,
@@ -51,7 +59,7 @@ const CommercialsSchema = new Schema({
     },
     front: {
         type: String,
-        required: true
+        required: false
     },
     interiorDecorations: {
         type: String,
@@ -102,7 +110,7 @@ const CommercialsSchema = new Schema({
     },
     supportingArea: {
         type: String,
-        required: true
+        required: false
     },
     transactions: {
         type: [String],

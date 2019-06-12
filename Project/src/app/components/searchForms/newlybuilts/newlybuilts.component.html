@@ -1,6 +1,12 @@
 <div class="filter-content filter-contentStyle" style="margin-left: 10px; margin-right: 10px;">
   <form [formGroup]="form" (ngSubmit)="formSend()">
-
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="optionsData.transactions" formControlName="transactions"
+                     [maxSelectedLabels]="1"
+                     [filter]="false"
+                     [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Գործարքի տեսակը' | translate:user}}"
+                     [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
     <div class="col-md-3 input-style">
       <p-multiSelect [options]="optionsData.regions" formControlName="regions" [selectedItemsLabel]="'{0} ընտրված դաշտ'"
                      (onChange)="onChange('region')"
@@ -30,7 +36,7 @@
                      [style]="{'width':'100%'}"></p-multiSelect>
     </div>
 
-    <div class="col-md-3 input-style hiddenInputs"></div>
+<!--    <div class="col-md-3 input-style hiddenInputs"></div>-->
 
     <div class="col-md-3 input-style appartament-button">
       <button type="submit" id="search"
@@ -42,7 +48,8 @@
     </div>
 
     <div class="appartament-button" style="margin-top: 20px;">
-      <button (click)="goToCreate()" id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>
+<!--      <button (click)="goToCreate()" id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>-->
+
 <!--      <button type="submit" id="search"-->
 <!--              class="twoToneButton"-->
 <!--              [ngClass]="{'spinning': searchFlage, 'ngPadding': searchFlage}">-->

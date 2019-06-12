@@ -33,6 +33,7 @@ const routes: Routes = [
     ]
   },
   {
+    // path: 'rimavigen123456', component: CreateComponent, children: [
     path: 'create', component: CreateComponent, children: [
       {path: 'apartments', component: CreateApartmentsComponent},
       {path: 'houses', component: CreateHousesComponent},
@@ -40,7 +41,7 @@ const routes: Routes = [
       {path: 'lands', component: CreateLandsComponent},
       {path: 'businesses', component: CreateBusinessesComponent},
       {path: 'codes', component: CreateCodesComponent},
-      {path: 'newlyBuilts', component: CreateNewlybuiltsComponent},
+      {path: 'newlyBuilds', component: CreateNewlybuiltsComponent},
       {path: '', redirectTo: '/apartments', pathMatch: 'full'}
     ]
   },
@@ -48,7 +49,8 @@ const routes: Routes = [
   {path: 'openMarket', component: OpenMarketComponent},
   {path: '', redirectTo: '/home/apartments', pathMatch: 'full'}
 ];
-
+// create
+// rimavigen123456
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

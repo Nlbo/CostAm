@@ -2,6 +2,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const HousesSchema = new Schema({
+    top: {
+        type: Boolean,
+        default: false
+    },
+    codeValue: {
+        type: String,
+        required: true
+    },
     announcementType: {
         type: String,
         default: 'Առանձնատուն'
@@ -16,7 +24,7 @@ const HousesSchema = new Schema({
     },
     ceilingValue: {
         type: String,
-        required: true
+        required: false
     },
     communities: {
         type: String
@@ -40,6 +48,10 @@ const HousesSchema = new Schema({
     landArea: {
         type: String,
         required: true
+    },
+    supportingArea: {
+        type: String,
+        required: false
     },
     livingSpace: {
         type: String,

@@ -1,39 +1,32 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const BusinessesSchema = new Schema({
+const NewlyBuildsSchema = new Schema({
+    top: {
+        type: Boolean,
+        default: false
+    },
     codeValue: {
         type: String,
         required: true
     },
     announcementType: {
         type: String,
-        default: 'Բիզնես'
+        default: 'Նորակառույց'
     },
     additionalInfoFields: {
         type: [String]
     },
-    areasBusiness: {
-        type: [String]
-    },
-    additionalInformation: {
-        type: String,
-        required: true
-    },
-    annualNetProfit: {
+    ceilingValue: {
         type: String
-    },
-    buildingArea: {
-        type: String
-    },
-    cities: {
-        type: String,
-        required: true
     },
     communities: {
         type: String
     },
-    landArea: {
+    flooring: {
+        type: String
+    },
+    interiorDecorations: {
         type: String
     },
     mapDetails: {
@@ -54,19 +47,6 @@ const BusinessesSchema = new Schema({
         type: [String],
         required: true
     },
-    regions: {
-        type: String,
-        required: true
-    },
-    streets: {
-        type: String
-    },
-    floor: {
-        type: String
-    },
-    flooring: {
-        type: String
-    },
     prices: [{
         type: {
             type: String,
@@ -81,7 +61,11 @@ const BusinessesSchema = new Schema({
             required: true
         }
     }],
-    supportingArea: {
+    regions: {
+        type: String,
+        required: true
+    },
+    streets: {
         type: String
     },
     transactions: {
@@ -90,6 +74,10 @@ const BusinessesSchema = new Schema({
     },
     imgs: {
         type: [String],
+        required: true
+    },
+    cities: {
+        type: String,
         required: true
     },
     created: {
@@ -102,4 +90,4 @@ const BusinessesSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('businesses', BusinessesSchema);
+module.exports = mongoose.model('newlybuilds', NewlyBuildsSchema);

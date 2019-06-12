@@ -2,6 +2,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const LandsSchema = new Schema({
+    top: {
+        type: Boolean,
+        default: false
+    },
+    codeValue: {
+        type: String,
+        required: true
+    },
     announcementType: {
         type: String,
         default: 'Հողամաս'
@@ -20,7 +28,7 @@ const LandsSchema = new Schema({
     },
     buildingArea: {
         type: String,
-        required: true
+        required: false
     },
     cities: {
         type: String,
@@ -31,7 +39,7 @@ const LandsSchema = new Schema({
     },
     front: {
         type: String,
-        required: true
+        required: false
     },
     landArea: {
         type: String,
@@ -78,7 +86,7 @@ const LandsSchema = new Schema({
     },
     supportingArea: {
         type: String,
-        required: true
+        required: false
     },
     transactions: {
         type: [String],

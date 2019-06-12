@@ -46,7 +46,7 @@ module.exports = {
 
         let houses = {};
 
-        let arr = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40];
+        let arr = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40];
 
         let filters = {
             pricesStart : req.body.pricesStart ? req.body.pricesStart : 0,
@@ -61,7 +61,7 @@ module.exports = {
 
         if (req.body.numberOfRooms.length > 0) {
             req.body.numberOfRooms.forEach(items => {
-                if (items === 8) {
+                if (items === 4) {
                     numer = numer.concat(arr);
                 } else {
                     numer.push(items);
@@ -76,7 +76,7 @@ module.exports = {
         req.body.streets.length > 0 ? houses.streets = {"$in": req.body.streets} : null;
         req.body.communities.length > 0 ? houses.communities = {"$in": req.body.communities} : null;
         req.body.cities.length > 0 ? houses.cities = {"$in": req.body.cities} : null;
-        req.body.buildingTypes.length > 0 ? houses.buildingTypes = {"$in": req.body.buildingTypes} : null;
+        // req.body.buildingTypes.length > 0 ? houses.buildingTypes = {"$in": req.body.buildingTypes} : null;
         req.body.numberOfRooms.length > 0 ? houses.numberOfRooms = {"$in": numer} : null;
         req.body.flooring ? houses.flooring = "" + req.body.flooring : null;
         req.body.currency || req.body.pricesStart || req.body.pricesEnd ? houses.prices =

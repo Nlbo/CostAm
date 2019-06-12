@@ -19,24 +19,33 @@ export class PublicDataService {
     {label: '1', value: 1},
     {label: '2', value: 2},
     {label: '3', value: 3},
-    {label: '4', value: 4},
-    {label: '5', value: 5},
-    {label: '6', value: 6},
-    {label: '7', value: 7},
-    {label: '8+', value: 8},
+    {label: '4+', value: 4}
     // {
     //   label: '8+',
     //   value: JSON.stringify([8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40])
     // }
   ];
+  // surface = [
+  //   {label: '0-100', value: {min: 3, max: 100}},
+  //   {label: '100-150', value: {min: 100, max: 150}},
+  //   {label: '150-200', value: {min: 150, max: 200}},
+  //   {label: '250-300', value: {min: 250, max: 300}},
+  //   {label: '350-400', value: {min: 350, max: 400}},
+  //   {label: '400+', value: {min: 400, max: 99999999999999}}
+  // ];
   surface = [
-    {label: '0-100', value: {min: 3, max: 100}},
-    {label: '100-150', value: {min: 100, max: 150}},
-    {label: '150-200', value: {min: 150, max: 200}},
-    {label: '250-300', value: {min: 250, max: 300}},
-    {label: '350-400', value: {min: 350, max: 400}},
-    {label: '400+', value: {min: 400, max: 99999999999999}}
+    {label: 'մինչև 50', value: {min: 2, max: 50}},
+    {label: '50-80', value: {min: 50, max: 80}},
+    {label: '80-120', value: {min: 80, max: 120}},
+    {label: '120+', value: {min: 120, max: 99999999999999}}
   ];
+  surfaceLand = [
+    {label: 'մինչև 300', value: {min: 2, max: 300}},
+    {label: '300-500', value: {min: 300, max: 500}},
+    {label: '500-1000', value: {min: 500, max: 1000}},
+    {label: '1000+', value: {min: 1000, max: 99999999999999}}
+  ];
+  
   pricesStart = [
     {label: '0', value: 0},
     {label: '10000', value: 10000},
@@ -57,7 +66,14 @@ export class PublicDataService {
     {label: '400000', value: 400000},
     {label: '450000', value: 450000},
     {label: '500000', value: 500000},
-    {label: '500000+', value: 5000005},
+
+    {label: '600000', value: 600000},
+    {label: '700000', value: 700000},
+    {label: '800000', value: 800000},
+    {label: '900000', value: 900000},
+    {label: '1000000', value: 1000000},
+
+    // {label: '1000000+', value: 10000005}
   ];
   pricesEnd = [
     {label: '10000', value: 10000},
@@ -78,6 +94,14 @@ export class PublicDataService {
     {label: '400000', value: 400000},
     {label: '450000', value: 450000},
     {label: '500000', value: 500000},
+
+    {label: '600000', value: 600000},
+    {label: '700000', value: 700000},
+    {label: '800000', value: 800000},
+    {label: '900000', value: 900000},
+    // {label: '1000000', value: 1000000},
+
+    {label: '1000000+', value: 100000000000005}
   ];
 
   surfaceHouse = [

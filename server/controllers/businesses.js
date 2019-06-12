@@ -13,8 +13,8 @@ module.exports = {
         });
 
         data.imgs = images;
-        data.areasBusiness = JSON.parse(data.areasBusiness);
-        data.additionalInfoFields = JSON.parse(data.additionalInfoFields);
+        data.areasBusiness ? data.areasBusiness = JSON.parse(data.areasBusiness) : null;
+        data.additionalInfoFields ? data.additionalInfoFields = JSON.parse(data.additionalInfoFields) : null;
         data.mapDetails = JSON.parse(data.mapDetails);
         data.phone = JSON.parse(data.phone);
         data.transactions = JSON.parse(data.transactions);

@@ -37,11 +37,12 @@ import { CreateCommercialsComponent } from './components/createForms/create-comm
 import { CreateHousesComponent } from './components/createForms/create-houses/create-houses.component';
 import { CreateLandsComponent } from './components/createForms/create-lands/create-lands.component';
 import { CreateNewlybuiltsComponent } from './components/createForms/create-newlybuilts/create-newlybuilts.component';
-import {FileUploadModule, GalleriaModule, SpinnerModule} from 'primeng/primeng';
+import {CheckboxModule, FileUploadModule, GalleriaModule, SpinnerModule} from 'primeng/primeng';
 import { DetailsMapComponent } from './components/details-map/details-map.component';
 import { DetailsSliderComponent } from './components/details-slider/details-slider.component';
 import {SortablejsModule} from "angular-sortablejs";
 import { OpenMarketComponent } from './pages/open-market/open-market.component';
+import { FileUploaderComponent } from './components/createForms/file-uploader/file-uploader.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -75,7 +76,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     CreateNewlybuiltsComponent,
     DetailsMapComponent,
     DetailsSliderComponent,
-    OpenMarketComponent
+    OpenMarketComponent,
+    FileUploaderComponent
   ],
   imports: [
     BrowserModule,
@@ -91,7 +93,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     SpinnerModule,
     GalleriaModule,
-    SortablejsModule.forRoot({ animation: 150 }),
+    SortablejsModule.forRoot({animation: 150}),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBrq8jkgCgDa3AvM5EmGPc39t1l_sVNdOk'
     }),
@@ -101,8 +103,9 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
-],
+    }),
+    CheckboxModule
+  ],
 providers: [],
   bootstrap
 :
