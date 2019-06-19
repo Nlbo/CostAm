@@ -1,0 +1,174 @@
+/*body {font-family: Arial, Helvetica, sans-serif;}*/
+.mapDetailsPage {
+  width: 100%;
+  height: 600px;
+}
+#mapLat{
+  font-family: "Roboto-Regular";
+  font-size: 15px;
+}
+#clearMap{
+  position: absolute;
+  transform: rotateX(90deg);
+  z-index: -1;
+}
+#mapLng{
+  font-family: "Roboto-Regular";
+  font-size: 15px;
+}
+.mapDetailsPageInput{
+  width: 100%;
+  padding: 8px 5px;
+  color: #245173;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  font-family: "Roboto-Regular";
+  padding-left: 12px;
+  margin-bottom: 12px;
+}
+
+#map {
+  width: 100%;
+  height: 600px;
+}
+
+#mapSearch {
+  width: 100%;
+
+}
+
+/* The Modal (background) */
+.modal {
+  text-align: center;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #03529082;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #03529082;
+  color: white;
+}
+
+.boldStyles{
+  font-family: "Roboto-Bold";
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0
+  }
+  to {
+    bottom: 0;
+    opacity: 1
+  }
+}
+
+@keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0
+  }
+  to {
+    bottom: 0;
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+label {
+  font-weight: bold;
+}
+
+button {
+  margin: 20px 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #f66;
+  color: #fff;
+  touch-action: manipulation;
+  border-radius: 4px;
+  border: none;
+}
+
+button:hover {
+  background-color: #E03C3C;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#inputMapAddress {
+  width: 30%;
+  font-size: 15px;
+  border-radius: 4px;
+  padding: 8px 5px;
+  color: #245173;
+  font-family: "Roboto-Regular";
+  padding-left: 12px;
+  margin-bottom: 12px;
+}
+
+.flewWrap{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 770px;
+  margin: auto;
+}
+
+.flewWrapSmall{
+  max-width: 750px;
+}

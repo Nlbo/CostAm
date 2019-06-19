@@ -1,0 +1,149 @@
+.mapHome {
+  width: 100%;
+  height: 505px;
+}
+#mapSearch{
+  width: 100%;
+}
+/*button{*/
+/*width: 20%;*/
+/*}*/
+.btnHomeMap button{
+  border-radius: 3px;
+  border: 1px solid #fff;
+  background: #03529082;
+  cursor: pointer;
+  font-weight: 700;
+  font-weight: 900;
+  height: 40px;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 12px;
+  width: 13.6%;
+  outline: none;
+  background: #ECF7EA;
+  color: #5A626D;
+  border: 1px solid darkgray;
+  font-family: "Montserrat-Light";
+  text-transform: uppercase;
+}
+.btnHomeMap .typeOfMarkerStyleDiv{
+  /*border-radius: 3px;*/
+  /*border: 1px solid #fff;*/
+  /*background: #03529082;*/
+  /*cursor: pointer;*/
+  /*font-weight: 700;*/
+  /*font-weight: 900;*/
+  /*height: 40px;*/
+  /*margin-bottom: 8px;*/
+  /*color: #ffffff;*/
+  /*font-size: 14px;*/
+  /*width: 16%;*/
+  /*outline: none;*/
+  /*background: #ECF7EA;*/
+  /*color: #5A626D;*/
+  /*border: 1px solid darkgray;*/
+  /*font-family: "Montserrat-Light";*/
+  /*text-transform: uppercase;*/
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 8px;
+  width: 16%;
+}
+.typeOfMarkerStyle{
+  display: grid;
+  height: 40px;
+  text-align: center;
+  line-height: 1.8;
+  font-family: "Montserrat-Light";
+}
+.btnHomeMap input{
+  width: 100%;
+  padding: 8px 5px;
+  color: #245173;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  font-family: "Montserrat-Light";
+  padding-left: 12px;
+  margin-bottom: 12px;
+}
+.btnMarkerActiveClass{
+  background-color: #C0ECAE!important;
+}
+.btnHomeMap button:hover{
+  background: #C0ECAE;
+}
+.mapBtnFlex{
+  display: flex;
+  justify-content: space-between;
+}
+.typeOfActualUseStyleBox{
+  position: relative;
+  width: 13.6%;
+}
+.typeOfActualUseStyle{
+  position: absolute;
+  right: 0;
+  top: -48px;
+  opacity: 0;
+  transition: .5s all;
+  z-index: -1;
+}
+.activeToggle{
+  top: 0!important;
+  opacity: 1!important;
+  z-index: 1!important;
+}
+/*.typeOfActualUseStyleBox:hover .typeOfActualUseStyle{*/
+
+/*}*/
+.typeOfActualUseStyleBtn{
+  width: 100%!important;
+}
+@media (max-width: 1500px) {
+  .btnHomeMap button{
+    font-size: 10px;
+  }
+  .btnHomeMap .typeOfMarkerStyleDiv{
+    /*width: auto;*/
+  }
+}
+@media (max-width: 1200px) {
+  .btnHomeMap .typeOfMarkerStyleDiv{
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 8px;
+    width: 18%;
+  }
+  .btnHomeMap button{
+    font-size: 9px;
+  }
+}
+/*@media (max-width: 1180px) {*/
+  /*.btnHomeMap button{*/
+    /*font-size: 10px;*/
+  /*}*/
+/*}*/
+@media (max-width: 992px) {
+  .btnHomeMap button{
+    font-size: 8px;
+    width: 13%;
+  }
+}
+@media (max-width: 800px) {
+  .btnHomeMap button{
+    width:100%;
+    font-size: 10px;
+  }
+  .mapBtnFlex{
+    flex-direction: column;
+  }
+  .btnHomeMap .typeOfMarkerStyleDiv{
+    width: 100%;
+  }
+  .typeOfActualUseStyleBox{
+    width: 100%;
+  }
+}
+
+

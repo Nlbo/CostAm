@@ -1,0 +1,98 @@
+<div class="addAnnouncement">
+  <div class="wrapper">
+  <div class="wrap-bg">
+    <div class="toggleAddAnnouncement">
+      <div class="linksBox">
+        <a routerLink="apartments" routerLinkActive="addAnnouncementActive"
+           (click)="res()" class="boldStyles">{{'Բնակարան' | translate:user}}</a>
+        <a routerLink="houses" routerLinkActive="addAnnouncementActive"
+           (click)="res()" class="boldStyles">{{'Առանձնատուն' | translate:user}}</a>
+        <a routerLink="commercials" routerLinkActive="addAnnouncementActive"
+           (click)="res()" class="boldStyles">{{'Կոմերցիոն' | translate:user}}</a>
+        <a routerLink="lands" routerLinkActive="addAnnouncementActive"
+          (click)="res()"  class="boldStyles">{{'Հողամաս' | translate:user}}</a>
+        <a routerLink="businesses" routerLinkActive="addAnnouncementActive"
+           (click)="res()" class="boldStyles">{{'Բիզնես' | translate:user}}</a>
+
+        <a routerLink="newlyBuilds" routerLinkActive="addAnnouncementActive"
+          (click)="res()"  class="boldStyles">{{'Նորակառույց' | translate:user}}</a>
+
+      </div>
+    </div>
+    <div class="toggleAddAnnouncement required-fields-section">
+      <span class="required-fields boldStyles">* {{'դաշտերը ենթակա են պարտադիր լրացման' | translate:user}}</span>
+    </div>
+
+    <!--<form [formGroup]="form" (ngSubmit)="form2Submit()"></form>-->
+      <router-outlet></router-outlet>
+
+      <div class="cont2">
+
+
+
+      <div class="addAnnouncement-w100">
+        <app-create-map (mapDetails)="mapDetails($event)"></app-create-map>
+      </div>
+
+      <form [formGroup]="form2" (ngSubmit)="form2Submit()" class="flewWrap">
+        <input type="hidden" formControlName="mapDetails">
+      <div class="addAnnouncement-w100 choosezUploadImage  pd10">
+
+        <app-file-uploader (images)="foo($event)"></app-file-uploader>
+
+      </div>
+      <div class="addAnnouncement-w100  pd0">
+        <div class="ui-g-12 ui-md-4">
+          <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-phone fa-rotate-180"></i></span>
+            <input type="text" pInputText
+                   formControlName="phone1"
+                   placeholder="* {{'Հեռախոս' | translate:user}} 1">
+          </div>
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-phone fa-rotate-180"></i></span>
+            <input type="text" pInputText
+                   formControlName="phone2"
+                   placeholder="{{'Հեռախոս' | translate:user}} 2">
+          </div>
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-phone fa-rotate-180"></i></span>
+            <input type="text" pInputText
+                   formControlName="phone3"
+                   placeholder="{{'Հեռախոս' | translate:user}} 3">
+          </div>
+        </div>
+      </div>
+      <div class="addAnnouncement-w100 pd0">
+          <textarea pInputTextarea autoResize="autoResize"
+                    formControlName="additionalInformation"
+                    placeholder="* {{'Լրացուցիչ ինֆորմացիա՝ բնութագրի համար' | translate:user}}"></textarea>
+      </div>
+      <div class="addAnnouncement-input addNewPost pd0 pRelative">
+        <button *ngIf="flag" type="submit" [disabled]="!(form2.valid && uploadedFiles.length > 0 && !invalid)"
+                [ngClass]="{'btnActiveClass': form2.valid && uploadedFiles.length > 0 && !invalid}">
+          {{'Ավելացնել հայտարարություն' | translate:user}}
+        </button>
+        <button (click)="checkIfValid($event)" type="button" id="greenId">
+          {{'Ստուգել' | translate:user}}
+        </button>
+      </div>
+        <p *ngIf="pleazeCheck" class="redPleaze">* խնդրում ենք լրացնել բոլոր պարտադիր դաշտերը</p>
+      </form>
+
+      </div>
+
+  </div>
+  </div>
+</div>
+<!--<div class="addAnnouncement-input addNewPost">-->
+
+<!--<button type="submit" class="xxx"-->
+        <!--(click)="gotoTop()">-->
+  <!--go top-->
+<!--</button>-->
+<!--</div>-->

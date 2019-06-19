@@ -1,0 +1,313 @@
+.wrapper{
+  max-width: 1480px;
+  margin: auto;
+  width: 94%;
+}
+.wrap-bg{
+  background: #f5f5f5;
+  border-radius: 3px;
+  position: relative;
+  top: 140px;
+  padding: 0 40px;
+  border: 1px solid darkgray;
+}
+.addAnnouncement{
+  background-image: url('../../../assets/images/cacad.jpg');
+  width:100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 1400px;
+}
+.toggleAddAnnouncement{
+  padding-top: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.toggleAddAnnouncement a{
+  border-color: #ffffff78;
+  background: #03529082;
+  color: #245173;
+  border-color: transparent;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0 2px 0 0;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  padding: 12px 18px;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  line-height: 38px;
+  border: none!important;
+  flex: 1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pRelative{
+  position: relative;
+}
+#greenId{
+  background-color: #EC971F!important;
+  position: absolute;
+  left: 0;
+  outline: none!important;
+  box-shadow: none;
+  cursor: pointer;
+}
+.redPleaze{
+  color: red;
+  font-size: 14px;
+  text-shadow: 0px 0px 4px white;
+  font-weight: bold;
+}
+.linksBox{
+  /*width: max-project;*/
+  margin: auto;
+  /*max-width: 794px;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toggleAddAnnouncement a:hover{
+  border-color: #ffffff78;
+  /*background: #ffffff78;*/
+  color: #fff;
+  border-bottom: none;
+  background: #035290db;
+  border: none!important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.addAnnouncementActive{
+  background: #035290db!important;
+  color: #fff!important;
+  border: none!important;
+}
+.addAnnouncement-input{
+  padding: 20px 10px;
+  display: block;
+  box-sizing: border-box;
+  width: 50%;
+}
+.addAnnouncement-w100{
+  width: 100%;
+  padding: 20px 10px;
+  display: block;
+  box-sizing: border-box;
+}
+.addAnnouncement-w100 iframe{
+  width: 100%;
+}
+.addAnnouncement-w100 input{
+  color: #245173;
+  width: 100%;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+  border-right-width: 1px!important;
+  height: 40px;
+  border-radius: 4px;
+  padding: 0 11px;
+}
+.addNewPost{
+  width:100%!important;
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+
+.addAnnouncement-input input, button{
+  color: #245173;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+  border-right-width: 1px!important;
+  height: 40px;
+  border-radius: 4px;
+}
+.addNewPost button{
+  background: lightgray!important;
+  border-color: lightgray!important;
+  cursor: no-drop;
+}
+.addAnnouncement-input button{
+  color: #fff;
+  background-color: #096dd9;
+  border-color: #096dd9;
+}
+.addAnnouncement-input select{
+  color: #245173;
+  width: 100%;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+  border-right-width: 1px!important;
+  height: 40px;
+  border-radius: 4px;
+  padding: 0 11px;
+}
+.addAnnouncement-input input{
+  padding: 0 11px;
+}
+.boldStyles{
+  /*font-family: "Roboto-Bold";*/
+  font-family: "Montserrat-Light";
+}
+.flewWrap{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 770px;
+  flex-direction: column;
+  /*margin: auto;*/
+}
+.flexBoxItem{
+  display: flex;
+  position: relative;
+  height: 52px;
+}
+#basic1{
+  transform: rotateY(26deg);
+  position: absolute;
+  left: 0;
+}
+#basic2{
+  transform: rotateY(26deg);
+  position: absolute;
+  right: 0;
+}
+.cont2{
+  display: flex;
+  flex-direction: row-reverse;
+  border-top: 2px solid lightgray;
+  margin-top: 10px;
+}
+.pd10{
+  padding: 20px 0;
+}
+.pd0{
+  padding: 10px 0;
+}
+@media (max-width: 1200px) {
+  .cont2{
+    flex-direction: column;
+  }
+  .flewWrap{
+    margin: auto;
+  }
+}
+@media (max-width: 880px) {
+  #basic1{
+    transform: rotateY(32deg);
+    position: absolute;
+    left: -5px;
+  }
+  #basic2{
+    transform: rotateY(32deg);
+    position: absolute;
+    right: -5px;
+  }
+  .linksBox {
+    display: flex;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+  }
+  .linksBox a{
+    line-height: 12px;
+  }
+  .toggleAddAnnouncement a{
+    width: 32%;
+    margin-bottom: 2px;
+    border-radius: 4px;
+    flex: inherit;
+  }
+}
+@media (max-width: 600px) {
+  .toggleAddAnnouncement a{
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .wrap-bg{
+    padding: 0 20px;
+  }
+  .addNewPost button {
+    width: 100%;
+  }
+  .addAnnouncement-input {
+    width: 100%;
+    padding: 10px;
+  }
+  .addAnnouncement-w100{
+    width: 100%;
+    padding: 10px;
+  }
+  .flexBoxItem{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  #basic1{
+    transform: rotateY(0deg);
+    position: relative;
+    left: auto;
+    margin-bottom: 17px;
+  }
+  #basic2{
+    transform: rotateY(0deg);
+    position: relative;
+    right: auto;
+  }
+}
+/* Avelacrac YERVAND */
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 160px!important;
+  padding: 8px;
+  font-family: "Montserrat-Light";
+}
+.addNewPost button{
+  padding: 0 20px;
+  float: left;
+  width: 50%;
+  height: 40px;
+  font-weight: 700;
+  font-family: "Montserrat-Light";
+}
+.addNewPost .btnActiveClass{
+  padding: 0 20px;
+  float: left;
+  width: 50%;
+  height: 40px;
+  font-weight: 700;
+  background: #f66!important;
+  color: #fff!important;
+  border-color: #f66!important;
+  cursor: pointer;
+
+}
+.required-fields-section{
+  margin-bottom: 0px;
+  padding: 0;
+}
+.required-fields{
+  color: red;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  font-size: 18px;
+  text-shadow: 0px 0px 4px white;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+

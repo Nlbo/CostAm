@@ -1,0 +1,150 @@
+<div class="wrapper searchDetailsPage">
+  <!--<a routerLink="/" class="backToSearchStyle boldStyles"><i class="fas fa-arrow-left"></i>{{'Վերադառնալ որոնման արդյունքներին' | translate:user}}</a>-->
+  <div class="locationPhone top-Info">
+    <div class="announcementType borderRadiusLeft">
+      <h2 style="color: black">{{cart.codeValue + ' '}}{{ cart.announcementType + ' | '}}{{cart.regions}}, {{cart.city ? cart.city + ' ,' : null}} {{cart.communities}}, {{cart.mapDetails.address}}</h2>
+<!--    <h2>{{cart.codeValue ? cart.codeValue + ' code' : null}}</h2>-->
+    </div>
+    <div class="phoneNumbers">
+<!--      <h2 *ngFor="let phone of cart.phone" class="boldStyles">{{'Հեռ.' | translate:user}} {{phone}}</h2>-->
+      <!--<h2 class="boldStyles phones">{{'Հեռ.' | translate:user}} {{cart.phone[0]}}</h2>-->
+      <h2 class="boldStyles phones">{{cart.phone[0]}}</h2>
+      <h2 class="boldStyles phones" *ngIf="cart.phone[1]">{{' | ' + cart.phone[1]}}</h2>
+      <h2 class="boldStyles phones" *ngIf="cart.phone[2]">{{' | ' + cart.phone[2]}}</h2>
+    </div>
+  </div>
+  <!--<div class="locationPhone">-->
+    <!--<div class="borderRadiusLeft">-->
+      <!--<h3 class="boldStyles">{{'Հասցե' | translate:user}}</h3>-->
+      <!--<h2>{{cart.regions}}, {{cart.city ? cart.city + ' ,' : null}} {{cart.communities}}, {{cart.mapDetails.address}}</h2>-->
+    <!--</div>-->
+    <!--<div class="floatRight borderRadiusRight" >-->
+      <!--<h2 *ngFor="let price of cart.prices">{{price.type}} {{price.price}} {{price.currency}}</h2>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <div class="moreInfo">
+    <div *ngIf="cart.announcementType == 'Բնակարան' || cart.announcementType == 'Առանձնատուն'">
+      <p class="border-top-item">{{'Սենյակ' | translate:user}}</p>
+      <p>{{cart.numberOfRooms}}</p>
+    </div>
+    <div  *ngIf="cart.announcementType !== 'Հողամաս' && cart.announcementType !== 'Նորակառույց'">
+      <p class="border-top-item">{{'Հ/հ' | translate:user}}</p>
+      <p>{{cart.flooring}} / {{cart.floor}}</p>
+    </div>
+    <div  *ngIf="cart.announcementType == 'Նորակառույց'">
+      <p class="border-top-item">{{'Հ' | translate:user}}</p>
+      <p>{{cart.flooring}}</p>
+    </div>
+    <div *ngIf="cart.announcementType == 'Բնակարան'">
+      <p class="border-top-item">{{'Մակերես' | translate:user}}</p>
+      <p>{{cart.areaValue + '  ք.մ.'}}</p>
+    </div>
+    <!--HOUSE DETAILS START-->
+    <div *ngIf="cart.announcementType == 'Առանձնատուն' || cart.announcementType == 'Կոմերցիոն' || cart.announcementType == 'Հողամաս' || cart.announcementType == 'Բիզնես'">
+      <p class="border-top-item">{{'Հողամասի մակերես' | translate:user}}</p>
+      <p>{{cart.landArea + ' ք.մ.'}}</p>
+    </div>
+    <div *ngIf="cart.announcementType == 'Առանձնատուն'">
+      <p class="border-top-item">{{'Բնակելի մակերես' | translate:user}}</p>
+      <p>{{cart.livingSpace + ' ք.մ.'}}</p>
+    </div>
+    <!--COMMERCIAL DETAILS START-->
+    <div *ngIf="cart.buildingArea ? cart.announcementType == 'Կոմերցիոն' || cart.announcementType == 'Հողամաս' || cart.announcementType == 'Բիզնես' : null">
+      <p class="border-top-item">{{'Շինության մակերես' | translate:user}}</p>
+      <p>{{cart.buildingArea + ' ք.մ.'}}</p>
+    </div>
+    <!--COMMERCIAL DETAILS END-->
+    <div *ngIf="cart.supportingArea ? cart.announcementType == 'Առանձնատուն' || cart.announcementType == 'Կոմերցիոն' || cart.announcementType == 'Հողամաս' || cart.announcementType == 'Բիզնես' : null">
+      <p class="border-top-item">{{'Օժանդակ մակերես' | translate:user}}</p>
+      <p>{{cart.supportingArea + ' ք.մ.'}}</p>
+    </div>
+    <!--HOUSE DETAILS END-->
+    <!--    <div *ngIf="announcementType !== 'Հողամաս' || announcementType !== 'Բիզնես'">-->
+    <div *ngIf="cart.announcementType == 'Բնակարան' || cart.announcementType == 'Առանձնատուն' || cart.announcementType == 'Կոմերցիոն' || cart.announcementType == 'Նորակառույց'">
+      <p class="border-top-item">{{'Ն. Հարդարանք' | translate:user}}</p>
+      <p>{{cart.interiorDecorations}}</p>
+    </div>
+    <div *ngIf="cart.announcementType == 'Բնակարան' && cart.projects">
+      <p class="border-top-item">{{'Նախագիծ' | translate:user}}</p>
+      <p>{{cart.projects}}</p>
+    </div>
+    <div *ngIf="cart.announcementType == 'Բնակարան' || cart.announcementType == 'Առանձնատուն' || cart.announcementType == 'Կոմերցիոն'">
+      <p class="border-top-item">{{'Շենքի տեսակ' | translate:user}}</p>
+      <p>{{cart.buildingTypes}}</p>
+    </div>
+    <div *ngIf="cart.front ? cart.announcementType == 'Կոմերցիոն'|| cart.announcementType == 'Հողամաս' : null">
+      <p class="border-top-item">{{'Ճակատ' | translate:user}}</p>
+      <p>{{cart.front}}</p>
+    </div>
+    <div *ngIf="cart.announcementType == 'Բնակարան' || cart.announcementType == 'Առանձնատուն' || cart.announcementType == 'Կոմերցիոն'">
+      <p class="border-top-item">{{'Ծածկ' | translate:user}}</p>
+      <p>{{cart.covers}}</p>
+    </div>
+    <div style="border-right: none!important;" *ngIf="cart.ceilingValue ? cart.ceilingValue && cart.announcementType == 'Բնակարան' || cart.announcementType == 'Առանձնատուն' || cart.announcementType == 'Կոմերցիոն' || cart.announcementType == 'Նորակառույց' : null">
+      <p class="border-top-item">{{'Առաստաղ' | translate:user}}</p>
+      <p>{{cart.ceilingValue + ' մ․'}}</p>
+    </div>
+
+  </div>
+
+<!--  <div class="floatRight borderRadiusRight" >-->
+<!--    <h2 *ngFor="let price of cart.prices">{{price.type}} {{price.price}} {{price.currency}}</h2>-->
+<!--  </div>-->
+
+  <div class="cartS searchDetailsPageFlex">
+
+    <div class="searchDetailsPageImage">
+<!--      <div class="floatRight borderRadiusRight" >-->
+<!--        <h2 *ngFor="let price of cart.prices">{{price.type}} {{price.price}} {{price.currency}}</h2>-->
+<!--      </div>-->
+      <!--      <img src="{{thumnail}}" alt="">-->
+      <div class="sliderBox">
+        <div class="floatRight borderRadiusRight" >
+          <div *ngFor="let price of cart.prices" class="borderRadiusRighth2"><h2>{{price.type}}</h2> <h2>{{price.price}} {{price.currency}}</h2></div>
+        </div>
+        <app-details-slider [images]="images"></app-details-slider>
+      </div>
+    </div>
+
+    <div class="cart-info">
+      <app-details-map [data]="data" [address]="address"></app-details-map>
+    </div>
+  </div>
+
+  <div class="details-Bottom">
+    <div class="details-bottom-right">
+      <div class="details-bottom-right-box" *ngFor="let infoFields of cart.additionalInfoFields">
+        <p>{{infoFields}}</p>
+        <img src="../../assets/images/checked.png" alt="">
+      </div>
+    </div>
+    <div class="details-bottom-left">
+      <!--<h2>{{'Բնութագիր' | translate:user}}</h2>-->
+      <p class="addInfoStyle">{{cart.additionalInformation}}</p>
+    </div>
+  </div>
+  <div class="otherInfo">
+    <div *ngIf="cart.announcementType == 'Կոմերցիոն' || cart.announcementType == 'Հողամաս'">
+      <h2>{{'Փաստացի օգտագործում' | translate:user}}</h2>
+      <p *ngFor="let aUse of cart.actualUse; let ind=index">
+        {{aUse}}{{ind < cart.actualUse.length-1 ? ',' : ''}}
+      </p>
+    </div>
+  </div>
+  <!-- business-->
+  <div class="otherInfo">
+    <div *ngIf="cart.announcementType == 'Բիզնես'">
+      <h2>{{'Ոլորտ' | translate:user}}</h2>
+      <p *ngFor="let sBusiness of cart.areasBusiness; let ind=index">
+        {{sBusiness}}{{ind < cart.areasBusiness.length-1 ? ',' : ''}}
+      </p>
+    </div>
+  </div>
+  <!-- business-->
+</div>
+
+
+
+
+
