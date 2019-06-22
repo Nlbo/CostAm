@@ -1,0 +1,14 @@
+.slick-slide img{
+  height: 400px;
+  object-fit: cover;
+}
+
+.prev-slide {
+    display: none!important;
+  opacity: 0!important;
+}
+
+.next-slide {
+    display: none!important;
+  opacity: 0!important;
+}

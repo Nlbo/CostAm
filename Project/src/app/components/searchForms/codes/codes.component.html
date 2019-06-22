@@ -1,0 +1,17 @@
+
+<script src="codes.component.ts"></script>
+<div class="filter-content filter-contentStyle codeSearchStyle">
+<div class="ui-inputgroup code-toggle">
+  <input type="text" pInputText placeholder="{{'Կոդ' | translate:user}}">
+</div>
+<div class="appartament-button btnCodeBox">
+<!--  <button (click)="goToCreate()"  id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>-->
+
+  <button type="submit" id="search"
+          class="twoToneButton"
+          [ngClass]="{'spinning': searchFlage, 'ngPadding': searchFlage}">
+    <i class="fas fa-search"  [ngClass]="{'searchIconHidden': searchFlage}"></i>
+    {{'Փնտրել' | translate:user}}
+  </button>
+</div>
+</div>

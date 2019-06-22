@@ -1,0 +1,67 @@
+<!--<div class="btnHomeMap">-->
+<!--  <button (click)="getMarkers('Բնակարան')" >{{'Բնակարան' | translate:user}}</button>-->
+<!--  <button (click)="getMarkers('Առանձնատուն')" >{{'Առանձնատուն' | translate:user}}</button>-->
+<!--  <button (click)="getMarkers('Կոմերցիոն')" >{{'Կոմերցիոն' | translate:user}}</button>-->
+<!--  <button (click)="getMarkers('Հողամաս')">{{'Հողամաս' | translate:user}}</button>-->
+<!--  <button (click)="getMarkers('Բիզնես')" >{{'Բիզնես' | translate:user}}</button>-->
+<!--  <input type="text" id="mapSearch" size="50" placeholder="{{'Մուտքագրեք հասցեն' | translate:user}}">-->
+<!--  <div id="map" class="mapHome"></div>-->
+<!--</div>-->
+
+
+<div class="btnHomeMap">
+  <div class="mapBtnFlex">
+    <div class="typeOfMarkerStyleDiv">
+      <p-multiSelect [maxSelectedLabels]="1" [options]="btnRedMarkerFlag || btnGreenMarkerFlag ? transactions : btnYellowMarkerFlag || btnBlueMarkerFlag || btnPurpleMarkerFlag ? transactions2 : transactions3"
+                     [(ngModel)]="selectedTransaction"
+                     (ngModelChange)="onTransactionChange($event)" class="typeOfMarker typeOfMarkerStyle"
+                     defaultLabel="{{'Գործարք' | translate:user}}"
+                     selectedItemsLabel="{0} ընտրված դաշտ"
+                     [disabled]="!btnRedMarkerFlag && !btnGreenMarkerFlag && !btnYellowMarkerFlag &&
+                   !btnBlueMarkerFlag && !btnPurpleMarkerFlag && !btnOrangeMarkerFlag">
+      </p-multiSelect>
+    </div>
+    <button (click)="showRedMarkers()" [ngClass]="{'btnMarkerActiveClass': btnRedMarkerFlag}">
+      <img src="assets/marker-icons-new/MapMenu/Bnakaran.png" alt="" class="mapIconsStyle">
+      {{'Բնակարան' | translate:user}}
+    </button>
+    <button (click)="showGreenMarkers()" [ngClass]="{'btnMarkerActiveClass': btnGreenMarkerFlag}">
+      <img src="assets/marker-icons-new/MapMenu/Arandznatun.png" alt="" class="mapIconsStyle">
+      {{'Առանձնատուն' | translate:user}}
+    </button>
+    <div class="typeOfActualUseStyleBox">
+    <button (click)="showYellowMarkers()" [ngClass]="{'btnMarkerActiveClass': btnYellowMarkerFlag}"
+            class="typeOfActualUseStyleBtn">
+      <img src="assets/marker-icons-new/MapMenu/Comercion.png" alt="" class="mapIconsStyle">
+      {{'Կոմերցիոն' | translate:user}}
+    </button>
+<!--    <p-multiSelect [maxSelectedLabels]="1" [options]="actualUseCommercials" [(ngModel)]="selectedActualUseCommercial"-->
+<!--                   (ngModelChange)="onActualUseCommercialChange($event)"-->
+<!--                   class="typeOfMarker typeOfMarkerStyle typeOfActualUseStyle"-->
+<!--                   selectedItemsLabel=""-->
+<!--                   [disabled]="!btnYellowMarkerFlag">-->
+<!--    </p-multiSelect>-->
+      <div style="position: relative">
+      <p-dropdown [ngClass]="{'activeToggle': btnYellowMarkerFlag}" [options]="actualUseCommercials" [(ngModel)]="selectedActualUseCommercial"
+                  class="typeOfMarker typeOfMarkerStyle typeOfActualUseStyle" [disabled]="!btnYellowMarkerFlag"
+                  (ngModelChange)="onActualUseCommercialChange($event)" placeholder="Փ. օգտագործում"
+      ></p-dropdown>
+        <!--[showClear]="true"-->
+      </div>
+    </div>
+    <button (click)="showBlueMarkers()" [ngClass]="{'btnMarkerActiveClass': btnBlueMarkerFlag}">
+      <img src="assets/marker-icons-new/MapMenu/Hoghamas.png" alt="" class="mapIconsStyle">
+      {{'Հողամաս' | translate:user}}
+    </button>
+    <button (click)="showPurpleMarkers()" [ngClass]="{'btnMarkerActiveClass': btnPurpleMarkerFlag}">
+      <img src="assets/marker-icons-new/MapMenu/Business.png" alt="" class="mapIconsStyle">
+      {{'Բիզնես' | translate:user}}
+    </button>
+    <button (click)="showOrangeMarkers()" [ngClass]="{'btnMarkerActiveClass': btnOrangeMarkerFlag}">
+      <img src="assets/marker-icons-new/MapMenu/norakaruyc.png" alt="" class="mapIconsStyle">
+      {{'Նորակառույցներ' | translate:user}}
+    </button>
+  </div>
+  <input type="text" id="mapSearch" size="50" placeholder="{{'Մուտքագրեք հասցեն' | translate:user}}">
+  <div id="map" class="mapHome"></div>
+</div>
