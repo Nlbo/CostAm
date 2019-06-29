@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/*@font-face {*/
+/*  font-family: "Roboto-Bold";*/
+/*  src: url("../assets/Roboto/Roboto-Bold.ttf")*/
+/*}*/
+/*@font-face {*/
+/*  font-family: "Roboto-Medium";*/
+/*  src: url("../assets/Roboto/Roboto-Medium.ttf")*/
+/*}*/
+/*@font-face {*/
+/*  font-family: "Roboto-Regular";*/
+/*  src: url("../assets/Roboto/Roboto-Regular.ttf")*/
+/*}*/
+/*@font-face {*/
+/*  font-family: "Roboto-Light";*/
+/*  src: url("../assets/Roboto/Roboto-Light.ttf")*/
+/*}*/
+
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("../assets/Monserat/Montserratarm-Regular.otf")
+}
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("../assets/Monserat/Montserrat-Light.otf")
+}
+
+@font-face {
+  font-family: "Montserratarm-Medium";
+  src: url("../assets/Monserat/Montserratarm-Medium.otf")
+}
+@font-face {
+  font-family: "Montserratarm-ExtraBold";
+  src: url("../assets/Monserat/Montserratarm-ExtraBold.otf")
+}
+@font-face {
+  font-family: "Montserratarm-Bold";
+  src: url("../assets/Monserat/Montserratarm-Bold.otf")
+}
+/*@font-face {*/
+/*  font-family: "Roboto-Regular";*/
+/*  src: url("../assets/Roboto/Roboto-Regular.ttf")*/
+/*}*/
+/*@font-face {*/
+/*  font-family: "Roboto-Light";*/
+/*  src: url("../assets/Roboto/Roboto-Light.ttf")*/
+/*}*/
+
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+  z-index: 2;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transform: scale(0);
+}
+.show-scroll {
+  opacity: 1;
+  transition: all .2s ease-in-out;
+  transform: scale(1);
+}
+
+
+
+
+
+

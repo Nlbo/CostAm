@@ -1,0 +1,302 @@
+.wrapper{
+  max-width: 1480px;
+  margin: auto;
+  width: 94%;
+}
+.header{
+  background-color: #224a69b3;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top:0;
+  height: 80px;
+  z-index: 99999;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+}
+.header ul{
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+.header ul li{
+  list-style: none;
+  color: white;
+  cursor: pointer;
+  max-width: 230px;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*font-family: "Roboto-Bold";*/
+  font-size: 13px;
+  border-radius: 4px;
+  font-family: "Montserrat-Light";
+  text-transform: uppercase;
+}
+.header ul li a{
+  list-style: none;
+  color: white;
+  cursor: pointer;
+  max-width: 230px;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*font-family: "Roboto-Bold";*/
+  font-size: 13px;
+  text-decoration: none;
+  /*font-weight: bold;*/
+}
+.header ul li:hover{
+  background: #224a69;
+}
+.header .icons{
+  text-align: right;
+}
+.logo a{
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+.logo a img{
+  /*width: 168px;*/
+  width: 200px;
+}
+.logo{
+  flex:1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.icons{
+  flex:1;
+}
+.nav{
+  flex:5;
+  /*margin-top: 12px;*/
+  display: block;
+}
+.phone{
+  display: flex;
+  flex-direction: column;
+}
+.phone a{
+  color: white;
+  text-decoration: none;
+  margin: 2px 0;
+  font-family: "Montserrat-Light";
+  font-weight: bold;
+  font-size: 16px;
+}
+.flags{
+  margin-top: 8px;
+}
+.flags a img{
+  margin-left: 6px;
+  /*border-radius: 50%;*/
+  /*width: 15px;*/
+  width: 28px;
+  height: 18px;
+}
+/*nav icon*/
+
+#nav-icon1{
+  width: 24px;
+  height: 20px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  top: 50px;
+}
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 6px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 12px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 8px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  background: #f66;
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+  background: #f66;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 8px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  background: #f66;
+}
+
+#nav-icon1.open{
+  display: block;
+}
+.navMobile{
+  display: block!important;
+
+}
+
+.navMobile ul{
+  /*display: flex!important;*/
+  /*flex-direction: column;*/
+}
+.navbarMobile{
+  display: none!important;
+}
+.flags a{
+  cursor: pointer;
+}
+/*====start responsive css====*/
+@media (max-width: 1296px) {
+
+}
+@media (max-width: 1200px) {
+  .filter-buttons .btn-style{
+    width: 32%;
+  }
+  .filter-buttons{
+    flex-wrap: wrap;
+  }
+  .appartament-button{
+    padding: 0 19px;
+  }
+  .header ul li a{
+    font-size: 12px;
+  }
+  .nav{
+    position: absolute;
+    top: 80px;
+    background: #224a69b3;
+    width: 100%;
+    left: 0;
+  }
+}
+@media (max-width: 992px) {
+  .filter-buttons .btn-style{
+    width: 48%;
+  }
+  /*.nav{*/
+  /*  position: absolute;*/
+  /*  top: 80px;*/
+  /*  background: #224a69b3;*/
+  /*  width: 100%;*/
+  /*  left: 0;*/
+  /*}*/
+  .appartament-button{
+    padding: 0 17px;
+  }
+  .google-map{
+    flex-direction: column;
+  }
+  .advertising-box{
+    text-align: center;
+  }
+  .advertising-box img{
+    width: auto;
+    margin: 8px;
+    display: inline-block;
+  }
+
+}
+@media (max-width: 768px) {
+  .input-style{
+    width: 50%;
+  }
+  .appartament-button{
+    padding: 0 19px;
+  }
+  .newly-built{
+    width:96%;
+  }
+  .nav{
+    display: none;
+  }
+  .navbarMobile{
+    display: block!important;
+  }
+  .header ul{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 576px) {
+  .filter-buttons .btn-style{
+    width: 98%;
+  }
+  .header ul li{
+    font-size: 12px!important;
+  }
+  .phone a{
+    font-size: 14px;
+  }
+  .input-style{
+    width: 100%;
+  }
+  .input-style select{
+    max-width: 100%;
+  }
+  .appartament-button{
+    width: 89%;
+    margin: auto;
+    padding: 0;
+  }
+  .newly-built{
+    width:92%;
+  }
+  .filter-buttons .btn-style{
+    height: 40px;
+  }
+  .logo a img{
+    width: 124px;
+  }
+}

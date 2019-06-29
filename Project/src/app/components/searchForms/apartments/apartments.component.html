@@ -1,0 +1,117 @@
+<div class="filter-content filter-contentStyle" style="margin-left: 10px; margin-right: 10px;">
+  <form [formGroup]="form" (ngSubmit)="formSend()">
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="optionsData.transactions" formControlName="transactions"
+                     [maxSelectedLabels]="1"
+                     [filter]="false"
+                     [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Գործարքի տեսակը' | translate:user}}"
+                     [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="optionsData.regions" formControlName="regions" [selectedItemsLabel]="'{0} ընտրված դաշտ'"
+                     (onChange)="onChange('regions')"
+                     [maxSelectedLabels]="1"
+                     defaultLabel="{{'Մարզ' | translate:user}}" [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="cities" formControlName="cities" [selectedItemsLabel]="'{0} ընտրված դաշտ'"
+                     (onChange)="onChange('cities')"
+                     [maxSelectedLabels]="1"
+                     defaultLabel="{{'Քաղաք' | translate:user}}" [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="communities" formControlName="communities"
+                     [maxSelectedLabels]="1"
+                     [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Համայնք' | translate:user}}"
+                     (onChange)="onChange('communities')"
+                     [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="streets" formControlName="streets"
+                     [maxSelectedLabels]="1"
+                     [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Փողոց' | translate:user}}"
+                     [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="optionsData.building" formControlName="buildingTypes"
+                     [maxSelectedLabels]="1"
+                     [filter]="false"
+                     [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Շենքի տեսակ' | translate:user}}"
+                     [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-multiSelect [options]="optionsData.rooms" formControlName="numberOfRooms"
+                     [maxSelectedLabels]="1"
+                     [filter]="false"
+                     [selectedItemsLabel]="'{0} ընտրված դաշտ'" defaultLabel="{{'Սենյակների քանակը' | translate:user}}"
+                     [style]="{'width':'100%'}"></p-multiSelect>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-dropdown [options]="optionsData.surface" [style]="{'width':'100%'}" formControlName="areaValue"
+                  placeholder=" {{'Մակերես քմ' | translate:user}} " [showClear]="true"></p-dropdown>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-dropdown (onChange)="foo()" [options]="optionsData.pricesStart" [style]="{'width':'100%'}" formControlName="pricesStart"
+                  placeholder=" {{'Գինը (սկսած)' | translate:user}} " [showClear]="true" [filter]="true"></p-dropdown>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-dropdown [options]="optionsData.pricesEnd" [style]="{'width':'100%'}" formControlName="pricesEnd"
+                  placeholder=" {{'Մինչև' | translate:user}} " [showClear]="true" [filter]="true"></p-dropdown>
+    </div>
+
+    <div class="col-md-3 input-style">
+      <p-dropdown [options]="optionsData.currencies" [style]="{'width':'100%'}" formControlName="currency"
+                  placeholder=" {{'Արժույթ' | translate:user}} " [showClear]="true"></p-dropdown>
+    </div>
+
+
+
+    <div class="col-md-3 input-style">
+      <div class="newCheckbox">
+        <p-checkbox name="newlyBuilds" value="Նորակառույց" formControlName="newlyBuilds" binary="true"></p-checkbox><label style="margin-left: 8px">{{'Նորակառույց' | translate:user}}</label>
+      </div>
+    </div>
+
+    <div class="col-md-3 input-style max576"></div>
+    <div class="col-md-3 input-style max1440"></div>
+
+    <div class="col-md-3 input-style appartament-button">
+<!--      <div class="newCheckbox">-->
+<!--        <p-checkbox name="newlyBuilds" value="Նորակառույց" formControlName="newlyBuilds" binary="true"></p-checkbox><label>{{'Նորակառույց' | translate:user}}</label>-->
+<!--      </div>-->
+
+      <button type="submit" id="search"
+              class="twoToneButton"
+              [ngClass]="{'spinning': searchFlage, 'ngPadding': searchFlage}">
+        <i class="fas fa-search"  [ngClass]="{'searchIconHidden': searchFlage}"></i>
+        {{'Փնտրել' | translate:user}}
+      </button>
+    </div>
+
+
+    <div class="appartament-button" style="margin-top: 20px;">
+
+<!--      <button (click)="goToCreate()" id="add-announcement">{{'Ավելացնել հայտարարություն' | translate:user}}</button>-->
+
+
+<!--      <button type="submit" id="search"-->
+<!--              class="twoToneButton"-->
+<!--              [ngClass]="{'spinning': searchFlage, 'ngPadding': searchFlage}">-->
+<!--        <i class="fas fa-search"  [ngClass]="{'searchIconHidden': searchFlage}"></i>-->
+<!--        {{'Փնտրել' | translate:user}}-->
+<!--      </button>-->
+    </div>
+    <!--<button type="submit">Value</button>-->
+    <!--<button  (click)="formSend2()">Form</button>-->
+  </form>
+</div>
+
