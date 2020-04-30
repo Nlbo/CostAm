@@ -24,7 +24,7 @@
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
     "angular-sortablejs": "^2.6.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-pagination": "^4.0.0",
     "ngx-slick-carousel": "^0.4.4",
     "primeicons": "^1.0.0",
